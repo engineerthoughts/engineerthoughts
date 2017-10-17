@@ -1,0 +1,470 @@
+
+			.HEAD2{
+
+
+					font-family:Century Gothic;
+					color:#1CD3A7;
+					text-align:center;
+					}
+			.img3{
+					align:center;
+					max-width: 90%;
+					height: auto;
+					}
+			.p2{
+				color:#1C353D;
+				font-size:22px;
+				text-align:center;
+				margin:0 50px 0 50px;
+				font-family:Century Gothic;
+			}
+			.p4{
+				color:#1C353D;
+
+				text-align:center;
+
+				font-family:Century Gothic;
+			}
+			<!--div.gallery {
+				margin-left:300px;
+				border: 1px solid #ccc;
+				float: left;
+				width: 250px;
+				padding-right:50px;
+			}
+			div.gallery img {
+				width: 100%;
+				height: auto;
+			}-->
+			.title1{
+				font-family:Century Gothic;
+				/*background-color:#1C353D;*/
+				text-align: center;
+				display:block;
+				color: #1CD3A7;
+			}
+			.HEAD4{
+
+
+					font-family:Century Gothic;
+					color:#1CD3A7;
+					text-align:center;
+					}
+			.img2{
+			margin-top:-50px;
+			max-width: 90%;
+			height: auto;
+			padding:7.5%;
+			border-ra
+			}
+			div.desc {
+				padding: 15px;
+				text-align: center;
+			}			
+			
+			
+			/*anim page css not needed inbuilt there itself no issues
+			
+			
+			div.gallery {
+				border: 1px solid #ccc;
+			}
+
+			div.gallery:hover {
+				border: 1px solid #777;
+			}
+
+			div.gallery img {
+				width: 100%;
+				height: auto;
+			}
+
+			div.desc {
+				padding: 15px;
+				text-align: center;
+				font-family:Century Gothic;
+				color:#1CD3CD;
+
+			}
+
+			* {
+				box-sizing: border-box;
+			}
+
+			.responsive {
+				padding: 0 6px;
+				float: left;
+				width: 24.99999%;
+			}
+
+			@media only screen and (max-width: 700px){
+				.responsive {
+					width: 49.99999%;
+					margin: 6px 0;
+				}
+			}
+
+			@media only screen and (max-width: 500px){
+				.responsive {
+					width: 100%;
+				}
+			}
+
+			.clearfix:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+			.button {
+					background-color: #778899;
+					border: none;
+					color: white;
+					padding: 10px 20px;
+					text-align: center;
+					text-decoration: none;
+					display: inline-block;
+					font-size: 16px;
+					margin: 15px 30px;
+					cursor: pointer;
+					-webkit-transition-duration: 0.4s; 
+					transition-duration: 0.4s;
+				}
+			.button2:hover {
+				box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+			}
+			.HEAD2{
+
+
+					font-family:Century Gothic;
+					color:#1CD3A7;
+					text-align:center;
+					}
+			.p2{
+				color:#1CD3CD;
+				font-size:20px;
+				text-align:justify;
+				margin:0 50px 0 50px;
+				font-family:Century Gothic;
+			}
+			*/
+			
+			
+			
+			/*apj page css*/
+			
+			.marapj{
+
+					display: block;
+				    margin: 0 auto;
+						width:80%;
+						height:60%;
+						text-align: center;
+							}
+
+							.papj{
+
+								font-family:Century Gothic;
+								color:#8CA336;
+								text-align:justify;
+								margin:10px 20px 0 20px;
+
+								}
+								.HEADapj{
+
+
+										font-family:Century Gothic;
+										color:#1CD3A7;
+										text-align:center;
+										}
+										
+										
+			/* cnc css */
+			
+			
+						.HEAD2CNC{
+
+
+					font-family:Century Gothic;
+					color:#1CD3A7;
+					text-align:center;
+					}
+			.p2cnc{
+				color:#1CD3CD;
+				font-size:20px;
+				text-align:justify;
+				margin:0 20px 0 20px;
+				font-family:Century Gothic;
+			}
+			.p5cnc{
+				color:#1CD3CD;
+				font-size:18px;
+				text-align:center;
+
+				font-family:Century Gothic;
+			}
+			.p3cnc{
+				color:#A2EE2F;
+				font-size:20px;
+				text-align:justify;
+				margin:0 20px 0 20px;
+				font-family:Century Gothic;
+			}
+			.p4cnc{
+				color:#A2EE2F;
+
+				text-align:center;
+
+				font-family:Century Gothic;
+			}
+			.img2cnc{
+			margin-left:20px;
+			max-width: 90%;
+			height: auto;
+			}
+			.img3cnc{
+			align:center;
+			max-width: 90%;
+			height: auto;
+			}
+			
+			
+			
+			
+			/*computer file css */
+			
+			
+			
+				.HEAD2CS{
+
+
+					font-family:Century Gothic;
+					color:#1CD3A7;
+					text-align:center;
+					}
+			.p2cs{
+				color:#1CD3CD;
+				font-size:20px;
+				text-align:center;
+				margin:0 50px 0 50px;
+				font-family:Century Gothic;
+			}
+			.p4cs{
+				color:#A2EE2F;
+
+				text-align:center;
+
+				font-family:Century Gothic;
+			}
+			.img3cs{
+			align:center;
+			max-width: 90%;
+			height:50%}
+			
+			
+			
+			
+			/* electrical css style*/
+			
+			
+			.p4elec{
+				color:#A2EE2F;
+
+				text-align:center;
+
+				font-family:Century Gothic;
+			}
+			.head2elec{
+
+
+					font-family:Century Gothic;
+					color:#1CD3A7;
+					text-align:center;
+					}
+					.img3elec{
+				align:center;
+				max-width: 90%;
+				height: auto;
+		}
+		
+		
+		/* index css style */
+		
+		
+		
+			.head1index{
+
+					margin-left:20px;
+					font-family:Century Gothic;
+					color:#1CD3A7;
+					}
+			.head2index{
+
+					margin-left:100px;
+					font-family:Century Gothic;
+					color:#1CD3A7;
+					}
+			.bulletindex{
+				color:#1CD3CD;
+				font-family:Century Gothic;
+				margin-left:100px;
+				}
+			.p1index{
+				font-size:20px;
+				font-family:Century Gothic;
+				color:#1CD3CD;
+				text-align:justify;
+				margin:10px 20px 0 20px;
+
+				}
+				.p2index{
+
+					font-family:Century Gothic;
+					color:#8CA336;
+					text-align:justify;
+					margin:10px 20px 0 20px;
+
+					}
+				.bgindex{
+					  background:url(engblueprint.jpg)no-repeat;
+					height: 20%;
+					padding-top: 100px;
+
+					background-size: cover;
+				}
+
+				.headtextindex{
+					color:#1C353D;
+					text-align:center;
+					border-radius:20px;
+					padding:40px;
+					background-color:rgba(255,255,255,0.75);
+					max-width:800px;
+					margin: auto;
+					background-position: center;
+				font-family:Century Gothic;
+
+					}
+					
+					
+					
+					
+					
+				/* mech scc style */
+				
+				
+				
+				
+					.head2mech{
+
+					font-family:Century Gothic;
+					color:#1CD3A7;
+					text-align:center;
+					}
+			.p2mech{
+				color:#1CD3CD;
+				font-size:22px;
+				text-align:center;
+				margin:0 50px 0 50px;
+				font-family:Century Gothic;
+			}
+			.p4mech{
+				color:#A2EE2F;
+
+				text-align:center;
+
+				font-family:Century Gothic;
+			}
+			.img3mech{
+			align:center;
+			max-width: 90%;
+			height: auto;
+			}
+			
+			
+			
+			/* Scribbles styles */
+			
+			
+			
+				.b1scribbles {
+					background-color: #008080;
+					color: white;
+					padding: 15px 32px;
+					text-align: center;
+					display: inline-block;
+					font-size: 16px;
+					margin: -5PX 0 0 50px;
+					cursor: pointer;
+					border-radius: 8px;
+				}
+			.b1scribbles:hover {
+					box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+				}
+			.HEAD2scribbles{
+					margin-left:100px;
+					margin-top:50px;
+					font-family:Century Gothic;
+					color:#1CD3A7;}
+			.HEAD3scribbles{
+					font-family:Century Gothic;
+					color:#1CD3A7;
+
+					margin-left:100px;
+					margin-right:50px;}
+			.p2scribbles{
+				font-size:20px;
+				font-family:Century Gothic;
+				color:#1CD3CD;
+				text-align:justify;
+				margin-left:100px;
+				margin-right:50px;
+
+				}
+				
+				
+				
+				/* Solar css */
+				
+				
+				
+						.head2solar{
+
+
+					font-family:Century Gothic;
+					color:#1CD3A7;
+					text-align:center;
+					}
+			.p2solar{
+				color:#1CD3CD;
+				font-size:20px;
+				text-align:justify;
+				margin:0 20px 0 20px;
+				font-family:Century Gothic;
+			}
+			.p5solar{
+				color:#1CD3CD;
+				font-size:18px;
+				text-align:center;
+
+				font-family:Century Gothic;
+			}
+			.p3solar{
+				color:#A2EE2F;
+				font-size:20px;
+				text-align:justify;
+				margin:0 20px 0 20px;
+				font-family:Century Gothic;
+			}
+			.p4solar{
+				color:#A2EE2F;
+
+				text-align:center;
+
+				font-family:Century Gothic;
+			}
+			.img2solar{
+			margin-left:20px;
+			max-width: 90%;
+			height: auto;
+			}
+			
