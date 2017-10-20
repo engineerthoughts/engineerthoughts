@@ -51,7 +51,7 @@
 					color:#9c9c9c;
 					border-bottom: 2px solid #87CEFA;
 				}
-	
+
 
 		@media screen and (max-width: 600px)
 				{
@@ -61,7 +61,7 @@
 	</head>
 	<body>
 
-	<div id="fb-root"></div>
+    <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -69,210 +69,210 @@
   js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-		<ul class = "topnav">
-			<li><a href="index.html">HOME</a></li>
-			<li><a class="active" href="projects.html">PROJECTS</a></li>
-			<li><a href="scribbles.html">SCRIBBLES</a></li>
-				<li><a href="apj.html">THOUGHTS</a></li>
-			<li><a href="aboutus.html">ABOUT US</a></li>
-		</ul><br>
+        <ul class = "topnav">
+            <li><a href="index.html">HOME</a></li>
+            <li><a class="active" href="projects.html">PROJECTS</a></li>
+            <li><a href="scribbles.html">SCRIBBLES</a></li>
+                <li><a href="apj.html">THOUGHTS</a></li>
+            <li><a href="aboutus.html">ABOUT US</a></li>
+        </ul><br>
 
-				<h2 class="p4solar">SMART WIRELESS SOLAR POWER MANAGEMENT</h2>
-					<p class="p5solar"> -N. ARANGANATHAN <p>
-					<div style="text-align: center;"><img class="img3" src="solar1.jpg"  width="460" height="345"></div><br>
+                <h2 class="p4solar">SMART WIRELESS SOLAR POWER MANAGEMENT</h2>
+                    <p class="p5solar"> -N. ARANGANATHAN <p>
+                    <div style="text-align: center;"><img class="img3" src="solar1.jpg"  width="460" height="345"></div><br>
 
-				<p class="p2solar">Hi.. Solar energy is abundant, pure form of energy. You could build your own solar system with the things you have in your home without wasting of much money and time. All you need is a bit of Enthusiasm and little time to experiment things.
+                <p class="p2solar">Hi.. Solar energy is abundant, pure form of energy. You could build your own solar system with the things you have in your home without wasting of much money and time. All you need is a bit of Enthusiasm and little time to experiment things.
 
-				In this  we are going to see how to make use of the Home Inverter with simple Relay Logic Circuits. Here all you will learn to build your own solar panel circuit and understand the basics of what is happening in the relay circuits made in this and also to control and monitor via home wifi using ESP8266.
-				<br><br><img class="img2solar" src="C:\updated\solar2.jpg"  width="460" height="345"><br><br>
-				<strong class="p3solar">Solar Panel Facts and Details ( You May Move Ahead If You Know the Basics)</strong><br><br>
-				<ul class="p2solar">
-					<li>Solar panel produces the Current due to the hitting of the photons from the sun on the silicon atoms.Thus in simple words SUN LIGHT FALLS ON THE SOLAR PANEL AND CURRENT is produced.</li>
-					<li>The main thing to be noticed when considering the other form of Energy is that SOLAR PANEL is CURRENT SOURCE and not voltage source , thus by virtue of this the voltage will change depending on the load.</li>
-					<li>Power of the solar panel is equal to the product of the Open Circuit voltage and the Short Circuit current.for example for 100 watts pannel,Voc=20V or 21V and Isc=5 A thus P=100 watts (approx) (at full bright sun)</li>
-					<li>The Power produced will be directly propotional to the intensity of the Sun Light.There are two types of Solar Panel:</li>
-					<li>Mono crystalline (high efficient)</li>
-					<li>Poly crystalline ( comparatively less efficient)
-				Thus without wasting much time lets get on to the making.......!</li>
-				</ul><br>
-				<strong class="p3solar">Step 1: LIST OF COMPONENTS</strong><br><br>
+                In this  we are going to see how to make use of the Home Inverter with simple Relay Logic Circuits. Here all you will learn to build your own solar panel circuit and understand the basics of what is happening in the relay circuits made in this and also to control and monitor via home wifi using ESP8266.
+                <br><br><img class="img2solar" src="C:\updated\solar2.jpg"  width="460" height="345"><br><br>
+                <strong class="p3solar">Solar Panel Facts and Details ( You May Move Ahead If You Know the Basics)</strong><br><br>
+                <ul class="p2solar">
+                    <li>Solar panel produces the Current due to the hitting of the photons from the sun on the silicon atoms.Thus in simple words, SUN LIGHT FALLS ON THE SOLAR PANEL AND CURRENT is produced.</li>
+                    <li>The main thing to be noticed when considering the other form of Energy is that SOLAR PANEL is CURRENT SOURCE and not voltage source, thus by virtue of this the voltage will change depending on the load.</li>
+                    <li>Power of the solar panel is equal to the product of the Open Circuit voltage and the Short Circuit current.for example for 100 watts pannel,Voc=20V or 21V and Isc=5 A thus P=100 watts (approx) (at full bright sun)</li>
+                    <li>The Power produced will be directly proportional to the intensity of the Sun Light.There are two types of Solar Panel:</li>
+                    <li>Mono crystalline (high efficient)</li>
+                    <li>Poly crystalline ( comparatively less efficient)
+                Thus without wasting much time lets get on to the making.......!</li>
+                </ul><br>
+                <strong class="p3solar">Step 1: LIST OF COMPONENTS</strong><br><br>
 
-				<p class="p2solar">I won't waste much time in the selection and construction of the solar panel, I don't want you to get bored any more. Thus I will move fast as possible ...!<br><br>
+                <p class="p2solar">I won't waste much time in the selection and construction of the solar panel, I don't want you to get bored anymore. Thus I will move fast as possible ...!<br><br>
 
-				<strong class="p3solar">LIST OF COMPONENTS:</strong><br>
-				<ol class="p2solar"><br>
-					<li><strong>SOLAR PANEL:</strong> Depending on the need of yours you may select the solar panel.
-				If you plan to run the total loads completely in the Solar system, select the large sized panels, In this case I am using a 100 watts Solar Pannel.<br><!--https://www.amazon.in/Solis-Monocrystalline-Solar-...--></li>
-					<li><strong>SOLAR CHARGE CONTROLLER</strong>:It is Very Essential as Solar panel is Current source. There are Two Types of Charge controllers namely :
-				PWM charge controllers - Cost effective, Commonly used ,slightly less efficient (Here I am using a PWM )<!--https://www.amazon.in/Sparkel-Charge-Controller-Mo...-->
-				MPPT charge controllers- Costly, Used in large Solar Systems, High efficient</li>
-					<li><strong>Battery</strong> : Proper selection of the Battery for the correct backup of the Load.You may make use of the Home Inverter battery.<!--https://www.amazon.in/Exide-42AH-PowerSafe-Sealed-...--></li>
-					<li><strong>Inverter:</strong> To run the AC (Alternating Current LOADS). Here you may use the home Inverter already installed</li>
-					<li><strong>WIFI CONTROLLER :</strong> ESP8266 nodemcu is the cheap and best controller to control the system in WIFI. Can be programmed via the Arduino IDE. <!--https://www.amazon.in/Lolin-NodeMCU-3-01-0268-1-No...--></li>
-					<li><strong>RELAY :</strong>Electromechanical device which may act as the elctronic switch to control the Solar System. It consist of the electromagnet whenever the magnet is switched on the Switch is closed and viceversa. Thus it can be used to control the any higher voltages using the small microcontroller signal.<!-- 4 channel 10 amp relay link >https://www.amazon.in/REES52-Optocoupler-Channel-C...70 AMPS car relay link->https://www.amazon.in/Bike-Heavy-Split-Charge-Rela...-->
-				<!--The links are given just to give a idea on the availability....!--></li>
-				</ol><br>
-				<p class="p2solar">FOR FURTHER UNDERSTANDING OF THE TOPICS, Google it and be clear before going any further..... !<br><br>
+                <strong class="p3solar">LIST OF COMPONENTS:</strong><br>
+                <ol class="p2solar"><br>
+                    <li><strong>SOLAR PANEL:</strong> Depending on the need of yours you may select the solar panel.
+                If you plan to run the total loads completely in the Solar system, select the large-sized panels, In this case, I am using a 100 watts Solar Panel.<br><!--https://www.amazon.in/Solis-Monocrystalline-Solar-...--></li>
+                    <li><strong>SOLAR CHARGE CONTROLLER</strong>:It is Very Essential as Solar panel is Current source. There are Two Types of Charge controllers namely :
+                PWM charge controllers - Cost effective, Commonly used, slightly less efficient (Here I am using a PWM )<!--https://www.amazon.in/Sparkel-Charge-Controller-Mo...-->
+                MPPT charge controllers- Costly, Used in large Solar Systems, High efficient</li>
+                    <li><strong>Battery</strong> : Proper selection of the Battery for the correct backup of the Load.You may make use of the Home Inverter battery.<!--https://www.amazon.in/Exide-42AH-PowerSafe-Sealed-...--></li>
+                    <li><strong>Inverter:</strong> To run the AC (Alternating Current LOADS). Here you may use the home Inverter already installed</li>
+                    <li><strong>WIFI CONTROLLER :</strong> ESP8266 nodemcu is the cheap and best controller to control the system in WIFI. Can be programmed via the Arduino IDE. <!--https://www.amazon.in/Lolin-NodeMCU-3-01-0268-1-No...--></li>
+                    <li><strong>RELAY :</strong>Electromechanical device which may act as the elctronic switch to control the Solar System. It consist of the electromagnet whenever the magnet is switched on the Switch is closed and viceversa. Thus it can be used to control the any higher voltages using the small microcontroller signal.<!-- 4 channel 10 amp relay link >https://www.amazon.in/REES52-Optocoupler-Channel-C...70 AMPS car relay link->https://www.amazon.in/Bike-Heavy-Split-Charge-Rela...-->
+                <!--The links are given just to give a idea on the availability....!--></li>
+                </ol><br>
+                <p class="p2solar">FOR FURTHER UNDERSTANDING OF THE TOPICS, Google it and be clear before going any further..... !<br><br>
 
-				<strong class="p3solar">Step 2: MODES OF OPERATION</strong><br><br>
+                <strong class="p3solar">Step 2: MODES OF OPERATION</strong><br><br>
 
-				There are basically two modes of operation in this Solar connected Systems, They are :<br><br>
-				<ul class="p2solar">
-					<li><strong>Manual Mode:</strong> As the name indicates it is controlled manually.But there are two different options for that they are :
-				<em>Physical switches</em>: Here it is controlled by the swtching ON and OFF by the conventional switches.
-				<em>Relay Switch</em> : Here the same operation is carried out using the wifi webpage to turn on and off the relay coils and monitored using ESP8266.</li>
-					<li><strong>Automatic Mode: </strong>Here it automatically runs depending on availability of the Solar and the Main Supply Power. Here the data can be monitored in the Webpage.</li>
-				</ul><br>
-				<strong class="p3solar">Step 3: MANUAL MODE</strong><br><br>
+                There are basically two modes of operation in this Solar connected Systems, They are :<br><br>
+                <ul class="p2solar">
+                    <li><strong>Manual Mode:</strong> As the name indicates it is controlled manually.But there are two different options for that they are :
+                <em>Physical switches</em>: Here it is controlled by the switching ON and OFF by the conventional switches.
+                <em>Relay Switch</em> : Here the same operation is carried out using the wifi web page to turn on and off the relay coils and monitored using ESP8266.</li>
+                    <li><strong>Automatic Mode: </strong>Here it automatically runs depending on availability of the Solar and the Main Supply Power. Here the data can be monitored in the Webpage.</li>
+                </ul><br>
+                <strong class="p3solar">Step 3: MANUAL MODE</strong><br><br>
 
-				<strong class="p2solar">RELAY CONNECTIONS</strong><br>
+                <strong class="p2solar">RELAY CONNECTIONS</strong><br>
 
-		<br><img class="img2solar" src="solar3.jpg"  width="460" height="345"><br><br>
-				<ol class="p2solar">
-					<li>Connect the solar panel to the Charge controller, Charge controller to the battery and Battery to Inverter through a relay as per the Circuit Diagram.
-				Relay must be of the correct specification. The main data to be noted is the relay coil voltage, Operating voltage and most importantly the current capacity of the relay.
-				<strong>Considerations :</strong></li>
+        <br><img class="img2solar" src="solar3.jpg"  width="460" height="345"><br><br>
+                <ol class="p2solar">
+                    <li>Connect the solar panel to the Charge controller, Charge controller to the battery and Battery to Inverter through a relay as per the Circuit Diagram.
+                The relay must be of the correct specification. The main data to be noted is the relay coil voltage, Operating voltage and most importantly the current capacity of the relay.
+                <strong>Considerations :</strong></li>
 
-					<li>Solar panel to Charge controller maximum current =5 Amp ( so relay of 10 amp is enough)</li>
-					<li>Charge controller to battery maximum current =5 amp (so relay of 10 amp is enough)</li>
-					<li>Battery to Inverter maximum current =50 AMP ( relay of 70 or 80 amp is enough)
-				Here for many of you even me have the same question, how it can be 50 amps at most. The answer to this question is simple when we look at the basic power equation.</li>
-				</ol><br>
-				<p class="p2solar">Power=Voltage *current
+                    <li>Solar panel to Charge controller maximum current =5 Amp ( so relay of 10 amp is enough)</li>
+                    <li>Charge controller to battery maximum current =5 amp (so relay of 10 amp is enough)</li>
+                    <li>Battery to Inverter maximum current =50 AMP ( relay of 70 or 80 amp is enough)
+                Here for many of you even me have the same question, how it can be 50 amps at most. The answer to this question is simple when we look at the basic power equation.</li>
+                </ol><br>
+                <p class="p2solar">Power=Voltage *current
 
-				Consider 600va (watts)inverter (for basic understanding 4 tubelight 4 fan inverter)
+                Consider 600va (watts)inverter (for basic understanding 4 tube light 4 fan inverter)
 
-				Power taken form battery = Power delivered to the load ( taking Ideal condition)
+                Power is taken from battery = Power delivered to the load ( taking Ideal condition)
 
-				Volatage of Battery (12Volts)* current form battery=600 va
+                Voltage of Battery (12Volts)* current form battery=600 VA
 
-				12*I=600 =>I=600/12=50Ampere
+                12*I=600 =>I=600/12=50Ampere
 
-				Thus from the basic calculation we can come to conclusion that relay switch must withstand min 50 amp so a bigger relay is taken for the consideration and other important thing is that, this relay is activated by other normal relay.
-				<br>
+                Thus from the basic calculation, we can come to the conclusion that relay switch must withstand min 50 amp so a bigger relay is taken for the consideration and another important thing is that, this relay is activated by another normal relay.
+                <br>
 
-				<br>
-				<strong class="p3solar">Step 4: Practical Construction</strong><br>
-				<br><img class="img2solar" src="solar4.jpg"  width="460" height="345"><br><br>
-				<img class="img2solar" src="solar5.jpg"  width="300" height="400"><br><br>
+                <br>
+                <strong class="p3solar">Step 4: Practical Construction</strong><br>
+                <br><img class="img2solar" src="solar4.jpg"  width="460" height="345"><br><br>
+                <img class="img2solar" src="solar5.jpg"  width="300" height="400"><br><br>
 
-				<p class="p3solar">Note:<br><br>
-				<ul class="p2solar">
-					<li>Make a main normal switch before connecting to the relay. This will ensure the proper control of the system in case of any undesirable problems.</li>
-					<li>Even though making a relay connections as per the diagram , it is also equally important to make the manual normal switches parallel to the relay as you cannot completely depend on the Micro controller for the operations as per the example.</li>
-					<li>Make the proper fuse to avoid the short circuit and overload faults.</li>
-					<li>In the connections between the inverter and the battery where we have seen there is the maximum amount of the current is passing, make sure to connect with the thick wire which resist, There use the MCB( miniature Circuit Breaker as the Switch) instead of the conventional switch.</li>
-				</ul><br>
-				<h2 id="step5solar" class="p3solar"><strong>Step 5: Controller-WIFI ESP8266 NODEMCU</strong></h2><br>
-				<img class="img2solar" src="solar6.jpg"  width="460" height="345"><br><br>
-				<ul class="p2solar">
-					<li>Built in wifi control</li>
-					<li>Easily programmable with arduino IDE</li>
-					<li>Cheap and simple
-				Connect the Relay Outputs to the GPIO of the controllers. Selection of the Port is as per wish. Kindly make sure you connect it in the proper I/O terminals of the microcontroller and mention the same in the program.</li>
-				</ul><br><br>
-				<strong class="p3solar">Step 6: AUTOMATIC MODE</strong><br><br>
+                <p class="p3solar">Note:<br><br>
+                <ul class="p2solar">
+                    <li>Make a main normal switch before connecting to the relay. This will ensure the proper control of the system in case of any undesirable problems.</li>
+                    <li>Even though making a relay connections as per the diagram , it is also equally important to make the manual normal switches parallel to the relay as you cannot completely depend on the Micro controller for the operations as per the example.</li>
+                    <li>Make the proper fuse to avoid the short circuit and overload faults.</li>
+                    <li>In the connections between the inverter and the battery where we have seen there is the maximum amount of the current is passing, make sure to connect with the thick wire which resist, There use the MCB( miniature Circuit Breaker as the Switch) instead of the conventional switch.</li>
+                </ul><br>
+                <h2 id="step5solar" class="p3solar"><strong>Step 5: Controller-WIFI ESP8266 NODEMCU</strong></h2><br>
+                <img class="img2solar" src="solar6.jpg"  width="460" height="345"><br><br>
+                <ul class="p2solar">
+                    <li>Built in wifi control</li>
+                    <li>Easily programmable with arduino IDE</li>
+                    <li>Cheap and simple
+                Connect the Relay Outputs to the GPIO of the controllers. Selection of the Port is as per wish. Kindly make sure you connect it in the proper I/O terminals of the microcontroller and mention the same in the program.</li>
+                </ul><br><br>
+                <strong class="p3solar">Step 6: AUTOMATIC MODE</strong><br><br>
 
-				<p class="p2solar">In this Mode of Operation, the controller automatically checks the power supply, solar input is present or not and relays are automatically made to ON and OFF depending on this.
+                <p class="p2solar">In this Mode of Operation, the controller automatically checks the power supply, solar input is present or not and relays are automatically made to ON and OFF depending on this.
 
-				<br>The Basic Outline of the Automatic Mode of Operation is as follows:
+                <br>The Basic Outline of the Automatic Mode of Operation is as follows:
 
-				<br><br><strong>Case1: SOLAR OFF and MAIN ON</strong>
+                <br><br><strong>Case1: SOLAR OFF and MAIN ON</strong>
 
-				Relay 1 OFF (solar to charge controller off)
+                Relay 1 OFF (solar to charge controller off)
 
-				Relay 2 OFF (Charge controller to Battery off)
+                Relay 2 OFF (Charge controller to Battery off)
 
-				Relay 3 ON (Battery to Inverter On)
+                Relay 3 ON (Battery to Inverter On)
 
-				<br><br><strong>Case2: SOLAR OFF and MAIN OFF</strong>
-				Relay 1 OFF (solar to charge controller off)
+                <br><br><strong>Case2: SOLAR OFF and MAIN OFF</strong>
+                Relay 1 OFF (solar to charge controller off)
 
-				Relay 2 OFF (Charge controller to Battery on)
+                Relay 2 OFF (Charge controller to Battery on)
 
-				Relay 3 ON (Battery to Inverter On)
+                Relay 3 ON (Battery to Inverter On)
 
-				<br><br><strong>Case3: SOLAR ON and MAIN ON</strong>
-				Relay 1 ON (solar to charge controller on)
+                <br><br><strong>Case3: SOLAR ON and MAIN ON</strong>
+                Relay 1 ON (solar to charge controller on)
 
-				Relay 2 ON (Charge controller to Battery on)
+                Relay 2 ON (Charge controller to Battery on)
 
-				Relay 3 OFF (Battery to Inverter off)
+                Relay 3 OFF (Battery to Inverter off)
 
-				<br><br><strong>Case4: SOLAR ON and MAIN OFF</strong>
-				Relay 1 ON (solar to charge controller on)
+                <br><br><strong>Case4: SOLAR ON and MAIN OFF</strong>
+                Relay 1 ON (solar to charge controller on)
 
-				Relay 2 ON (Charge controller to Battery on)
+                Relay 2 ON (Charge controller to Battery on)
 
-				Relay 3 ON (Battery to Inverter On)
+                Relay 3 ON (Battery to Inverter On)
 
-				Thus programming these cases makes the micro controller to operate in the Automatic Mode.
+                Thus programming these cases makes the microcontroller to operate in the Automatic Mode.
 
-				All these are monitored in the webpage.
-					<br><br>
-				<strong class="p3solar">Step 7: INPUTS OR SENSOR</strong><br><br>
+                All these are monitored in the web page.
+                    <br><br>
+                <strong class="p3solar">Step 7: INPUTS OR SENSOR</strong><br><br>
 
-				<img class="img2solar" src="solar7.jpg"  width="460" height="345"><br><br>
-				<img class="img2solar" src="solar8.jpg"  width="460" height="345"><br><br>
+                <img class="img2solar" src="solar7.jpg"  width="460" height="345"><br><br>
+                <img class="img2solar" src="solar8.jpg"  width="460" height="345"><br><br>
 
-				Before we step on to the programming of the Manual and the Automatic mode of Operation, We need to detuct two factors, they are :
-				<ol class="p2solar">
-					<li>SOLAR on or off</li>
-					<li>MAIN SUPPLY on or off</li>
-				</ol><br>
-				<strong class="p3solar">SOLAR SENSOR :</strong><br><br>
+                Before we step onto the programming of the Manual and the Automatic Mode of Operation, We need to detect two factors, they are :
+                <ol class="p2solar">
+                    <li>SOLAR on or off</li>
+                    <li>MAIN SUPPLY on or off</li>
+                </ol><br>
+                <strong class="p3solar">SOLAR SENSOR :</strong><br><br>
 
-				<p class="p2solar">The presence of the solar can be detucted in various ways , there is no limitations, Some of the ways I suggest are as follows:
-				<ol class="p2solar">
-					<li>Using of the LDR, Photodiode, Phototransistors to detect the presence of the Sun light.</li>
-					<li>Using of the Voltage sensor (voltage bridge to measure the voltage in the microcontroller GPIO)</li>
-					<li>Use of the Relay or Optocoupler</li>
-				</ol><br>
-				<p class="p2solar">To make the system and the code simple I used the relay as the sensor.
+                <p class="p2solar">The presence of the solar can be detected in various ways, there are no limitations, Some of the ways I suggest are as follows:
+                <ol class="p2solar">
+                    <li>Using of the LDR, Photodiode, Phototransistors to detect the presence of the Sun light.</li>
+                    <li>Using of the Voltage sensor (voltage bridge to measure the voltage in the microcontroller GPIO)</li>
+                    <li>Use of the Relay or Optocoupler</li>
+                </ol><br>
+                <p class="p2solar">To make the system and the code simple I used the relay as the sensor.
 
-				I connected the relay (12V) coil to the solar input , So when the sunlight is bright enough to trigger the coil, relay is on switch will be closed, thus it can be taken as the presence of the solar energy.
-				<br><br><strong class="p3solar">MAIN SUPPLY SENSING:</strong><br><br>
+                I connected the relay (12V) coil to the solar input, So when the sunlight is bright enough to trigger the coil, the relay is on the switch will be closed, thus it can be taken as the presence of the solar energy.
+                <br><br><strong class="p3solar">MAIN SUPPLY SENSING:</strong><br><br>
 
-				<p class="p2solar">If you are Electricaly strong you could make the sensor connection from the Main supply 220 volts by converting the 220 v ac to (5 or 6 v ac)(transformer)and to dc (rectifier) then connect it to the microcontroller input.
+                <p class="p2solar">If you are Electrically strong you could make the sensor connection from the Main supply 220 volts by converting the 220 vac to (5 or 6 vac)(transformer)and to dc (rectifier) then connect it to the microcontroller input.
 
-				<br><em >BUT IF YOU ARE LAZY LIKE ME ,I STRONGLY SAY THERE IS A VERY VERY SIMPLY MEASUREMENT SYSTEM</em><br><br>
-				<ul class="p2solar">
-					<li>Take a waste phone charger and plug it in the supply , the output is 5 volt dc which is more than enough to power up the relay coil. When switch is closed the input is obtained to the microcontroller.</li>
-				</ul><br>
-				<strong class="p3solar">Step 8: ARDUINO PROGRAMMING</strong><br><br>
-				<img class="img2solar" src="solar9.jpg"  width="460" height="345"><br><br>
-				<img class="img2solar" src="solar10.jpg"  width="460" height="345"><br><br>
-				<p class="p2solar">
-				Thus we have come to the final part of this project ,
+                <br><em >BUT IF YOU ARE LAZY LIKE ME ,I STRONGLY SAY THERE IS A VERY VERY SIMPLY MEASUREMENT SYSTEM</em><br><br>
+                <ul class="p2solar">
+                    <li>Take a waste phone charger and plug it in the supply , the output is 5 volt dc which is more than enough to power up the relay coil. When switch is closed the input is obtained to the microcontroller.</li>
+                </ul><br>
+                <strong class="p3solar">Step 8: ARDUINO PROGRAMMING</strong><br><br>
+                <img class="img2solar" src="solar9.jpg"  width="460" height="345"><br><br>
+                <img class="img2solar" src="solar10.jpg"  width="460" height="345"><br><br>
+                <p class="p2solar">
+                Thus we have come to the final part of this project ,
 
-				If you are familiar with the Ardunio programming , it is very easy step<br><br>
-				<ol class="p2solar">
-					<li>Give the wifi name and password in the begining of the program.</li>
-					<li>Change the title and the headings as per your wish.</li>
-					<li>The webpage is basically a html code written in the ardunio IDE, you may also edit and change if you are good in the website designing.</li>
-					<li>After the code being uploaded on the serial monitor there will be the ip address where it must be connected.</li>
-					<li>From the device connected in the same wifi open that ipaddrees then the webpage will be Opened showing the details.</li>
-				</ol><br>
-				<strong class="p3solar">Step 9: CONCLUSION</strong><br><br>
+                If you are familiar with the Ardunio programming , it is very easy step<br><br>
+                <ol class="p2solar">
+                    <li>Give the wifi name and password in the begining of the program.</li>
+                    <li>Change the title and the headings as per your wish.</li>
+                    <li>The webpage is basically a html code written in the ardunio IDE, you may also edit and change if you are good in the website designing.</li>
+                    <li>After the code being uploaded on the serial monitor there will be the ip address where it must be connected.</li>
+                    <li>From the device connected in the same wifi open that ipaddrees then the webpage will be Opened showing the details.</li>
+                </ol><br>
+                <strong class="p3solar">Step 9: CONCLUSION</strong><br><br>
 
-				<p class="p2solar">There are many things which can be added in this project. Some of the ideas which I have are as follows, you may also :<br>
+                <p class="p2solar">There are many things which can be added in this project. Some of the ideas which I have are as follows, you may also :<br>
 
-				1. Usage of the Current sensor (hall effect sensor ) to measure the current and finally to show the status of the power utilized form the Solar Panel.<br>
+                1. Usage of the Current sensor (hall effect sensor ) to measure the current and finally to show the status of the power utilized to form the Solar Panel.<br>
 
-				2. Making a IOT based control to the same system.<br>
+                2. Making an IOT based control to the same system.<br>
 
-				If you have any doubts or any further Ideas feel free to comment and be confident to EXPERIMENT it...!
+                If you have any doubts or any further Ideas feel free to comment and be confident to EXPERIMENT it...!
 
-				<br><br><strong >thank you and be happy ,,.. God is with you... all the best</strong>
-				<br><br><strong>With love</strong>
+                <br><br><strong >thank you and be happy ,,.. God is with you... all the best</strong>
+                <br><br><strong>With love</strong>
 
-				<br><strong>(N.Aranganathan)</strong><br><br>
+                <br><strong>(N.Aranganathan)</strong><br><br>
 
-				<p class="p2solar">MY HOME PROJECT IMAGES ARE</p>
-			<img class="img2solar" src="solar11.jpg"  width="200" height="345">
-				<img class="img2solar" src="solar12.jpg"  width="550" height="425"><br><br>
+                <p class="p2solar">MY HOME PROJECT IMAGES ARE</p>
+            <img class="img2solar" src="solar11.jpg"  width="200" height="345">
+                <img class="img2solar" src="solar12.jpg"  width="550" height="425"><br><br>
 
-				<div class="fb-share-button" data-href="http://engineerthoughts.com/solar.html" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fengineerthoughts.com%2Fsolar.html&amp;src=sdkpreparse">Share</a></div>
+                <div class="fb-share-button" data-href="http://engineerthoughts.com/solar.html" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http:%2F%2Fengineerthoughts.com%2Fsolar.html&amp;src=sdkpreparse">Share</a></div>
 
 </body>
 </html>
