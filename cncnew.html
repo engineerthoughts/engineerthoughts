@@ -88,7 +88,7 @@
 
 					<em>This instructable is just to get overall basic knowledge and programming aspect of CNC machines and its programming with a program at the end. This Instructable may be taken as short notes of CNC and for refreshing material if you already have a knowledge of it.</em>
 
-					I think this would be greatly helpful for the Mechanical students who need to know about CNC and its important in Core Company and also a hobbyists knowing about it helps you a lot. Have taken efforts to give the correct informations which i learned ,but sorry if any errors present in this instructable....kindly forgive me as I am basically form <em><strong>Electrical</strong></em><strong><em> Engineering</em></strong>. You may feel free to point it out if any.
+					I think this would be greatly helpful for the Mechanical students who need to know about CNC and its importance in Core Company and also hobbyists knowing about it helps you a lot. Have taken efforts to give the correct informations which i learned ,but sorry if any errors present in this instructable....kindly forgive me as I am basically from <em><strong>Electrical</strong></em><strong><em> Engineering</em></strong>. You may feel free to point it out if any.
 
 					<em><strong>Moreover this is written in motive to share the known knowledge to the aspirants.</strong></em>
 
@@ -103,415 +103,408 @@
 					<ul>
 					<li class="p3cnc">Why Number comes in play ?</li></ul>
 
-						<p class="p2cnc">This is a number based control where each number has the seperate Value. Each number is assigned to separate function and work. Which we will be seeing it in the upcoming steps.</p>
-				<br>
-					<p class="p3cnc">Advantages of Learning CNC:</p><br>
-
-					<em class="p2cnc">1. As a Core Mechanical Engineer, It is very essential for you to know CNC to get placed in Core.</em><br>
-
-					<em class="p2cnc">2.Basics of CNC is only being used in the 3D printing Industry.</em><br>
-
-					<em class="p2cnc">3. More for a Researchers or hobbyist to make new things, it is very essential for them to know some basic of CNC, to make prototype.</em><br><br>
-
-					<p class="p3cnc">INSIDE CNC</p><br>
-
-					<p class="p2cnc">The CNC basically constructed with the Controllers which determines various Machining Functions for each and every Machine Codes. (Mostly it might be a PLC -Programable Logic Controller)</p>
-					<p class="p3cnc"><br>
-					The are mainly 2 main Controller companies ,They are as follows:</p>
-					<ol>
-						<li><strong>FANUC CNC CONTROLLER</strong></li>
-						<li><strong>SINENUMERIK CONTROLLER(siemens brand)</strong></li>
-					</ol>
-					<p class="p2cnc">They are the Largest manufacturers of the CNC machine and CNC controllers in world.</p>
-
-					<em class="p2cnc"><strong>In INDIA many manufacturers use FANUC machines</strong></em><br>
-
-					</div><br><br>
-					</section><section class="p2cnc">
-					<h2 class="p3cnc">Step 1: What Is Machining</h2>
-						<img class="img2cnc" src="cnc2.jpg"  width="460" height="345">
-						<img class="img2cnc" src="cnc3.jpg"  width="460" height="345">
-					<div class="step-body">
-
-					<strong><em>Machining as simple can be said as a process of removal of the material form the work piece to get the desirable and needed shape.</em></strong>
-
-					The Shape and Size of the output depends on the MOVEMENT OF THE TOOL or JOB and not because of the ROTATION.
-
-					The Machining process may be broadly classified as follows:
-					<ul>
-						<li>Lathe machining-(JOB rotate and TOOL move)</li>
-						<li>Mill Machining-(JOB move and TOOL rotate)</li>
-						<li>Drill Machining-(JOB stationary and TOOL rotate)</li>
-					</ul>
-					You may see the you tube videos for the good underestanding about the working of the various Machining process.
-
-					Note:
-					<ol>
-						<li>In this JOB means the material which you want to make to required shape and size.</li>
-						<li>"TOOL is simply a tool"</li>
-					</ol>
-					As simple to understand: In your Home , Knife is a tool and vegetables or bread is job , (TOOL knife) which deforms the shape of (JOB vegetable )as required by (YOU the MACHINE).
-
-					</div><br>
-					</section><section class="p2cnc">
-					<h2  class="p3cnc">Step 2: CNC Classification</h2>
-						<img class="img2cnc" src="cnc4.jpg"  width="460" height="345">
-						<img class="img2cnc" src="cnc5.jpg"  width="460" height="345">
-					<div class="step-body">
-
-					The CNC machine can be basically classified into two types as follows :
-					<ol>
-						<li><u><strong>CNC Lathe Machine</strong><strong>:</strong></u></li>
-					</ol>
-					<ul>
-						<li>Horizontal Operations.</li>
-						<li><strong>JOB will rotate and TOOL will move.</strong></li>
-						<li>Can be called as <strong>TURNING CENTRE.</strong></li>
-					</ul>
-					2. <u><strong>CNC</strong><strong>Milling Machine :</strong></u>
-					<ul>
-						<li>Vertical Operations.</li>
-						<li><strong>JOB will move and TOOL will rotate.</strong></li>
-						<li>Can be called as <strong>MACHINING CENTRE.</strong></li>
-					</ul>
-					</div>
-					</section><section class="p2cnc">
-					<h2  class="p3cnc">Step 3: CNC FUNCTIONS</h2>
-					<img class="img2cnc" src="cnc6.jpg"  width="460" height="345">
-					<div class="step-body">
-
-					CNC coding is basically in the Machine Level languages, there is a universal set of codes depending on the function and Operation the CNC does.
-
-					The function of the CNC machine can be classified broadly as follows:
-					<ol>
-						<li>AUXILIARY FUNCTION(M-CODE)</li>
-						<li>PREPARATORY OR MAIN FUNCTION(G-CODE)</li>
-						<li>SPINDLE SPEED FUNCTION(S-CODE)</li>
-						<li>FEED FUNCTION(F-CODE)</li>
-						<li>TOOL FUNCTION(T-CODE)</li>
-					</ol>
-					NOTE:
-					<ol>
-						<li>Here I am focusing on the Lathe type CNC machines.</li>
-						<li>The code may change according to the CNC machines, some codes may be similar. So It is advised to see the Manual of the CNC manufacturer before proceeding any further.</li>
-						<li>Also it is required to know only very few CNC codes for understanding purpose only.</li>
-						<li>Most important codes may be printed on the CNC machine itself.</li>
-					</ol>
-					</div>
-					</section><section class="p2cnc">
-					<h2 class="p3cnc">Step 4: AUXILIARY FUNCTION-(M CODE)</h2><br>
-					<div class="step-body">
-
-					As the name indicates, the auxiliary function is subordinate actions in the CNC machine.
-
-					It is also called as the M-CODE
-
-					Some of the examples of this function are:
-					<ul>
-						<li>Spindle ON or OFF</li>
-						<li>Door Opening</li>
-						<li>Coolent Operation</li>
-					</ul>
-					Some of the Common M codes in all the CNC machine are as follows :
-					<ol>
-						<li>M03- Spindle ON clockwise</li>
-						<li>M04-Spindle ON counter clockwise</li>
-						<li>M05- spindle OFF</li>
-						<li>M07 or M08- Coolent ON</li>
-						<li>M09- Coolent OFF</li>
-						<li>M30- Program end/ reset/ rewind</li>
-					</ol>
-					NOTE: Here spindle refers to part which holds the JOB.( Similar to the Hand in case of the Human )
-
-					The Spindly may be connected to the Induction or any other Motors , which makes it rotating.
-
-					</div><br>
-					</section><section class="p2cnc">
-					<h2 id="step5cnc" class="p3cnc">Step 5: PREPARATORY OR MAIN FUNCTION(G-CODE)</h2><br>
-					<img class="img2cnc" src="C:\updated\cnc7.jpg"  width="460" height="345">
-					<div class="step-body">
-
-					This main function mainly deals with the Tool Movement and other preparatory works.
-
-					It is also called as the G-CODE.
-
-					here I will share some of the basic codes for understanding purposes
-
-					Some of the G CODES are as follows:
-
-					1. G00 or G0 - Positiong the tool to the mark
-					<ul>
-						<li>It refers to the rapid positioning of the Tool to the required point.</li>
-						<li>Speed is at the maximum.</li>
-					</ul>
-					2. G01- Linear Interpolation or Cutting feed
-					<ul>
-						<li>It refers to the Stright line movement of the Tool.</li>
-						<li>It takes the shortest distance to the two points mentioned.</li>
-						<li>Speed can be set in this function</li>
-					</ul>
-					3.G02 or G03- Circular Interpolation(G02 -clockwise and G03 - counter clockwise)
-					<ul>
-						<li>This similar to the G01 code but it takes the curved path</li>
-						<li>So it is required for us to say about the radius and other specifications.</li>
-					</ul>
-					4.G96 and G97 (CSS Mode- Constant Surface Speed control)
-					<ul>
-						<li>This code controls the on and off feature in the Spindle Function , which may be elobrated in the next step.</li>
-					</ul>
-					</div>
-					</section><section class="p2cnc">
-					<h2 id="step6" class="p3cnc">Step 6: SPINDLE SPEED FUNCTION (S-CODE)</h2><br>
-					<img class="img2cnc" src="C:\updated\cnc8.jpg"  width="460" height="345">
+					<p class="p2cnc">This is a number based control where each number has the separate Value. Each number is assigned to separate function and work. Which we will be seeing it in the upcoming steps.</p>
+							<br>
+									<p class="p3cnc">Advantages of Learning CNC:</p><br>
+
+									<em class="p2cnc">1. As a Core Mechanical Engineer, It is very essential for you to know CNC to get placed in Core.</em><br>
+
+									<em class="p2cnc">2.Basics of CNC is only being used in the 3D printing Industry.</em><br>
+
+									<em class="p2cnc">3. More for a Researchers or hobbyist to make new things, it is  essential for them to know some basic of CNC, to make prototype.</em><br><br>
+
+									<p class="p3cnc">INSIDE CNC</p><br>
+
+									<p class="p2cnc">The CNC basically constructed with the Controllers which determines various Machining Functions for each and every Machine Codes. (Mostly it might be a PLC -Programable Logic Controller)</p>
+									<p class="p3cnc"><br>
+									The are mainly 2 main Controller companies ,They are as follows:</p>
+									<ol>
+											<li><strong>FANUC CNC CONTROLLER</strong></li>
+											<li><strong>SINENUMERIK CONTROLLER(siemens brand)</strong></li>
+									</ol>
+									<p class="p2cnc">They are the Largest manufacturers of the CNC machine and CNC controllers in world.</p>
+
+									<em class="p2cnc"><strong>In INDIA many manufacturers use FANUC machines</strong></em><br>
+
+									</div><br><br>
+									</section><section class="p2cnc">
+									The Shape and Size of the output depend on the MOVEMENT OF THE TOOL or JOB and not because of the ROTATION.
+
+									The Machining process may be broadly classified as follows:
+									<ul>
+										<li>Lathe machining-(JOB rotate and TOOL move)</li>
+										<li>Mill Machining-(JOB move and TOOL rotate)</li>
+										<li>Drill Machining-(JOB stationary and TOOL rotate)</li>
+									</ul>
+									You may see the you tube videos for the good underestanding about the working of the various Machining process.
+
+									Note:
+									<ol>
+										<li>In this JOB means the material which you want to make to required shape and size.</li>
+										<li>"TOOL is simply a tool"</li>
+									</ol>
+									As simple to understand: In your Home , Knife is a tool and vegetables or bread is job , (TOOL knife) which deforms the shape of (JOB vegetable )as required by (YOU the MACHINE).
+
+									</div><br>
+									</section><section class="p2cnc">
+									<h2  class="p3cnc">Step 2: CNC Classification</h2>
+										<img class="img2cnc" src="cnc4.jpg"  width="460" height="345">
+										<img class="img2cnc" src="cnc5.jpg"  width="460" height="345">
+									<div class="step-body">
+
+									The CNC machine can be basically classified into two types as follows :
+									<ol>
+										<li><u><strong>CNC Lathe Machine</strong><strong>:</strong></u></li>
+									</ol>
+									<ul>
+										<li>Horizontal Operations.</li>
+										<li><strong>JOB will rotate and TOOL will move.</strong></li>
+										<li>Can be called as <strong>TURNING CENTRE.</strong></li>
+									</ul>
+									2. <u><strong>CNC</strong><strong>Milling Machine :</strong></u>
+									<ul>
+										<li>Vertical Operations.</li>
+										<li><strong>JOB will move and TOOL will rotate.</strong></li>
+										<li>Can be called as <strong>MACHINING CENTRE.</strong></li>
+									</ul>
+									</div>
+									</section><section class="p2cnc">
+									<h2  class="p3cnc">Step 3: CNC FUNCTIONS</h2>
+									<img class="img2cnc" src="cnc6.jpg"  width="460" height="345">
+									<div class="step-body">
+
+									CNC coding is basically in the Machine Level languages, there is a universal set of codes depending on the function and Operation the CNC does.
+
+									The function of the CNC machine can be classified broadly as follows:
+									<ol>
+										<li>AUXILIARY FUNCTION(M-CODE)</li>
+										<li>PREPARATORY OR MAIN FUNCTION(G-CODE)</li>
+										<li>SPINDLE SPEED FUNCTION(S-CODE)</li>
+										<li>FEED FUNCTION(F-CODE)</li>
+										<li>TOOL FUNCTION(T-CODE)</li>
+									</ol>
+									NOTE:
+									<ol>
+										<li>Here I am focusing on the Lathe type CNC machines.</li>
+										<li>The code may change according to the CNC machines, some codes may be similar. So It is advised to see the Manual of the CNC manufacturer before proceeding any further.</li>
+										<li>Also it is required to know only very few CNC codes for understanding purpose only.</li>
+										<li>Most important codes may be printed on the CNC machine itself.</li>
+									</ol>
+									</div>
+									</section><section class="p2cnc">
+									<h2 class="p3cnc">Step 4: AUXILIARY FUNCTION-(M CODE)</h2><br>
+									<div class="step-body">
+
+									As the name indicates, the auxiliary function is subordinate actions in the CNC machine.
+
+									It is also called as the M-CODE
+
+									Some of the examples of this function are:
+									<ul>
+										<li>Spindle ON or OFF</li>
+										<li>Door Opening</li>
+										<li>Coolent Operation</li>
+									</ul>
+									Some of the Common M codes in all the CNC machine are as follows :
+									<ol>
+										<li>M03- Spindle ON clockwise</li>
+										<li>M04-Spindle ON counter clockwise</li>
+										<li>M05- spindle OFF</li>
+										<li>M07 or M08- Coolent ON</li>
+										<li>M09- Coolent OFF</li>
+										<li>M30- Program end/ reset/ rewind</li>
+									</ol>
+									NOTE: Here spindle refers to part which holds the JOB.( Similar to the Hand in case of the Human )
+
+									The Spindly may be connected to the Induction or any other Motors, which makes it rotate.
+
+									</div><br>
+									</section><section class="p2cnc">
+									<h2 id="step5cnc" class="p3cnc">Step 5: PREPARATORY OR MAIN FUNCTION(G-CODE)</h2><br>
+									<img class="img2cnc" src="cnc7.jpg"  width="460" height="345">
+									<div class="step-body">
+
+									This main function mainly deals with the Tool Movement and other preparatory works.
+
+									It is also called as the G-CODE.
+
+									here I will share some of the basic codes for understanding purposes
+
+									Some of the G CODES are as follows:
+
+									1. G00 or G0 - Positiong the tool to the mark
+									<ul>
+										<li>It refers to the rapid positioning of the Tool to the required point.</li>
+										<li>Speed is at the maximum.</li>
+									</ul>
+									2. G01- Linear Interpolation or Cutting feed
+									<ul>
+										<li>It refers to the Stright line movement of the Tool.</li>
+										<li>It takes the shortest distance to the two points mentioned.</li>
+										<li>Speed can be set in this function</li>
+									</ul>
+									3.G02 or G03- Circular Interpolation(G02 -clockwise and G03 - counter clockwise)
+									<ul>
+										<li>This similar to the G01 code but it takes the curved path</li>
+										<li>So it is required for us to say about the radius and other specifications.</li>
+									</ul>
+									4.G96 and G97 (CSS Mode- Constant Surface Speed control)
+									<ul>
+										<li>This code controls the on and off feature in the Spindle Function , which may be elobrated in the next step.</li>
+									</ul>
+									</div>
+									</section><section class="p2cnc">
+									<h2 id="step6" class="p3cnc">Step 6: SPINDLE SPEED FUNCTION (S-CODE)</h2><br>
+									<img class="img2cnc" src="cnc8.jpg"  width="460" height="345">
 
-					<div class="step-body">
+									<div class="step-body">
 
-					This function of the CNC mainly focus on the <strong>Speed of the Spindle.</strong>
-					<ul>
-						<li>Rotation speed of Spindle cannot be set to any arbitary value , there is a calculation for the proper speed setup. Not maintaining the proper speed may lead to the improper FINISH of the JOB.</li>
-					</ul>
-					The speed of the Spindle mainly depends on the 2 main factors as follows :
-					<ol>
-						<li><strong>Diameter of the Tool or Job</strong></li>
-						<li><strong>Cutting Speed (ie the Metal Removal rate)</strong></li>
-					</ol>
-					CUTTING SPEED Vc= {(Circumference of the material or length removed per rev)*(number of revolution)}/ 1min
+									This function of the CNC mainly focus on the <strong>Speed of the Spindle.</strong>
+									<ul>
+										<li>Rotation speed of Spindle cannot be set to any arbitary value , there is a calculation for the proper speed setup. Not maintaining the proper speed may lead to the improper FINISH of the JOB.</li>
+									</ul>
+									The speed of the Spindle mainly depends on the 2 main factors as follows :
+									<ol>
+										<li><strong>Diameter of the Tool or Job</strong></li>
+										<li><strong>Cutting Speed (ie the Metal Removal rate)</strong></li>
+									</ol>
+									CUTTING SPEED Vc= {(Circumference of the material or length removed per rev)*(number of revolution)}/ 1min
 
-					<strong>Vc= π* D*n/1 mm/min</strong>
+									<strong>Vc= π* D*n/1 mm/min</strong>
 
-					Vc =π* D*n/1000 m/min
+									Vc =π* D*n/1000 m/min
 
-					now Rotation per min <strong>RPM n= (Vc*1000)/π* D</strong>
+									now Rotation per min <strong>RPM n= (Vc*1000)/π* D</strong>
 
-					RPM can be calculated easily.
+									RPM can be calculated easily.
 
-					<em><strong>EXAMPLE:</strong></em>
+									<em><strong>EXAMPLE:</strong></em>
 
-					<em><strong>Consider a example of the material to be removed is of the diameter 100mm, cutting speed is 200 m/min</strong></em>
+									<em><strong>Consider a example of the material to be removed is of the diameter 100mm, cutting speed is 200 m/min</strong></em>
 
-					<em><strong>given</strong></em>
+									<em><strong>given</strong></em>
 
-					D=100mm
-
-					Vc=200m/min
-
-					RPM (n)=(Vc*1000)/π* D
-
-					RPM (n)=(200*1000)/(3.141*100)
-
-					n=636 RPM to be set for the good machining process.
-
-					<strong>CODE:</strong>
-					<ol>
-						<li>S(rpm value)</li>
-					</ol>
-					Example S636 ---> this maintains the speed of the Spindle at that RPM.
-
-					</div><br>
-					</section><section class="p2cnc">
-					<h2 id="step7" class="p3cnc">Step 7: FEED FUNCTION (F-CODE)</h2><br>
-					<div class="step-body">
-
-					This function deals with the movement of the Tool for the required output shape.
-
-					The Speed of movement of the <strong>TOOL</strong> is can be set by the calculation as follows:
-
-					<strong>Speed= D/T mm/min</strong>
-
-					It can be coded as 2 methods as follows :
-					<ol>
-						<li>F (speed in mm/min) for example to set the speed of the tool as 100 mm/min we write as F100</li>
-						<li>F(mm/revolution)for example need to remove 100 mm material in 1 min then we write as F100</li>
-					</ol>
-					Both methods of describing the feed function is valid.
-
-					NOTE:
-					<ol>
-						<li>But before using both you need to describe in the preparatory function as follows:</li>
-					</ol>
-					G94 for speed/min and G95 for mm/ revolution. ----->in G CODE B type
-
-					G98 for speed/min and G99 for mm/ revolution. ----->in G CODE A type
-
-					As said before there will be the slight difference in code for each and every CNC machine
-
-					</div><br>
-					</section><section class="p2cnc">
-					<h2 id="step8" class="p3cnc">Step 8: TOOL FUNCTION (T-CODE)</h2><br>
-				<img class="img2cnc" src="cnc9.jpg"  width="460" height="345">
-				<img class="img2cnc" src="cnc10.jpg"  width="460" height="345"><br>
-					<div class="step-body">
-
-					This function determines the appropriate tool for the correct operation on the JOB.
-
-					There will be set of Standard tools listed in the CNC and for each number feed will change the required tool automatically.
-
-					The tool Code basically have 4 numbers the syntax of the code can be written as follows:
-
-					CODE:
-
-					T (tool number )(Offset Number)
-
-					for example :
-
-					T0101---->here the first 01 determines the tool number and the next 01 determines the offset number of the tool
-
-					NOTE:
-
-					The selection of the tool is totally different in the case of the Maching Centre that is Milling CNC types
-
-					here it is written with the Auxiliary M code for example
-
-					T01
-
-					M06
-
-					</div><br>
-					</section><section class="p2cnc">
-					<h2 id="step9" class="p3cnc">Step 9: PROGRAMING</h2><br>
-					<div class="step-body">
-
-					Thanks for you patient reading. This is the Important part in learning the CNC as it involves better understanding of how the Codes are formulated for the required shape and size.
-					<ul>
-						<li>Before going any further you must be clear in ploting the 2d graph which is very basic part of the school higher Educations.</li>
-						<li>Here the points in the 2 D graph describe the exact notation of how the Tool must move and how speed the spindle must rotate.</li>
-					</ul>
-					There are 2 main methods of programming in the CNC, They are as follows :
-					<ol>
-						<li><strong>Absolute method</strong></li>
-						<li><strong>Incremental method</strong></li>
-					</ol>
-					<strong>Absolute method:</strong>
-					<ul>
-						<li>Here the ploting of the graph will be taken with reference to particular point</li>
-						<li>Easy and safe</li>
-						<li><strong>G90 is the CODE for absolute programing.</strong></li>
-					</ul>
-					<strong>Incremental Method:</strong>
-					<ul>
-						<li>Reference to the previous point of the Tool.</li>
-						<li>used only for small changes.</li>
-						<li>Experts with great experience can make use of it.</li>
-						<li><strong>G91 is the CODE for the Incremental programing.</strong></li>
-					</ul>
-					<strong><em>TIPS BEFORE WRITING CODE:</em></strong>
-					<ol>
-						<li>Make sure of the Tool Path</li>
-						<li>Establish absolute Virtual Zero point</li>
-						<li>Job centre is X=0</li>
-						<li>Job end face is Z=0</li>
-						<li>Assume it as a cartesian centre</li>
-						<li>always use a decimal point after the number</li>
-						<li>End of the block is represented by semicolun (;).</li>
-						<li>Stoping of the program is made by emergency key, which exist the loop operation.</li>
-					</ol>
-					</div>
-					</section><section class="p2cnc">
-					<h2 class="p3cnc">Step 10: STEPS IN PROGRAMING</h2><br>
-					<div class="step-body">
+									D=100mm
+
+									Vc=200m/min
+
+									RPM (n)=(Vc*1000)/π* D
+
+									RPM (n)=(200*1000)/(3.141*100)
+
+									n=636 RPM to be set for the good machining process.
+
+									<strong>CODE:</strong>
+									<ol>
+										<li>S(rpm value)</li>
+									</ol>
+									Example S636 ---> this maintains the speed of the Spindle at that RPM.
+
+									</div><br>
+									</section><section class="p2cnc">
+									<h2 id="step7" class="p3cnc">Step 7: FEED FUNCTION (F-CODE)</h2><br>
+									<div class="step-body">
+
+									This function deals with the movement of the Tool for the required output shape.
+
+									The Speed of movement of the <strong>TOOL</strong> is can be set by the calculation as follows:
+
+									<strong>Speed= D/T mm/min</strong>
+
+									It can be coded as 2 methods as follows :
+									<ol>
+										<li>F (speed in mm/min) for example to set the speed of the tool as 100 mm/min we write as F100</li>
+										<li>F(mm/revolution)for example need to remove 100 mm material in 1 min then we write as F100</li>
+									</ol>
+									Both methods of describing the feed function is valid.
+
+									NOTE:
+									<ol>
+										<li>But before using both you need to describe in the preparatory function as follows:</li>
+									</ol>
+									G94 for speed/min and G95 for mm/ revolution. ----->in G CODE B type
+
+									G98 for speed/min and G99 for mm/ revolution. ----->in G CODE A type
+
+									As said before there will be the slight difference in code for each and every CNC machine
+
+									</div><br>
+									</section><section class="p2cnc">
+									<h2 id="step8" class="p3cnc">Step 8: TOOL FUNCTION (T-CODE)</h2><br>
+								<img class="img2cnc" src="cnc9.jpg"  width="460" height="345">
+								<img class="img2cnc" src="cnc10.jpg"  width="460" height="345"><br>
+									<div class="step-body">
+
+									This function determines the appropriate tool for the correct operation of the JOB.
+
+									There will be set of Standard tools listed in the CNC and for each number feed will change the required tool automatically.
+
+									The tool Code basically have 4 numbers the syntax of the code can be written as follows:
+
+									CODE:
+
+									T (tool number )(Offset Number)
+
+									for example :
+
+									T0101---->here the first 01 determines the tool number and the next 01 determines the offset number of the tool
+
+									NOTE:
+
+									The selection of the tool is totally different in the case of the Machine Centre that is Milling CNC types
+
+									here it is written with the Auxiliary M code for example
+
+									T01
+
+									M06
+
+									</div><br>
+									</section><section class="p2cnc">
+									<h2 id="step9" class="p3cnc">Step 9: PROGRAMING</h2><br>
+									<div class="step-body">
+
+									Thanks for your patient reading. This is the Important part in learning the CNC as it involves a better understanding of how the Codes are formulated for the required shape and size.
+									<ul>
+										<li>Before going any further you must be clear in ploting the 2d graph which is very basic part of the school higher Educations.</li>
+										<li>Here the points in the 2 D graph describe the exact notation of how the Tool must move and how speed the spindle must rotate.</li>
+									</ul>
+									There are 2 main methods of programming in the CNC, They are as follows :
+									<ol>
+										<li><strong>Absolute method</strong></li>
+										<li><strong>Incremental method</strong></li>
+									</ol>
+									<strong>Absolute method:</strong>
+									<ul>
+										<li>Here the ploting of the graph will be taken with reference to particular point</li>
+										<li>Easy and safe</li>
+										<li><strong>G90 is the CODE for absolute programing.</strong></li>
+									</ul>
+									<strong>Incremental Method:</strong>
+									<ul>
+										<li>Reference to the previous point of the Tool.</li>
+										<li>used only for small changes.</li>
+										<li>Experts with great experience can make use of it.</li>
+										<li><strong>G91 is the CODE for the Incremental programing.</strong></li>
+									</ul>
+									<strong><em>TIPS BEFORE WRITING CODE:</em></strong>
+									<ol>
+										<li>Make sure of the Tool Path</li>
+										<li>Establish absolute Virtual Zero point</li>
+										<li>Job centre is X=0</li>
+										<li>Job end face is Z=0</li>
+										<li>Assume it as a cartesian centre</li>
+										<li>always use a decimal point after the number</li>
+										<li>End of the block is represented by semicolun (;).</li>
+										<li>Stoping of the program is made by emergency key, which exist the loop operation.</li>
+									</ol>
+									</div>
+									</section><section class="p2cnc">
+									<h2 class="p3cnc">Step 10: STEPS IN PROGRAMING</h2><br>
+									<div class="step-body">
 
-					The Steps in the CNC programming are as follows:
-
-					Pre-requisities
-					<ol>
-						<li>Make a diagram of the required job with the exact dimensions</li>
-						<li>Make the Virtual zero at the center of the JOB.</li>
-						<li>Mark the points where the Tool has to take path.</li>
-						<li>Note down the X,Z table</li>
-					</ol>
-					Steps :
-					<ol>
-						<li>Set absolute zero point</li>
-						<li>Select the Tool</li>
-						<li>Start the spindle with speed mentioning (as per the calculation)</li>
-						<li>Start the coolent( to avoid heating in the machining process)</li>
-						<li>Mention the points one by one ( always make sure the feed rate is low)</li>
-						<li>Finally when all points are over stop spindle</li>
-						<li>Stop coolent</li>
-						<li>Return the tool back to Home position</li>
-						<li>Program End M30</li>
-					</ol>
-					NOTES:
-
-					These are the one's which I understand and It may differ to the other person or any standard material.
-
-					</div><br>
-					</section><section class="p2cnc">
-					<h2 id="step11" class="p3cnc">Step 11: PRACTICAL EXAMPLE:</h2><br>
-				<img class="img2cnc" src="cnc11.jpg"  width="460" height="345">
-				<img class="img2cnc" src="cnc12.jpg"  width="460" height="345">
-				<img class="img2cnc" src="cnc13.jpg"  width="460" height="345">
-					<div class="step-body">
-
-					Here we can see the practical example of making it .
-
-					here we need to write the coding to the Dimensions specified to the question.<br>
-
-					STEP  1: Marking the points of motion of the TOOL<br>
-
-					STEP  2: TABULAR COLUMN<br>
-
-					STEP 3: <em><strong>CODING</strong></em> (all the remaning steps comes under to avoid unnecessary confusions)
-
-					<br><br><i class="p3cnc">G28 U0.0 W0.0;</i>//Automatic reurn to machine reference point
-
-					<br><i class="p3cnc">T0101;/</i><em>/ </em>Tool select , <br><p class="p2cnc">first 01 represents the tool and the next 01 represents offset tool
-
-					</p><i class="p3cnc">G0 X62.0 Z0.0;</i>// Make sure the tool first placed little above the JOB<br>
-
-					<i class="p3cnc">M03 S1000;</i class="p2cnc">// Start the spindle in clockwise direction and spindle speed is 1000 rpm</i>
-
-					<br><em><i class="p3cnc">M08;</i>// Coolent On</em><br>
-
-					<i class="p3cnc">G01 X0.0 Z0.0 F0.1;</i>// Set the JOB zero point and set the Tool feed speed
-
-					<br><i class="p3cnc">G01 X50.0 Z0.0;</i>// from these plot the tabular column<br>
-
-					<em><i class="p3cnc">G01 X50.0 Z-30.0;</i></em><br>
-
-					<em><i class="p3cnc">G01 X54.0 Z-30.0;</i></em><br>
-
-					<em><i class="p3cnc">G01 X54.0 Z-60.0;</i></em><br>
-
-					<em><i class="p3cnc">G01 X58.0 Z-60.0;</i></em><br>
-
-					<em><i class="p3cnc">G01 X58.0 Z-100.0;</i></em><br>
-
-					<em><i class="p3cnc">G01 X62.0 Z-100.0;</i></em><br>
-
-					<em><i class="p3cnc">M05;// Spindle off</i></em><br>
-
-					<em><i class="p3cnc">M09;// Coolent off</i></em><br>
-
-					<i class="p3cnc">G28 U0.0 W0.0;</i>// Tool return to home position
-
-					</div>
-					<!--<div id="rich-embed-files" class="ible-files"></div>
-					<ul id="attachments" class="ible-files unstyled">
-						<li class="file-info clearfix "><a class="thumb-wrapper" title="Practical example pdf.pdf" href="https://cdn.instructables.com/ORIG/FVQ/LCIJ/J7L46TMY/FVQLCIJJ7L46TMY.pdf" download="Practical example pdf.pdf"><span class="file-thumb"><img class="tiny-img lazy-img-scroll" src="https://www.instructables.com/static/defaultIMG/file/PDF.gif" alt="Practical example pdf.pdf" data-src="https://www.instructables.com/static/defaultIMG/file/PDF.gif" /></span><span class="title">Practical example pdf.pdf</span></a>
-					<div class="file-actions"><a class="btn pull-right" href="https://cdn.instructables.com/ORIG/FVQ/LCIJ/J7L46TMY/FVQLCIJJ7L46TMY.pdf" download="Practical example pdf.pdf">Download</a></div></li>
-					</ul>
-					</section>--><br><section class="p2cnc">
-					<h2  class="p3cnc">Step 12: CONCLUSION</h2>
-				<img class="img2cnc" src="cnc14.jpg"  width="460" height="345">
-				<img class="img2cnc" src="cnc15.jpg"  width="460" height="345">
-					<div class="step-body">
-
-					Thus in this Instructable I have made my full efforts to make sure that the reader will get a basic Idea of what is CNC and programming basics in it. I have made my efforts to cross check all details.
-
-					I have given a gist of practical class in my internship from the expert of CNC. All comments improving this are welcomed.
-
-					MY suggestions
-					<ol>
-						<li>Install the Simulation Software and Simulate the code on your own....!</li>
-					</ol>
-					Thanks,... ENRICH YOUR LIFE WITH KNOWLEDGE .... BE happy.. GOD is with you..!!
-					<br>	<br>
-					N.Aranganathan
-
-					</div>
-					<div id="double-inline-ads" class="clearfix"></div>
-					</section>
-					<div class="fb-share-button" data-href="http://engineerthoughts.com/cncnew.html" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fengineerthoughts.com%2Fcncnew.html&amp;src=sdkpreparse">Share</a></div>
-					</body>
-					</html>
+									The Steps in the CNC programming are as follows:
+
+									Pre-requisities
+									<ol>
+										<li>Make a diagram of the required job with the exact dimensions</li>
+										<li>Make the Virtual zero at the center of the JOB.</li>
+										<li>Mark the points where the Tool has to take path.</li>
+										<li>Note down the X,Z table</li>
+									</ol>
+									Steps :
+									<ol>
+										<li>Set absolute zero point</li>
+										<li>Select the Tool</li>
+										<li>Start the spindle with speed mentioning (as per the calculation)</li>
+										<li>Start the coolent( to avoid heating in the machining process)</li>
+										<li>Mention the points one by one ( always make sure the feed rate is low)</li>
+										<li>Finally when all points are over stop spindle</li>
+										<li>Stop coolent</li>
+										<li>Return the tool back to Home position</li>
+										<li>Program End M30</li>
+									</ol>
+									NOTES:
+
+									These are the one's which I understand and It may differ to the other person or any standard material.
+
+									</div><br>
+									</section><section class="p2cnc">
+									<h2 id="step11" class="p3cnc">Step 11: PRACTICAL EXAMPLE:</h2><br>
+								<img class="img2cnc" src="cnc11.jpg"  width="460" height="345">
+								<img class="img2cnc" src="cnc12.jpg"  width="460" height="345">
+								<img class="img2cnc" src="cnc13.jpg"  width="460" height="345">
+									<div class="step-body">
+
+									Here we can see the practical example of making it.
+
+									here we need to write the coding to the Dimensions specified to the question.<br>
+
+									STEP  1: Marking the points of motion of the TOOL<br>
+
+									STEP  2: TABULAR COLUMN<br>
+
+									STEP 3: <em><strong>CODING</strong></em> (all the remaning steps comes under to avoid unnecessary confusions)
+
+									<br><br><i class="p3cnc">G28 U0.0 W0.0;</i>//Automatic reurn to machine reference point
+
+									<br><i class="p3cnc">T0101;/</i><em>/ </em>Tool select , <br><p class="p2cnc">first 01 represents the tool and the next 01 represents offset tool
+
+									</p><i class="p3cnc">G0 X62.0 Z0.0;</i>// Make sure the tool first placed little above the JOB<br>
+
+									<i class="p3cnc">M03 S1000;</i class="p2cnc">// Start the spindle in clockwise direction and spindle speed is 1000 rpm</i>
+
+									<br><em><i class="p3cnc">M08;</i>// Coolent On</em><br>
+
+									<i class="p3cnc">G01 X0.0 Z0.0 F0.1;</i>// Set the JOB zero point and set the Tool feed speed
+
+									<br><i class="p3cnc">G01 X50.0 Z0.0;</i>// from these plot the tabular column<br>
+
+									<em><i class="p3cnc">G01 X50.0 Z-30.0;</i></em><br>
+
+									<em><i class="p3cnc">G01 X54.0 Z-30.0;</i></em><br>
+
+									<em><i class="p3cnc">G01 X54.0 Z-60.0;</i></em><br>
+
+									<em><i class="p3cnc">G01 X58.0 Z-60.0;</i></em><br>
+
+									<em><i class="p3cnc">G01 X58.0 Z-100.0;</i></em><br>
+
+									<em><i class="p3cnc">G01 X62.0 Z-100.0;</i></em><br>
+
+									<em><i class="p3cnc">M05;// Spindle off</i></em><br>
+
+									<em><i class="p3cnc">M09;// Coolent off</i></em><br>
+
+									<i class="p3cnc">G28 U0.0 W0.0;</i>// Tool return to home position
+
+									</div>
+									<!--<div id="rich-embed-files" class="ible-files"></div>
+									<ul id="attachments" class="ible-files unstyled">
+										<li class="file-info clearfix "><a class="thumb-wrapper" title="Practical example pdf.pdf" href="https://cdn.instructables.com/ORIG/FVQ/LCIJ/J7L46TMY/FVQLCIJJ7L46TMY.pdf" download="Practical example pdf.pdf"><span class="file-thumb"><img class="tiny-img lazy-img-scroll" src="https://www.instructables.com/static/defaultIMG/file/PDF.gif" alt="Practical example pdf.pdf" data-src="https://www.instructables.com/static/defaultIMG/file/PDF.gif" /></span><span class="title">Practical example pdf.pdf</span></a>
+									<div class="file-actions"><a class="btn pull-right" href="https://cdn.instructables.com/ORIG/FVQ/LCIJ/J7L46TMY/FVQLCIJJ7L46TMY.pdf" download="Practical example pdf.pdf">Download</a></div></li>
+									</ul>
+									</section>--><br><section class="p2cnc">
+									<h2  class="p3cnc">Step 12: CONCLUSION</h2>
+								<img class="img2cnc" src="cnc14.jpg"  width="460" height="345">
+								<img class="img2cnc" src="cnc15.jpg"  width="460" height="345">
+									<div class="step-body">
+
+									Thus in this Instructable, I have made my full efforts to make sure that the reader will get a basic Idea of what is CNC and programming basics in it. I have made my efforts to cross check all details.
+
+									I have given a gist of practical class in my internship from the expert of CNC. All comments improving this are welcomed.
+
+									MY suggestions
+									<ol>
+										<li>Install the Simulation Software and Simulate the code on your own....!</li>
+									</ol>
+									Thanks,... ENRICH YOUR LIFE WITH KNOWLEDGE .... BE happy.. GOD is with you..!!
+									<br>	<br>
+									N.Aranganathan
+
+									</div>
+									<div id="double-inline-ads" class="clearfix"></div>
+									</section>
+									<div class="fb-share-button" data-href="http://engineerthoughts.com/cncnew.html" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http:%2F%2Fengineerthoughts.com%2Fcncnew.html&amp;src=sdkpreparse">Share</a></div>
+									</body>
+									</html>
