@@ -15,46 +15,13 @@
 		<title> Engineer thoughts </title>
 		<link rel="shortcut icon" href="Omshanthi.jpg"/>
 		<link rel="stylesheet" type="text/css" href="etstyles.css">
-		<style>
-		body{
+				<style>
+				body{
 
 			height: 1420px;
 			background: linear-gradient(to bottom left, #000066 0%, #006666 100%);
 		}
-		/*body{
-		background-color:#d4e7e4;}*/
-			ul.topnav li a.active{
-						border-bottom: 2px solid #87CEFA;
-					}
-			ul.topnav {
-					list-style-type: none;
-					margin: 0;
-					text-align:center;
-					padding: 0;
-					overflow: hidden;
-					//width: 100%;
-					background-color:#1C353D;
-				}
-			ul.topnav li {
-					float: left;
-				}
-			ul.topnav li a {
-					display: block;
-					color: #1CD3CD;
-					text-align: center;
-					margin: 50px 40px 0 0;
-					text-decoration: none;
-					font-size: 16px;
-					font-family:Century Gothic;
-				}
-
-			li a:hover {
-					color:#9c9c9c;
-					border-bottom: 2px solid #87CEFA;
-				}
-
-		
-			.img2cnc{
+		.img2cnc{
 					margin-left:20px;
 					margin-top:10px;
 					max-width: 90%;
@@ -79,17 +46,62 @@
 
 				}
 			
-			@media screen and (max-width: 500px)
-				{
-				ul.topnav li {float: none;
+					body {margin:0;}
+					.topnav a.active{
+						border-bottom: 2px solid #87CEFA;
+					}
+					.topnav {
+					  overflow: hidden;
+					  background-color: #1C353D;
+					}
+
+					.topnav a {
+					  float: left;
+					  display: block;
+					  color: #1CD3CD;
+					  text-align: center;
+					  padding: 14px 16px;
+					  text-decoration: none;
+					  font-size: 16px;
+					  text-align: center;
+					  font-family:Century Gothic;
+					}
+
+					.topnav a:hover {
+					  color:#1CD3CD;
+						border-bottom: 2px solid #87CEFA;
+					}
+
+					.topnav .icon {
+					  display: none;
+					}
+
+					@media screen and (max-width: 600px) {
+					  .topnav a:not(:first-child) {display: none;}
+					  .topnav a.icon {
+						float: right;
+						display: block;
+					  }
+					}
+
+					@media screen and (max-width: 600px) {
+					  .topnav.responsive {position: relative;}
+					  .topnav.responsive .icon {
+						position: absolute;
+						right: 0;
+						top: 0;
+					  }
+					  .topnav.responsive a {
+						float: none;
+						display: block;
+						text-align: center;
+					  }
+
 				}
-
-				
-
-		</style>
-	</head>
-	<body>
-		<div id="fb-root"></div>
+				</style>
+		</head>
+		<body>
+			<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -97,13 +109,38 @@
   js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=160948707823361';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-		<ul class="topnav">
-				<li><a href="index.html">HOME</a></li>
-				<li><a href="projects.html">PROJECTS</a></li>
-				<li><a class="active" href="scribbles.html">SCRIBBLES</a></li>
-					<li><a href="apj.html">THOUGHTS</a></li>
-				<li><a href="aboutus.html">ABOUT US</a></li>
-			</ul><br>
+			
+			
+			<div class="topnav" id="myTopnav">
+			<a class="active" href="index.html">HOME</a>
+			<a href="projects.html">PROJECTS</a>
+			<a href="scribbles.html">SCRIBBLES</a>
+			<a href="apj.html">THOUGHTS</a>
+			<a href="aboutus.html">ABOUT US</a>
+			<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+		</div>
+		<br>
+			
+			<!--<div class="topnav" id="myTopnav">
+			  <a href="#home">Home</a>
+			  <a href="#news">News</a>
+			  <a href="#contact">Contact</a>
+			  <a href="#about">About</a>
+			  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+			</div>-->
+
+			
+			<script>
+			function myFunction() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
+				}
+			}
+			</script>
+			
 			<div class="sd1" style="text-align: center;"><img class="img3elec" src="c2c1.png"  width="45%" height="35%"></div><br>
 			
 		<div class="fb-share-button" data-href="http://engineerthoughts.com/c2c.html" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fengineerthoughts.com%2Fc2c.html&amp;src=sdkpreparse">Share</a></div>
@@ -124,5 +161,6 @@ I even got placed in a core company. I went there for getting some details about
 He had 2 years’ experience in that company it seems and earning 8000/- which is less than the salary of a watchman in the same company. I respect every job and every person irrespective of their knowledge and position, but that man’s answer gave a shock to me. <br><br>
 Then I was in a dilemma which one to decide. I thought of my family. My father is a retd. bank officer and my mother is a housewife. I have a younger sister who is currently pursuing her under graduate in the field of commerce. For my college fees, my father had taken loan in the bank. So, I decided to get into the world of IT. <br><br>
 		</p></div>
-		</body>
-	</html>
+
+</body>
+</html>
