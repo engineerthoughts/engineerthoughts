@@ -1,63 +1,21 @@
-
 <!DOCTYPE html>
 <html>
-	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/E734C3DD-A4D8-EF41-B35A-6348FD243265/main.js" charset="UTF-8"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-107702763-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-107702763-1');
-</script>
+		<head>
+		
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title> Engineer thoughts </title>
 		<link rel="shortcut icon" href="Omshanthi.jpg"/>
 		<link rel="stylesheet" type="text/css" href="etstyles.css">
-		<style>
-		body{
+				<style>
+				body{
 
 			height: 1420px;
 			background: linear-gradient(to bottom left, #000066 0%, #006666 100%);
 		}
-		/*body{
-		background-color:#d4e7e4;}*/
-			ul.topnav li a.active{
-						border-bottom: 2px solid #87CEFA;
-					}
-			ul.topnav {
-					list-style-type: none;
-					margin: 0;
-					text-align:center;
-					padding: 0;
-					overflow: hidden;
-					//width: 100%;
-					background-color:#1C353D;
-				}
-			ul.topnav li {
-					float: left;
-				}
-			ul.topnav li a {
-					display: block;
-					color: #1CD3CD;
-					text-align: center;
-					margin: 50px 40px 0 0;
-					text-decoration: none;
-					font-size: 16px;
-					font-family:Century Gothic;
-				}
 
-			li a:hover {
-					color:#9c9c9c;
-					border-bottom: 2px solid #87CEFA;
-				}
-
-		
-
-				
-			.img2cnc{
+					body {margin:0;}
+					.img2cnc{
 					margin-left:20px;
 					margin-top:10px;
 					max-width: 90%;
@@ -81,14 +39,60 @@
 				margin-right:30px;
 
 				}
-			
-			@media screen and (max-width: 500px)
-				{
-				ul.topnav li {float: none;
+					.topnav a.active{
+						border-bottom: 2px solid #87CEFA;
+					}
+					.topnav {
+					  overflow: hidden;
+					  background-color: #1C353D;
+					}
+
+					.topnav a {
+					  float: left;
+					  display: block;
+					  color: #1CD3CD;
+					  text-align: center;
+					  padding: 14px 16px;
+					  text-decoration: none;
+					  font-size: 16px;
+					  text-align: center;
+					  font-family:Century Gothic;
+					}
+
+					.topnav a:hover {
+					  color:#1CD3CD;
+						border-bottom: 2px solid #87CEFA;
+					}
+
+					.topnav .icon {
+					  display: none;
+					}
+
+					@media screen and (max-width: 600px) {
+					  .topnav a:not(:first-child) {display: none;}
+					  .topnav a.icon {
+						float: right;
+						display: block;
+					  }
+					}
+
+					@media screen and (max-width: 600px) {
+					  .topnav.responsive {position: relative;}
+					  .topnav.responsive .icon {
+						position: absolute;
+						right: 0;
+						top: 0;
+					  }
+					  .topnav.responsive a {
+						float: none;
+						display: block;
+						text-align: center;
+					  }
+
 				}
-		</style>
-	</head>
-	<body>
+				</style>
+		</head>
+<body>
 		<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -97,13 +101,37 @@
   js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=160948707823361';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-		<ul class="topnav">
-				<li><a href="index.html">HOME</a></li>
-				<li><a href="projects.html">PROJECTS</a></li>
-				<li><a class="active" href="scribbles.html">SCRIBBLES</a></li>
-					<li><a href="apj.html">THOUGHTS</a></li>
-				<li><a href="aboutus.html">ABOUT US</a></li>
-			</ul><br>
+			
+			<div class="topnav" id="myTopnav">
+			<a class="active" href="index.html">HOME</a>
+			<a href="projects.html">PROJECTS</a>
+			<a href="scribbles.html">SCRIBBLES</a>
+			<a href="apj.html">THOUGHTS</a>
+			<a href="aboutus.html">ABOUT US</a>
+			<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+		</div>
+		<br>
+			
+			<!--<div class="topnav" id="myTopnav">
+			  <a href="#home">Home</a>
+			  <a href="#news">News</a>
+			  <a href="#contact">Contact</a>
+			  <a href="#about">About</a>
+			  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+			</div>-->
+
+			
+			<script>
+			function myFunction() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
+				}
+			}
+			</script>
+			
 			<div class="sd1" style="text-align: center;"><img class="img3elec" src="bench1.png"  width="50%" height="40%"></div><br>
 			<div class="fb-share-button" data-href="http://engineerthoughts.com/bench.html" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fengineerthoughts.com%2Fbench.html&amp;src=sdkpreparse">Share</a></div>
 			<h3 class= "HEAD3scribbles"> MY FIRST DAY AT BENCH</h3>
@@ -115,5 +143,6 @@ I was waiting for the right time to start watching the movie. Then I grabbed a c
 Suddenly a person came and told us to change our supervisor name in all the company websites. Done. Then again clicked the play button. As usual Stomach started alarming. Lunch time. <b>Note:</b> Don’t forget to keep your bag or at least hand-kerchief in your chair before leaving or else you should be ready to sit on floor. I adopted the first method. So, my chair escaped. Then again clicked the play button.<br><br>
 At last the movie got over. I looked around the bay, everyone was busy doing their work. I got a feeling somewhere in the edge of my heart, “Are we wasting our time”. Then immediately, I opened the company browser and searched for some online courses that can be completed in 10 – 15 days. As usual got lacs of results. I clicked on the first link, a pop-up opened stating “The site become unresponsive”. Then I clicked the second link, again a pop-up opened stating “The site become unresponsive”. I felt ‘uh’. Then I clicked the third link, again the same pop-up stating, “The site become unresponsive and clearly notifies a message because of the long time, the session is not responding, and will give an option to kill the page or continue with the process”. A doubt cracked in my mind, the systems lying in the ITP location for a long time may be a reason for its slowness. Then, there from, I have got a clear message, lying in the bench for long time intervals is never good for system and employees too. Then I put that computer to sleep mode. Slowly again took my phone to watch the second movie. But Battery low. <b>Note:</b> Please don’t forget to take the charging cable. Then after a nap, marked my evening attendance and successfully completed my first day of bench. Still stories yet to come.
 		</p><br><br>
-		</body>
-	</html>
+
+</body>
+</html>
