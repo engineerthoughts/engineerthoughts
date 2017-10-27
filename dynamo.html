@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+		<head>
+				<style>
+					body {margin:0;}
+					.topnav a.active{
+						border-bottom: 2px solid #87CEFA;
+					}
+					body{
+			height: 100%;
+			background: linear-gradient(to bottom left, #000066 0%, #006666 100%);
+		}
+					
+						.head2{
+
+
+								font-family:Century Gothic;
+								color:#1CD3A7;
+								text-align:center;
+								}
+						.p2{
+							color:#1CD3CD;
+							font-size:20px;
+							text-align:justify;
+							margin:0 20px 0 20px;
+							font-family:Century Gothic;
+						}
+						.p5{
+							color:#1CD3CD;
+							font-size:18px;
+							text-align:center;
+
+							font-family:Century Gothic;
+						}
+						.p3{
+							color:#A2EE2F;
+							font-size:20px;
+							text-align:justify;
+							margin:0 20px 0 20px;
+							font-family:Century Gothic;
+						}
+						.p4{
+							color:#A2EE2F;
+
+							text-align:center;
+
+							font-family:Century Gothic;
+						}
+						.img2{
+						margin-left:20px;
+						max-width: 90%;
+						height: auto;
+						}
+						.img3{
+							align:center;
+							max-width: 90%;
+							height: auto;
+							}
+			
+						
+			
+					.topnav {
+					  overflow: hidden;
+					  background-color: #1C353D;
+					}
+
+					.topnav a {
+					  float: left;
+					  display: block;
+					  color: #1CD3CD;
+					  text-align: center;
+					  padding: 14px 16px;
+					  text-decoration: none;
+					  font-size: 16px;
+					  text-align: center;
+					  font-family:Century Gothic;
+					}
+
+					.topnav a:hover {
+					  color:#1CD3CD;
+						border-bottom: 2px solid #87CEFA;
+					}
+
+					.topnav .icon {
+					  display: none;
+					}
+
+					@media screen and (max-width: 600px) {
+					  .topnav a:not(:first-child) {display: none;}
+					  .topnav a.icon {
+						float: right;
+						display: block;
+					  }
+					}
+
+					@media screen and (max-width: 600px) {
+					  .topnav.responsive {position: relative;}
+					  .topnav.responsive .icon {
+						position: absolute;
+						right: 0;
+						top: 0;
+					  }
+					  .topnav.responsive a {
+						float: none;
+						display: block;
+						text-align: center;
+					  }
+
+				}
+				</style>
+		</head>
+<body>
+			
+			<div class="topnav" id="myTopnav">
+			<a href="index.html">HOME</a>
+			<a class="active" href="projects.html">PROJECTS</a>
+			<a href="scribbles.html">SCRIBBLES</a>
+			<a href="apj.html">THOUGHTS</a>
+			<a href="aboutus.html">ABOUT US</a>
+			<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+		</div>
+		<br>
+			
+			<!--<div class="topnav" id="myTopnav">
+			  <a href="#home">Home</a>
+			  <a href="#news">News</a>
+			  <a href="#contact">Contact</a>
+			  <a href="#about">About</a>
+			  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+			</div>-->
+
+			
+			<script>
+			function myFunction() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
+				}
+			}
+			</script>
+						
+												
+						<h1 class="head2">Phone Charging from the Dynamo</h1>
+						<div style="text-align: center;"><img class="img3" src="cycletitle.png"  width="460" height="345"></div><br>
+						<h2 class="p3">Introduction:</h2><br>
+						<p class="p2">In the day to day life, we all run for the charging of the mobile phones and the charging plugs. But whatif you could charge your phone while going on the cycle ride. This is the very old concept which all your father and forefathers must beknowing, it is none other than using the dynamo for Charging our phone.
+
+						When we started thinking of the engineering projects for ahobby, the first thing we saw was the old dynamo in old father’s cycle. We started working on charging the phone with it and making a small emergency light charged with it.
+
+						Further, read this blog to know how to make the circuit for this and make use of the old dynamo.Also to get a short note of the basic of building an own circuit.
+
+						Also make a look at our explanation video on it in the link below.<br><br>
+						<h2 class="p3">Kickstarting :</h2><br>
+						<p class="p2">You may think what is the relation with the cycle and dynamo, definitely, there is no relation lol. This is to make you aware of some quick tips before you start reading the project.
+
+						When we started checking the voltage from the dynamo, we thoughts was DC one, we asked some they said it was pulsating DC, AC etc and no proper information present on the internet too….. It was quite confusing for us to decide what form of the current it was !.
+
+						The only way left for us was to experiment it. When we started rotating the wheel, the voltage was oscillating in the DC side and when the knob on the AC side was switched, the voltage was constant around (9-12 V) depending on the speed of the rotation. Thus half the process was confirmed that the power from the dynamo was AC. Might be some models may have the DC power, just experiment out yourself.
+
+						Points to be noted :<br><br>
+						<ul class="p2">
+							<li>Power from the Dynamo is AC in our case.</li>
+							<li>There can be other type of the dynamo check it out for your case.</li>
+						</ul>
+						 
+						<h2 class="p3">Components :</h2><br>
+						<p class="p2">The some of the important components for the making of this project is as follows:
+						<br><br><ol  class="p2">
+							<li>Cycle with dynamo</li>
+							<li>Diodes</li>
+							<li>Voltage Regulator L7805</li>
+							<li>Capacitor</li>
+							<li>Usb adaptor</li>
+							<li>Definitely some wires, solder iron</li>
+							<li>Additionally, glue gun or any adhesive etc</li>
+						</ol><br>
+						<h2 class="p3">Little theory :</h2><br>
+						<h3 class="p3">Dynamo:</h3><br>
+						<ul class="p2">
+							<li>Greek word dynamis, meaning force or power. word "dynamo" was coined by Werner von Siemens in 1882.</li>
+							<li>Dynamo converts the mechanical energy into the Electrical energy by Fleming'sRight-hand</li>
+						</ul>
+						 
+							<br><img class="img2" src="frhr.gif"  width="300" height="200"><br><br>
+							<br><br><p class="p2">DYNAMO<br><br>
+						<img class="img2" src="dynamo.png"  width="250" height="345"><br><br>
+						
+						<h3 class="p3">Electronic Circuits :</h3>
+						<p class="p2">As we seen before that in our dynamo the current generated was Ac one. But unfortunately, our phones charge in the Dc source. Thus we need a proper and simple electronic circuit for this conversion.
+						<h4></h4>
+						<h4></h4>
+						<br><br><h3 class="p3">Bridge rectifier:</h3><br>
+						<p class="p2">The bridge rectifier is one where the sine wave of the AC supply is converted to the DC of the every alternating half cycles.
+						<br><br><h3 class="p3">Voltage Regulator L7805:</h3><br>
+						<p class="p2">This is a voltage regulator which is used to regulate the output Dc Voltage to the required value. In this case, we use the 5 Voltage regulator. We can also any buck converters. To Make it simple here we have used this one.
+
+						<br><br><p class="p2">VOLTAGE REGULATOR<br><br>
+						
+						<img class="img2" src="l7805.png"  width="460" height="345"><br><br>
+						<br><br><h3 class="p3">Capacitor:</h3><br>
+						<p class="p2">Many Non Electrical students might be asking this question that what is the role of the capacitor here. As all the works have been completed by the rectifiers and the voltage regulator.
+
+						<b>Answer:</b>
+
+						<em>The answer to this little interesting if you are patient enough to read. Even though the DC of the required voltage is formed, there is the presence of voltage ripples and distortions, Capacitor with its unique quality of charging and discharging, compensates the voltage ripples and gives the steady DC voltage. If you are interested to know how it happens I will be making a separate video on it.</em>
+					<br><br>	<h2 class="p3">Simulation :</h2><br>
+						<p class="p2">Before Practically experimenting stuff, it is advised to stimulate in a software. Make the same connections as final. The output of the simulations is working good. There are as follows:
+						<br><br><img class="img2" src="proteus.png"  width="460" height="345"><br>
+						
+						<br><br><h2 class="p3">Connections :</h2><br>
+						<p class="p2">The connections are given as per the circuit diagram below.<br><br>
+						<img class="img2" src="connections.png"  width="460" height="345"><br>
+						<ol class="p2">
+							<li>At first, the connections were given on the breadboard( Which is the first experimenting thing of the circuit in Electrical.)</li>
+							<li>Then the Circuit was soldered to the PCB (printed circuit board).</li>
+						</ol>
+						 
+
+						 
+
+						 
+
+						 
+						<h2 class="p3">Explanation and Calculations :</h2><br>
+					<p class="p2">	You may think it might think Calculations are little boring …. Don’t worry I am doing It with a practical example so go on….!
+
+						Battery size 1500 mAh.<br><br>
+						<h6 class="p3">Set 1:</h6><br>
+						<p class="p2">If we drive a cycle for 2 minutes it charges 1.5% of the Battery
+
+						1.5% of 1500=22.5mAh for 2 min
+
+						thus for 1min =11.25mAh
+
+						thus for 1hr (11.25* 60=675mAhie 0.675Ah)
+
+						the current passed at 0.675 A (approx)
+
+						Watts delivered by the dynamo is
+
+						<strong>Power= Voltage X Current</strong>
+
+						Power= 5V X 0.675A= 3.75W
+
+						 <br><br>
+						<h2 class="p3">Practical Outcomes :</h2><br>
+						<p class="p2">We practically build our circuit and tested in the real time and charging time and various details are measured.
+
+						Cycled for a distance approximately around 2.6km, to our surprise the phone was charged around 10%.
+
+						As it is a windows nokia phone with us. We are only able to calculate the details approximately in a app.
+							<br><br><img class="img2" src="map.jpg"  width="390" height="300">
+								<img class="img2" src="map1.png"  width="460" height="345"><br>
+						<br><br>
+						<h2 class="p3">Theoritical Calculation :</h2><br>
+						<p class="p2">(Power calculations are carried at the average cycle driving
+
+						speed of 10 Km/h)
+
+						we all know this basic Speed formula ie (Speed= Distance /time). With the known values we are calculating the Time.
+
+						<strong>Time= Distance/Speed</strong>
+
+						Time  = 2.6/10= 0.26hr
+
+						Time in min =16 min approx
+
+						charge per min=0.75
+
+						Total charge=0.75X16= 12 %
+
+						Thus theoretically and practical calculations are verified thus.<br><br>
+						<h2 class="p3">Pictures :</h2>
+						 <br><br><img class="img2" src="circuit.jpg"  width="460" height="345">
+								<img class="img2" src="circuit1.jpg"  width="460" height="345"><br>
+
+	</body>
+</html>
+
+						 
+
+						 
+
+						 
+
+						 
+
+						 
+
+						 
+
+						 
