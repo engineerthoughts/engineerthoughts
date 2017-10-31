@@ -1,8 +1,23 @@
-
 <!DOCTYPE html>
 <html>
-		<head>
-		
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109018339-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-109018339-1');
+</script>
+
+	<script>
+		function blinktext() {
+		  var f = document.getElementById('announcement');
+		  setInterval(function() {
+			f.style.visibility = (f.style.visibility == 'hidden' ? '' : 'hidden');
+		  }, 1000);
+		}</script>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title> Engineer thoughts </title>
@@ -152,8 +167,8 @@
 			
 			<div class="topnav" id="myTopnav">
 			<a href="index.html">HOME</a>
-			<a class="active" href="projects.html">PROJECTS</a>
-			<a href="scribbles.html">SCRIBBLES</a>
+			<a href="projects.html">PROJECTS</a>
+			<a class="active" href="scribbles.html">SCRIBBLES</a>
 			<a href="apj.html">THOUGHTS</a>
 			<a href="aboutus.html">ABOUT US</a>
 			<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
