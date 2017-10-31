@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
 <html>
 	<head>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
-<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/E734C3DD-A4D8-EF41-B35A-6348FD243265/main.js" charset="UTF-8"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-107702763-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109018339-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
 
-  gtag('config', 'UA-107702763-1');
-</script>
+		  gtag('config', 'UA-109018339-1');
+		</script>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title> Engineer thoughts </title>
@@ -74,7 +75,53 @@
 					.topnav .icon {
 					  display: none;
 					}
+				.sidenav1 {
+				height: 100%;
+				width: 0;
+				position: fixed;
+				z-index: 1;
+				top: 0;
+				left: 0;
+				background-color: #1C353D;
+				overflow-x: hidden;
+				transition: 0.5s;
+				padding-top: 60px;
+			}
 
+			.sidenav1 a {
+				padding: 8px 8px 8px 32px;
+				text-decoration: none;
+				font-size: 25px;
+				color: #1CD3A7;
+				display: block;
+				transition: 0.3s;
+				
+				font-family:Century Gothic;
+			}
+
+			.sidenav1 a:hover {
+				color: #A2EE2F;
+			}
+
+			.sidenav1 .closebtn {
+				position: absolute;
+				top: 0;
+				right: 25px;
+				font-size: 36px;
+				margin-left: 50px;
+			}
+
+			#main {
+				transition: margin-left .5s;
+				padding: 16px;
+				color: #1CD3A7;
+					font-family:Century Gothic;
+			}
+
+			@media screen and (max-height: 450px) {
+			  .sidenav1 {padding-top: 15px;}
+			  .sidenav1 a {font-size: 18px;}
+			}
 					@media screen and (max-width: 600px) {
 					  .topnav a:not(:first-child) {display: none;}
 					  .topnav a.icon {
@@ -140,7 +187,31 @@
 				}
 			}
 			</script>
-			
+			<div id="mysidenav1" class="sidenav1">
+			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			  <a href="bench.html">My First day @ Bench</a>
+			  <a href="c2c.html">College to Corporate</a>
+			  <a href="socks.html">A day in IT without Socks</a>
+			  
+			</div>
+
+			<div id="main">
+			 
+			 
+			  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Navigate</span>
+			</div>
+
+			<script>
+			function openNav() {
+				document.getElementById("mysidenav1").style.width = "250px";
+				document.getElementById("main").style.marginLeft = "250px";
+			}
+
+			function closeNav() {
+				document.getElementById("mysidenav1").style.width = "0";
+				document.getElementById("main").style.marginLeft= "0";
+			}
+			</script>
 			
 			<div class="sd1" style="text-align: center;"><img class="img3elec" src="socks1.png"  width="45%" height="35%"></div><br>
 			<div class="fb-like" data-href="http://engineerthoughts.com/socks.html" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
