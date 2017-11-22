@@ -164,7 +164,17 @@
 			<a href="http://engineerthoughts.com/apj.html">THOUGHTS</a>
 			<a href="http://engineerthoughts.com/aboutus.html">ABOUT US</a>
 			<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">☰</a>
-		</div><br><br><br><br>
+		</div>
+	<script>
+			function myFunction() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
+				}
+			}
+			</script><br><br><br><br>
 <div class="row">
   <div class="column">
     <div class="card">
