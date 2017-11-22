@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
-<html>
-	<head>
+<!-- saved from url=(0028)http://engineerthoughts.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107702763-1"></script>
+<script type="text/javascript" async="" src="./index_files/analytics.js.download"></script><script async="" src="./index_files/js"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -11,19 +10,41 @@
 
   gtag('config', 'UA-107702763-1');
 </script>
-
+	<script>
+		function blinktext() {
+		  var f = document.getElementById('announcement');
+		  setInterval(function() {
+			f.style.visibility = (f.style.visibility == 'hidden' ? '' : 'hidden');
+		  }, 1000);
+		}</script>
+		<meta name="description" content="animation engineer thoughts">
+		<meta name="keywords" content="engineerthoughts,animation engineerthoughts,animatorz4d,sudharsan animation,aranganathan animation,sudharsan,aranganathan">
+		<meta name="author" content="engineerthoughts">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title> Engineer thoughts </title>
-		<link rel="shortcut icon" href="Omshanthi.jpg"/>
+		<link rel="shortcut icon" href="https://raw.githubusercontent.com/engineerthoughts/engineerthoughts/gh-pages/E.png">
+		
 		<style>
 		body{
-			height: 1420px;
-			background: linear-gradient(to bottom left, #000066 0%, #006666 100%);
+			color:#0d1934;
+			height: 700px;
+			background: #b7e2e2;
+			font-family:Calibri,Century Gothic;
 		}
+		::-moz-selection { /* Code for Firefox */
+					color: #b7e2e2;
+					background: #0d1934;
+				}
+
+				::selection {
+					color: #b7e2e2;
+					background: #0d1934;
+				}
 		
 //image gallery code css
 div.gallery {
 				border: 1px solid #ccc;
+				
 			}
 
 			div.gallery:hover {
@@ -39,7 +60,7 @@ div.gallery {
 				padding: 15px;
 				text-align: center;
 				font-family:Century Gothic;
-				color:#1CD3CD;
+				color:#0d1934;
 
 			}
 
@@ -92,11 +113,11 @@ div.gallery {
 
 
 					font-family:Century Gothic;
-					color:#1CD3A7;
+					color:#0d1934;
 					text-align:center;
 					}
 			.p2{
-				color:#1CD3CD;
+				color:#0d1934;
 				font-size:20px;
 				text-align:justify;
 				margin:0 50px 0 50px;
@@ -113,6 +134,7 @@ div.gallery {
 				overflow-x: hidden;
 				transition: 0.5s;
 				padding-top: 60px;
+				font-family:Calibri;
 			}
 
 			.sidenav1 a {
@@ -123,7 +145,7 @@ div.gallery {
 				display: block;
 				transition: 0.3s;
 				
-				font-family:Century Gothic;
+				font-family:Calibri;
 			}
 
 			.sidenav1 a:hover {
@@ -141,8 +163,8 @@ div.gallery {
 			#main {
 				transition: margin-left .5s;
 				padding: 16px;
-				color: #1CD3A7;
-					font-family:Century Gothic;
+				color: #0d1934;
+					font-family:Calibri;
 			}
 
 			@media screen and (max-height: 450px) {
@@ -155,13 +177,16 @@ div.gallery {
 					}
 					.topnav {
 					  overflow: hidden;
-					  background-color: #1C353D;
+					  background-color: #0d1934;
+					  position: fixed;
+					  width:100%;
+					  box-shadow: 0 12px 16px 0 rgba(0,0,0,.5),0 17px 50px 0 rgba(0,0,0,0.19);
 					}
 
 					.topnav a {
 					  float: left;
 					  display: block;
-					  color: #1CD3CD;
+					  color: #b7e2e2;
 					  text-align: center;
 					  padding: 14px 16px;
 					  text-decoration: none;
@@ -171,9 +196,10 @@ div.gallery {
 					}
 
 					.topnav a:hover {
-					  color:#1CD3CD;
+					  color:#b7e2e2;
 						border-bottom: 2px solid #87CEFA;
 					}
+
 
 					.topnav .icon {
 					  display: none;
@@ -215,16 +241,30 @@ div.gallery {
 }(document, 'script', 'facebook-jssdk'));</script>
 
 
-<div class="topnav" id="myTopnav">
-			<a class="active" href="index.html">HOME</a>
+
+			<div class="topnav" id="myTopnav">
+			<a> <img src="E.png" width='20px', height='18px'> </a>
+			<a href="index.html">HOME</a>
 			<a href="projects.html">PROJECTS</a>
-			<a href="scribbles.html">SCRIBBLES</a>
+			<a class="active" href="scribbles.html">SCRIBBLES</a>
 			<a href="apj.html">THOUGHTS</a>
 			<a href="aboutus.html">ABOUT US</a>
 			<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 		</div>
+			
+			<script>
+			function myFunction() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
+				}
+			}
+			</script>
 			<!-- <p class="p2"><br><br>
 			</p> -->
+			<br><br><br>
 			<div id="mysidenav1" class="sidenav1">
 			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			  <a href="anim.html">ANIMATION</a>
