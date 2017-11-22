@@ -212,6 +212,16 @@ body{
 			<a class="active" href="http://engineerthoughts.com/aboutus.html">ABOUT US</a>
 			<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">☰</a>
 			</div>
+	<script>
+			function myFunction() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
+				}
+			}
+			</script>
 			<br><br><br>
 			<H1 class="HEAD2">ENGINEER THOUGHTS</H1>
 <H2 class="HEAD2"><u>ABOUT US</u></H2><BR>
