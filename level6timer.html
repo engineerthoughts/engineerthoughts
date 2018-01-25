@@ -1,0 +1,328 @@
+<html class="loading">
+<head>
+<style>
+
+html {
+				-webkit-transition: background-color 1s;
+				transition: background-color 1s;
+			}
+			html, body { min-height: 100%; }
+			html.loading {
+				background: #e8fffb url('loading.gif') no-repeat 50% 50%;
+				-webkit-transition: background-color 0;
+				transition: background-color 0;
+			}
+			body {
+				-webkit-transition: opacity 1s ease-in;
+				transition: opacity 1s ease-in;
+			}
+			html.loading body {
+				opacity: 0;
+				-webkit-transition: opacity 0;
+				transition: opacity 0;
+			}
+			
+			
+.bartime
+{
+color:black;
+background-color:black;
+width:70%;
+height:30px;
+}
+#diva1, #diva3, #diva5, #diva7, #divb2, #divb4, #divb6, #divb8, #divc1, #divc3, #divc5, #divc7, 
+			#divd2, #divd4, #divd6, #divd8, #dive1, #dive3, #dive5, #dive7, #divf2, #divf4, #divf6, #divf8,
+			#divg1, #divg3, #divg5, #divg7, #divh2, #divh4, #divh6, #divh8
+			{
+				float: left;
+				width: 50px;
+				height: 50px;
+				border: 1px solid black;
+				background-color:white;
+			}
+
+			#diva2, #diva4, #diva6, #diva8, #divb1, #divb3, #divb5, #divb7, #divc2, #divc4, #divc6, #divc8,
+			#divd1, #divd3, #divd5, #divd7, #dive2, #dive4, #dive6, #dive8, #divf1, #divf3, #divf5, #divf7,
+			#divg2, #divg4, #divg6, #divg8, #divh1, #divh3, #divh5, #divh7{
+				float: left;
+				width: 50px;
+				height: 50px;
+				border: 1px solid black;
+				background-color:#7FB3D5;
+			}
+			#answer1Box,#answer2Box,#answer3Box,#answer4Box, #answer5Box
+			{
+			float:left;
+			width: 50px;
+			height: 50px;
+			}
+			#answerBoxes
+			{
+			margin-top:-25px;
+			margin-left:450px;}
+			#answer1Box,#answer2Box,#answer3Box,#answer4Box, #answer5Box
+			{
+			float:left;
+			width: 50px;
+			height: 50px;
+			
+			
+			}
+			#answers{
+			margin-left:530px;}
+			body { min-width: 980px; text-align: left; background:#e8fffb;}
+			.buttonc{
+			margin-left:455px;
+			margin-top:10px;
+			}
+			.button {
+			background-color: #0c3327;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			
+			cursor: pointer;
+		}
+		h2{
+					margin-left:530px;
+					font-family:Calibri;
+					color:#0c3327;
+					}
+		.timer1{
+					margin-top:-17px;
+					margin-left:540px;
+					font-family:Calibri;
+					color:#0c3327;	}	
+
+
+					.topnav a.active{
+						border-bottom: 2px solid #87CEFA;
+					}
+					.topnav {
+					  overflow: hidden;
+					  background-color: #0d1934;
+					  position: fixed;
+					  min-width: 1500px;
+					  box-shadow: 0 12px 16px 0 rgba(0,0,0,.5),0 17px 50px 0 rgba(0,0,0,0.19);
+					  margin-top:-10px;
+					  margin-left:-10px;
+					}
+
+					.topnav a {
+					  float: left;
+					  display: block;
+					  color: #b7e2e2;
+					  text-align: center;
+					  padding: 10px 16px;
+					  text-decoration: none;
+					  font-size: 16px;
+					  text-align: center;
+					  font-family:Calibri;
+					}
+
+					.topnav a:hover {
+					  color:#b7e2e2;
+						border-bottom: 2px solid #87CEFA;
+					}
+
+					.topnav .icon {
+					  display: none;
+					}					
+</style>
+</head>
+<body>
+	
+			
+	<body onload="blinktext();">
+		<div class="topnav" id="myTopnav">
+			<a> <img src="https://raw.githubusercontent.com/engineerthoughts/engineerthoughts/gh-pages/E.png" width='20px', height='18px'> </a>
+			<a href="http://engineerthoughts.com/index.html">HOME</a>
+			<a class="active" href="http://engineerthoughts.com/projects.html">PROJECTS</a>
+			<a href="http://engineerthoughts.com/scribbles.html">SCRIBBLES</a>
+			<a href="http://engineerthoughts.com/apj.html">THOUGHTS</a>
+			<a href="http://engineerthoughts.com/aboutus.html">ABOUT US</a>
+			<!--<a id="announcement" style="color: rgb(162, 238, 47);" href="http://engineerthoughts.com/elec.html">**NEW**</a> -->
+			<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">☰</a>
+		</div><br><br><br>
+		<center><progress value="0" max="63" id="progressBar" class="bartime"></progress></center>
+		<h2>MEMORY GAME - LEVEL 6</h2>
+		<p class="timer1">The GAME will begin in <span id="countdowntimer">63 </span> Seconds</p>
+	
+	<script type="text/javascript" charset="UTF-8"></script><script>
+			var html = document.getElementsByTagName('html')[0];
+			var removeLoading = function() {
+				// In a production application you would remove the loading class when your
+				// application is initialized and ready to go.  Here we just artificially wait
+				// 3 seconds before removing the class.
+				setTimeout(function() {
+					html.className = html.className.replace(/loading/, '');
+				}, 3000);
+			};
+			removeLoading();
+		</script>
+		
+		<script>
+			function myFunction() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
+				}
+			}
+			</script>
+		<br>
+
+				<div id="answerBoxes">
+						
+						<div id="diva1" ondrop="drop1(event)" ondragover="allowDrop(event)">
+						<img src="bR.png" draggable="true" ondragstart="drag(event)" id="bR1" width="50" height="50"></div>
+						<div id="diva2" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="diva3" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="diva4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="diva5" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="diva6" ondrop="drop2(event)" ondragover="allowDrop(event)">
+						<img src="bR.png" draggable="true" ondragstart="drag(event)" id="bR2" width="50" height="50"></div>
+						<div id="diva7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="diva8" ondrop="drop3(event)" ondragover="allowDrop(event)">
+						<img src="bK.png" draggable="true" ondragstart="drag(event)" id="bK1" width="50" height="50"></div>
+						<br> 
+						<br><br>
+						
+						<div id="divb1" ondrop="drop4(event)" ondragover="allowDrop(event)">
+						<img src="bP.png" draggable="true" ondragstart="drag(event)" id="bP1" width="50" height="50"></div>
+						<div id="divb2" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divb3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divb4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divb5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divb6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divb7" ondrop="drop5(event)" ondragover="allowDrop(event)">
+						<img src="wR.png" draggable="true" ondragstart="drag(event)" id="wR1" width="50" height="50"></div>
+						<div id="divb8" ondrop="drop6(event)" ondragover="allowDrop(event)">
+						<img src="bP.png" draggable="true" ondragstart="drag(event)" id="bP2" width="50" height="50"></div>
+						<br> 
+						<br><br>
+						
+						<div id="divc1" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divc2" ondrop="drop7(event)" ondragover="allowDrop(event)">
+						<img src="bP.png" draggable="true" ondragstart="drag(event)" id="bP3" width="50" height="50"></div>
+						<div id="divc3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divc4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divc5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divc6" ondrop="drop8(event)" ondragover="allowDrop(event)">
+						<img src="bP.png" draggable="true" ondragstart="drag(event)" id="bP4" width="50" height="50"></div>
+						<div id="divc7" ondrop="drop9(event)" ondragover="allowDrop(event)">
+						<img src="bB.png" draggable="true" ondragstart="drag(event)" id="bB1" width="50" height="50"></div>
+						<div id="divc8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<br> 
+						<br><br>
+						
+						<div id="divd1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divd2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divd3" ondrop="drop10(event)" ondragover="allowDrop(event)">
+						<img src="wP.png" draggable="true" ondragstart="drag(event)" id="wP1" width="50" height="50"></div>
+						<div id="divd4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divd5" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divd6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divd7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divd8" ondrop="drop11(event)" ondragover="allowDrop(event)">
+						<img src="wN.png" draggable="true" ondragstart="drag(event)" id="wN1" width="50" height="50"></div>
+						<br> 
+						<br><br>
+						
+						<div id="dive1" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="dive2" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="dive3" ondrop="drop12(event)" ondragover="allowDrop(event)">
+						<img src="wB.png" draggable="true" ondragstart="drag(event)" id="wB1" width="50" height="50"></div>
+						<div id="dive4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="dive5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="dive6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="dive7" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="dive8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<br> 
+						<br><br>
+						
+						<div id="divf1" ondrop="drop13(event)" ondragover="allowDrop(event)">
+						<img src="wP.png" draggable="true" ondragstart="drag(event)" id="wP2" width="50" height="50"></div>
+						<div id="divf2" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divf3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divf4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divf5" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divf6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divf7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divf8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<br> 
+						<br><br>
+						
+						<div id="divg1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divg2" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divg3" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divg4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divg5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divg6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divg7" ondrop="drop14(event)" ondragover="allowDrop(event)">
+						<img src="wP.png" draggable="true" ondragstart="drag(event)" id="wP3" width="50" height="50"></div>
+						<div id="divg8" ondrop="drop15(event)" ondragover="allowDrop(event)">
+						<img src="wP.png" draggable="true" ondragstart="drag(event)" id="wP4" width="50" height="50"></div>
+						<br> 
+						<br><br>
+						
+						<div id="divh1" ondrop="drop16(event)" ondragover="allowDrop(event)">
+						<img src="wB.png" draggable="true" ondragstart="drag(event)" id="wB2" width="50" height="50"></div>
+						<div id="divh2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divh3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divh4" ondrop="drop17(event)" ondragover="allowDrop(event)">
+						<img src="bN.png" draggable="true" ondragstart="drag(event)" id="bN1" width="50" height="50"></div>
+						<div id="divh5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divh6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divh7" ondrop="drop18(event)" ondragover="allowDrop(event)">
+						<img src="wK.png" draggable="true" ondragstart="drag(event)" id="wK1" width="50" height="50"></div>
+						<div id="divh8" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+				</div>
+				<br> 
+				<br><br>
+
+				<script>
+					var timeleft = 63;
+					var downloadTimer = setInterval(function(){
+					timeleft--;
+					document.getElementById("countdowntimer").textContent = timeleft;
+					if(timeleft <= 0)
+						clearInterval(downloadTimer);
+					},1000);
+					
+					var timeremaining = 63;
+					var remTimer = setInterval(function(){
+					document.getElementById("progressBar").value = 63 - --timeremaining;
+					if(timeremaining <= 0)
+					clearInterval(remTimer);
+					},1000);
+					
+					setTimeout(function(){window.location.href='level6.html'},63000);
+				</script>
+				<div class="buttonc">
+			<a href="level5timer.html"><button class="button button1">&laquo; LEVEL 5 </button></a>
+			<a href="level6.html"><button class="button button1">READY</button></a>
+			<a href="level7timer.html"><button class="button button1">LEVEL 7 &raquo;</button></a>
+			
+			</div>
+		</body>
+</html>
