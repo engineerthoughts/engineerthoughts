@@ -1,0 +1,10 @@
+Game rules:
+1. This is a memory game.
+2. The chess board consist of various pieces at various positions. 
+	You need to remember the positions of each pieces and you need to assemble them correctly.
+3. Level: 1- 5 have (20secs) to memorize the pieces and (40secs) to place them.
+4. Level: 6-15 have (60secs) to memorize the pieces and (90secs) to place them.
+5. You can click "READY" button if you have memorized the pieces before time 
+	and you will be directed to the empty chess board where you can place the pieces.
+6. For every Pieces correctly placed the box will turn green and once you finish placing 
+	your coins click "VERIFY" button to validate the positions.

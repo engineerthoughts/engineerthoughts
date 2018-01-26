@@ -1,0 +1,577 @@
+<!doctype html>
+<html class="loading">
+	<head>
+			<title>memory game alien</title>
+			
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+			
+
+			<style>
+			html {
+				-webkit-transition: background-color 1s;
+				transition: background-color 1s;
+			}
+			html, body { min-height: 100%; }
+			html.loading {
+				background: #e8fffb url('loading.gif') no-repeat 50% 50%;
+				-webkit-transition: background-color 0;
+				transition: background-color 0;
+			}
+			body {
+				-webkit-transition: opacity 1s ease-in;
+				transition: opacity 1s ease-in;
+			}
+			html.loading body {
+				opacity: 0;
+				-webkit-transition: opacity 0;
+				transition: opacity 0;
+			}
+			
+			#diva1, #diva3, #diva5, #diva7, #divb2, #divb4, #divb6, #divb8, #divc1, #divc3, #divc5, #divc7, 
+			#divd2, #divd4, #divd6, #divd8, #dive1, #dive3, #dive5, #dive7, #divf2, #divf4, #divf6, #divf8,
+			#divg1, #divg3, #divg5, #divg7, #divh2, #divh4, #divh6, #divh8
+			{
+				float: left;
+				width: 50px;
+				height: 50px;
+				border: 1px solid black;
+				background-color:white;
+				
+				
+			}
+
+			#diva2, #diva4, #diva6, #diva8, #divb1, #divb3, #divb5, #divb7, #divc2, #divc4, #divc6, #divc8,
+			#divd1, #divd3, #divd5, #divd7, #dive2, #dive4, #dive6, #dive8, #divf1, #divf3, #divf5, #divf7,
+			#divg2, #divg4, #divg6, #divg8, #divh1, #divh3, #divh5, #divh7{
+				float: left;
+				width: 50px;
+				height: 50px;
+				border: 1px solid black;
+				background-color:#7FB3D5;
+			}
+			#answerBoxes
+			{
+			margin-top:-10px;
+			margin-left:450px;
+			}
+			
+			
+			
+			#imganalysis{
+			margin-top:-475px;
+			margin-left:90px;
+			width:300px;
+			height:375px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			}
+			
+			#analysis{
+			margin-left:-775px;
+			
+			}
+			
+			
+			#description
+			{
+			margin-top:-425px;
+			margin-left:900px;
+			width:300px;
+			height:375px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			
+			}
+			
+			
+			
+			#desctitle{
+			font-size:30px;
+			font-family:Calibri;
+			color:white;
+			background: #0c3327 ;
+			}
+			#getdescription,#resultin,#five1
+			{
+			font-size:22px;
+			font-family:Calibri;
+			color:#0c3327;
+			background: linear-gradient(to bottom left, #b7e9ff, #fffdd1);
+			
+			}
+			#getmoves,#resultout,#five
+			{
+			font-size:18px;
+			font-family:Calibri;
+			
+			color:#0c3327;
+			//border: 1px solid #4CAF50;
+			}
+			#desctitle1{
+			font-size:30px;
+			font-family:Calibri;
+			color:white;
+			width:300px;
+			background: #0c3327 ;
+			}
+			#desctitle2{
+			margin-top:-400px;
+			}
+			
+			
+			#answer1Box,#answer2Box,#answer3Box,#answer4Box, #answer5Box
+			{
+			float:left;
+			width: 50px;
+			height: 50px;
+			
+			
+			}
+			#answers{
+			
+			margin-left:500px;}
+			body { min-width: 980px; text-align: left; background:#e8fffb;}
+			.buttonc{
+			margin-left:400px;
+			}
+			.button {
+			background-color: #0c3327;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			
+			cursor: pointer;
+		}
+		h2{
+					
+					margin-left:540px;
+					font-family:Calibri;
+					color:#0c3327;
+					}
+		.timer1{
+					margin-top:-20px;
+					margin-left:530px;
+					font-family:Calibri;
+					color:#0c3327;	}	
+
+					.topnav a.active{
+						border-bottom: 2px solid #87CEFA;
+					}
+					.topnav {
+					  overflow: hidden;
+					  background-color: #0d1934;
+					  position: fixed;
+					  min-width: 1500px;
+					  box-shadow: 0 12px 16px 0 rgba(0,0,0,.5),0 17px 50px 0 rgba(0,0,0,0.19);
+					  margin-top:-10px;
+					  margin-left:-10px;
+					}
+
+					.topnav a {
+					  float: left;
+					  display: block;
+					  color: #b7e2e2;
+					  text-align: center;
+					  padding: 10px 16px;
+					  text-decoration: none;
+					  font-size: 16px;
+					  text-align: center;
+					  font-family:Calibri;
+					}
+
+					.topnav a:hover {
+					  color:#b7e2e2;
+						border-bottom: 2px solid #87CEFA;
+					}
+
+					.topnav .icon {
+					  display: none;
+					}
+
+				
+
+									
+			
+			</style>
+
+			<script src="jquery.js"></script>
+			<script>
+			var myFuncCalls = 0;
+			function allowDrop(ev){
+			   ev.preventDefault();
+			}
+
+			function drag(ev){
+			   ev.dataTransfer.setData("content", ev.target.id);
+			}
+			function drop(ev) {
+				ev.preventDefault();
+				var data = ev.dataTransfer.getData("content");
+				ev.target.appendChild(document.getElementById(data));
+				myFuncCalls++;
+			}
+			   
+			function drop1(ev){
+			   ev.preventDefault();
+			   var image5 = ev.dataTransfer.getData("content");
+			   ev.target.appendChild(document.getElementById(image5));
+			   myFuncCalls++;
+			
+			if($('#diva1').find('#bK1').length == 1)
+			  {
+				document.getElementById("diva1").style.backgroundColor = "#66cc33";
+			  } else {
+				alert("Wrong!");
+			  }
+			 
+			}
+			
+			
+			function drop2(ev)
+			{
+			   ev.preventDefault();
+			   var image1 = ev.dataTransfer.getData("content");
+			   ev.target.appendChild(document.getElementById(image1));
+			   myFuncCalls++;
+			   if($('#diva3').find('#wN1').length == 1)
+			  {
+				document.getElementById("diva3").style.backgroundColor = "#66cc33";
+			  } else {
+				alert("Wrong!");
+			  }
+			}
+			
+			function drop3(ev)
+			{
+			   ev.preventDefault();
+			   var image2 = ev.dataTransfer.getData("content");
+			   ev.target.appendChild(document.getElementById(image2));
+			   myFuncCalls++;
+			   if($('#divb1').find('#wP1').length == 1)
+			  {
+				document.getElementById("divb1").style.backgroundColor = "#66cc33";
+			  } else {
+				alert("Wrong!");
+			  }
+			}
+			
+			function drop4(ev)
+			{
+			   ev.preventDefault();
+			   var image3 = ev.dataTransfer.getData("content");
+			   ev.target.appendChild(document.getElementById(image3));
+			   myFuncCalls++;
+			   if(($('#divb2').find('#bP1').length == 1) || ($('#divb2').find('#bP2').length == 1))
+			  {
+				document.getElementById("divb2").style.backgroundColor = "#66cc33"; 
+			  } else {
+				alert("Wrong!");
+			  }
+			}
+			
+			function drop5(ev)
+			{
+			   ev.preventDefault();
+			   var image4 = ev.dataTransfer.getData("content");
+			   ev.target.appendChild(document.getElementById(image4));
+			   myFuncCalls++;
+			   if(($('#dive7').find('#bP1').length == 1) || ($('#dive7').find('#bP2').length == 1))
+			  {
+				document.getElementById("dive7").style.backgroundColor = "#66cc33"; 
+			  } else {
+				alert("Wrong!");
+				
+			  }
+			}
+			function drop6(ev)
+			{
+			   ev.preventDefault();
+			   var image6 = ev.dataTransfer.getData("content");
+			   ev.target.appendChild(document.getElementById(image6));
+			   myFuncCalls++;
+			   if($('#divg8').find('#wK1').length == 1)
+			  {
+				document.getElementById("divg8").style.backgroundColor = "#66cc33"; 
+			  } else {
+				alert("Wrong!");
+				
+			  }
+			}
+			function drop7(ev)
+			{
+			   ev.preventDefault();
+			   var image7 = ev.dataTransfer.getData("content");
+			   ev.target.appendChild(document.getElementById(image7));
+			   myFuncCalls++;
+			   if($('#divh8').find('#wB1').length == 1)
+			  {
+				document.getElementById("divh8").style.backgroundColor = "#66cc33"; 
+			  } else {
+				alert("Wrong!");
+				
+			  }
+			}
+			
+			function eff()
+			{
+			if(myFuncCalls <= 9)
+				{
+				document.getElementById("analysis").src = "green.gif";
+				}
+				else 
+				{
+				document.getElementById("analysis").src = "red.gif";
+				}
+				document.getElementById("getmoves").innerHTML = myFuncCalls;
+			}
+</script>
+	</head>
+
+	
+	
+	<body onload="blinktext();">
+		<div class="topnav" id="myTopnav">
+			<a> <img src="https://raw.githubusercontent.com/engineerthoughts/engineerthoughts/gh-pages/E.png" width='20px', height='18px'> </a>
+			<a href="http://engineerthoughts.com/index.html">HOME</a>
+			<a class="active" href="http://engineerthoughts.com/projects.html">PROJECTS</a>
+			<a href="http://engineerthoughts.com/scribbles.html">SCRIBBLES</a>
+			<a href="http://engineerthoughts.com/apj.html">THOUGHTS</a>
+			<a href="http://engineerthoughts.com/aboutus.html">ABOUT US</a>
+			<!--<a id="announcement" style="color: rgb(162, 238, 47);" href="http://engineerthoughts.com/elec.html">**NEW**</a> -->
+			<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">☰</a>
+		</div>
+		
+		<script type="text/javascript" charset="UTF-8"></script><script>
+			var html = document.getElementsByTagName('html')[0];
+			var removeLoading = function() {
+				// In a production application you would remove the loading class when your
+				// application is initialized and ready to go.  Here we just artificially wait
+				// 3 seconds before removing the class.
+				setTimeout(function() {
+					html.className = html.className.replace(/loading/, '');
+				}, 3000);
+			};
+			removeLoading();
+		</script>
+		
+		<script>
+			function myFunction() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
+				}
+			}
+			</script>
+		<br>
+
+		
+		<h2>Memory game - LEVEL : 3</h2>
+		<p class="timer1">Time remaining to complete : <span id="countdowntimer">30 </span> Seconds</p>
+			
+			<div id="answerBoxes">
+						
+						<div id="diva1" ondrop="drop1(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="diva2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="diva3" ondrop="drop2(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="diva4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="diva5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="diva6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="diva7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="diva8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<br> 
+						<br><br>
+						<div id="divb1" ondrop="drop3(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divb2" ondrop="drop4(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divb3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divb4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divb5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divb6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divb7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divb8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<br> 
+						<br><br>
+						
+						<div id="divc1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divc2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divc3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divc4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divc5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divc6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divc7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divc8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<br> 
+						<br><br>
+						
+						<div id="divd1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divd2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divd3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divd4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divd5" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divd6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divd7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divd8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<br> 
+						<br><br>
+						
+						<div id="dive1" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="dive2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="dive3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="dive4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="dive5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="dive6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="dive7" ondrop="drop5(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="dive8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<br> 
+						<br><br>
+						
+						<div id="divf1" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divf2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divf3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divf4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divf5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divf6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divf7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divf8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<br> 
+						<br><br>
+						
+						<div id="divg1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divg2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divg3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divg4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divg5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divg6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divg7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divg8" ondrop="drop6(event)" ondragover="allowDrop(event)">
+						</div>
+						<br> 
+						<br><br>
+						
+						<div id="divh1" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divh2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divh3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divh4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divh5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divh6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divh7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divh8" ondrop="drop7(event)" ondragover="allowDrop(event)">
+						</div>
+				</div>
+				<br> 
+				<br><br>
+			
+			<!-- end of answerBoxes -->
+			<div id="whatsWhatContent">
+			<div id="answers">
+			   <div id="answer1Box" ondrop="drop1(event)" ondragover="allowDrop(event)">
+				   <img src="bK.png" draggable="true" ondragstart="drag(event)" id="bK1" width="50" height="50">
+			   </div>
+
+				 <div id="answer3Box" ondrop="drop2(event)" ondragover="allowDrop(event)">
+				   <img src="wN.png" draggable="true" ondragstart="drag(event)" id="wN1" width="50" height="50">
+				</div>
+				
+			   <div id="answer2Box" ondrop="drop3(event)" ondragover="allowDrop(event)">
+				   <img src="wP.png" draggable="true" ondragstart="drag(event)" id="wP1" width="50" height="50">
+			</div>
+
+			  
+
+			   <div id="answer4Box" ondrop="drop4(event)" ondragover="allowDrop(event)">
+				  <img src="bP.png" draggable="true" ondragstart="drag(event)" id="bP1" width="50" height="50">
+			</div>
+			
+			 <div id="answer5Box" ondrop="drop5(event)" ondragover="allowDrop(event)">
+				  <img src="bP.png" draggable="true" ondragstart="drag(event)" id="bP2" width="50" height="50">
+			</div>
+			
+			<div id="answer5Box" ondrop="drop5(event)" ondragover="allowDrop(event)">
+				  <img src="wK.png" draggable="true" ondragstart="drag(event)" id="wK1" width="50" height="50">
+			</div>
+			
+			<div id="answer5Box" ondrop="drop5(event)" ondragover="allowDrop(event)">
+				  <img src="wB.png" draggable="true" ondragstart="drag(event)" id="wB1" width="50" height="50">
+			</div>
+			</div>
+			</div></div><br><br><br>
+			
+			
+			
+			<script>
+			
+					var timeleft = 33;
+					var downloadTimer = setInterval(function(){
+					timeleft--;
+					document.getElementById("countdowntimer").textContent = timeleft;
+					if(timeleft <= 0)
+						clearInterval(downloadTimer);
+					},1000);
+					
+			var myVar = setInterval(timeup, 33000);
+			var myVar = setInterval(check, 33000);
+			function timeup()
+			{alert("TIME UP");}
+			function check()
+			{
+			
+				if(($('#diva1').find('#bK1').length == 1) && ($('#diva3').find('#wN1').length == 1) && ($('#divb1').find('#wP1').length == 1) && (($('#divb2').find('#bP1').length == 1) || ($('#divb2').find('#bP2').length == 1)) && (($('#dive7').find('#bP1').length == 1) || ($('#dive7').find('#bP2').length == 1)) && ($('#divg8').find('#wK1').length == 1) && ($('#divh8').find('#wB1').length == 1))
+				{
+				document.getElementById("resultout").innerHTML = "CONGRATULATIONS YOU WON";
+				document.body.style.backgroundImage = "url('congrats.gif')";
+				}
+				else {
+				document.getElementById("resultout").innerHTML = "SORRY PLEASE TRY AGAIN";
+				}
+			}
+			</script>
+			
+			<div id="imganalysis">
+					
+						<img id="analysis" src="gifbgd.gif" width="300" height="375">
+					</div>
+<br>
+					<div id="description">
+						<center>
+							<p id="desctitle">ANALYSIS</p>
+							<p id="getdescription"><b>IDEAL MOVES TO COMPLETE : </b>
+							</p>
+							<p id="five">7</p>
+							
+							<p id="five1"><b>TOTAL MOVES TAKEN TO COMPLETE : </b></p>
+							
+							<p id="getmoves">&#160
+							</p>
+							<p id="resultin"><b>RESULT : </b>
+							</p>
+							<p id="resultout">&#160
+							</p>
+							</center>
+					</div>
+					
+					<br><br><br><br><br><br>
+					
+					
+			<div class="buttonc">
+			<a href="level2timer.html"><button class="button button1">&laquo; LEVEL 2 </button></a>
+			<button class="button button1" onclick="check();eff()">ANALYSIS</button>
+			<a href="level3timer.html"><button class="button button1">RETRY</button></a>
+			<a href="level4timer.html"><button class="button button1">LEVEL 4 &raquo;</button></a>
+			</div>
+			
+	</body>
+</html>
+
+
