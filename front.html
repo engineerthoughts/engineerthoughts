@@ -41,8 +41,9 @@
 				font-size:20px;
 				font-family:Century Gothic;
 				color:#0d1934;
-				text-align:justify;
-				margin:10px 20px 0 20px;
+				text-align:left;
+				padding-left:20px;
+				padding-right:20px;
 
 				}
 				.p2index{
@@ -103,6 +104,15 @@
 					background-color: #0099cc;
 					color: white;
 				}
+				.rules{
+				border-left: 8px solid #4a708b;
+				border-right: 8px solid #4a708b;
+				background-color: #76D1D8;
+				width:70%;
+				margin:auto;
+				text-align:left;
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				}
 
 			.a1{
 				color:white;
@@ -139,11 +149,17 @@
 						border-bottom: 2px solid #87CEFA;
 					}
 
+
 					.topnav .icon {
 					  display: none;
 					}
 
-					@media screen and (max-width: 700px) {
+				@media screen and (max-height: 450px) {
+					  .sidenav1 {padding-top: 15px;}
+					  .sidenav1 a {font-size: 18px;}
+					}
+
+					@media screen and (max-width: 600px) {
 					  .topnav a:not(:first-child) {display: none;}
 					  .topnav a.icon {
 						float: right;
@@ -151,7 +167,7 @@
 					  }
 					}
 
-					@media screen and (max-width: 700px) {
+					@media screen and (max-width: 600px) {
 					  .topnav.responsive {position: relative;}
 					  .topnav.responsive .icon {
 						position: absolute;
@@ -193,15 +209,42 @@
 		
 		<h1 class="headtextindex">Engineer Thoughts</h1>
 		
-		<h2 class="head1index">MEMORY GAME</h2>
+		<h2 class="head1index">MEMORY GAME - DESKTOP VERSION</h2>
+		
+		
+		
+		<div class="rules">
+				<p class="p1index">
+				<b><u>Game rules:</u></b><br><br>
+
+				No one likes rules. Here is basic things you need to know.<br><br>
+
+				1. This is a Desktop based Memory Game, Sorry for the inconvenience (Mobile Users).<br><br>
+
+				2. The chess board consist of various pieces at various positions. <br><br>
+					You need to remember the positions of each pieces and you need to assemble them correctly.<br><br>
+
+				3. Level: 1- 2 have (15secs) to memorize the pieces and (20secs) to place them.<br><br>
+				Level: 3- 5 have (20secs) to memorize the pieces and (30secs) to place them.<br><br>
+
+				4. Level: 6-15 have (60secs) to memorize the pieces and (90secs) to place them.<br><br>
+
+				5. You can click "READY" button if you have memorized the pieces before time <br><br>
+					and you will be directed to the empty chess board where you can place the pieces. <br><br>
+					You need to drag and drop the pieces into the correct boxes accordingly.<br><br>
+
+				6. For every Pieces correctly placed the box will turn green and once you finish placing <br><br>
+					your coins click "ANALYSIS" button to check your efficiency.<br><br>
+
+				7. As soon as you click the "START" button you will be directed to the FIRST LEVEL.<br><br>
+
+				<b>ALL THE BEST.<b>
+		</p></div><br>
 		
 		<center><a href="level1timer.html"><button class="button button1">START</button></a></center>
-		
+		<br>
 
-		<script>
-		function myFunction() {
-			setTimeout(function(){window.location.href='net1.html'},10000);
-		}
+		
 		</script>
 
 </body>
