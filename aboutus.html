@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="description" content="home engineer thoughts">
+		<meta name="keywords" content="engineerthoughts,home,Home engineerthoughts,sudharsan,aranganathan,alien,arangan,engineer,engineersthoughts">
+		<meta name="author" content="engineerthoughts">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Engineer thoughts </title>
+		<link rel="shortcut icon" href="images/logo.png">
+		<link rel="stylesheet" type="text/css" href="etstyle.css">		
+	<style>
+		.aboutuscontainer 
+			{
+				float: left;
+				width: 50%;
+				height:auto;
+				margin-top:15px;
+			}
+
+
+		.aboutusimage 
+			{
+			  display: block;
+			  width: 50%;
+			  height: auto;
+			}
+
+		@media screen and (max-width: 600px) 
+			{
+				.head1index
+				{
+					font-size:14px;
+					margin:10px 0 0 0;
+				}
+				.p1index
+				{
+					font-size: 12px;
+				}
+				.img3
+				{
+					width:90%;
+					height:auto;
+				}
+</style>	
+	</head>
+	<body onload="DayET();">
+	
+		<div class="topnav" id="myTopnav">
+			<a> <img src="images/logo.png" width='20px', height='18px'> </a>
+			<a id="topnav1"	href="index.html">HOME</a>
+			<a id="topnav2"	href="projects.html">PROJECTS</a>
+			<a id="topnav3"	href="scribbles.html">SCRIBBLES</a>
+			<a id="topnav4"	href="apj.html">THOUGHTS</a>
+			<a id="topnav5"	class="active" href="aboutus.html">ABOUT US</a>
+			<!--<a id="announcement" style="color: rgb(162, 238, 47);" href="http://engineerthoughts.com/elec.html">**NEW**</a> -->
+			<a id="topnav6" href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">☰</a>
+		</div>
+		<script>
+			function myFunction() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
+				}
+			}
+			</script>
+		<br>
+	<br>
+	<center><h2 class ="head1index">ENGINEERTHOUGHTS</h3>
+	<p class = "p1index" style="text-align:center">"Even if you are zero, a good team can make you a hero"<br>"Team work makes the Dream work"</p>
+	<img class="img3" src="images/join.png" style="width:60%;height:auto;"></img>
+	<p class = "p1index" style="text-align:center">Nice Meeting you :)</p></center>
+	<div class="aboutuscontainer">
+		<center>
+			<img src="images/aranga.png" alt = "N Aranganathan" class="aboutusimage">
+			<h3 class="head1index">ARANGANATHAN N</h3>
+			<p class="p1index" style="text-align:center">Electrical Engineer<br>R & D<br> (ranga) </p><br>
+			<button class="buttonmodified" style="width:60%">PROFILE</button>
+		 </center>
+	</div>
+	
+	<div class="aboutuscontainer">
+		<center>
+			<img src="images/alien.jpg" alt = "N Aranganathan" class="aboutusimage">
+			<h3 class="head1index">SUDHARSAN K</h3>
+			<p class="p1index" style="text-align:center">Mechanical Engineer<br>But works in IT.<br> (alien) </p><br>
+			<button class="buttonmodified"  style="width:60%">PROFILE</button>
+		 </center>
+		 	<br><br>
+	</div>
+<center><div style="bottom:0;position:fixed; width:100%;">
+		<a href="https://www.facebook.com/enggthoughts/"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/facebook.png" width='40px', height='40px' style="opacity:0.5"></a>
+		<a href="https://www.youtube.com/channel/UCNEehMfqVDmvPb9BJUPFU-w"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/youtube.png" width='40px', height='40px' style="opacity:0.5"></a>
+		<a href="mailto:engineerthoughts4life@gmail.com?Subject=I%20like%20Engineer%20Thoughts!!" target="_top"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/mail.png" width='40px', height='40px' style="opacity:0.5"></a>
+		</div></center>
+<script>
+function bigImg(x) {
+  x.style.height = "60px";
+  x.style.width = "60px";
+  x.style.opacity = "1";
+}
+
+function normalImg(x) {
+  x.style.height = "40px";
+  x.style.width = "40px";
+  x.style.opacity = "0.5";
+}
+</script>
+
+<script src="color.js"></script>
+</body>
+</html>

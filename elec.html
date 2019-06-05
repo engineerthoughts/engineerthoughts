@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<meta name="description" content="electricity engineer thoughts">
+		<meta name="keywords" content="engineerthoughts,electricity engineerthoughts,engineersthoughts,cycle dynamo engineerthoughts,solar panel engineerthoughts">
+		<meta name="author" content="engineerthoughts">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Engineer thoughts </title>
+		<link rel="shortcut icon" href="images/logo.png">
+		<link rel="stylesheet" type="text/css" href="etstyle.css">	
+		
+	</head>
+	<body onload="DayET();">
+
+			<div class="topnav" id="myTopnav">
+			<a> <img src="images/logo.png" width='20px', height='18px'> </a>
+			<a id="topnav1" href="index.html">HOME</a>
+			<a id="topnav2" class="active" href="projects.html">PROJECTS</a>
+			<a id="topnav3" href="scribbles.html">SCRIBBLES</a>
+			<a id="topnav4" href="apj.html">THOUGHTS</a>
+			<a id="topnav5" href="aboutus.html">ABOUT US</a>
+			<a id="topnav6" href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">☰</a>
+		</div>
+		</div>
+		<br><br><br>
+		<script>
+			function myFunction() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
+				}
+			}
+			</script>
+		<div id="mysidenav1" class="sidenav1">
+			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			  <a href="anim.html">ANIMATION</a>
+			  <a href="elec.html">ELECTRICAL</a>
+			  <a href="mech.html">MECHANICAL</a>
+			   <a href="computer.html">COMPUTER</a>
+
+			</div>
+
+			<div id="main">
+
+
+			  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Navigate</span>
+			</div>
+
+			<script>
+			function openNav() {
+				document.getElementById("mysidenav1").style.width = "250px";
+				document.getElementById("main").style.marginLeft = "250px";
+			}
+
+			function closeNav() {
+				document.getElementById("mysidenav1").style.width = "0";
+				document.getElementById("main").style.marginLeft= "0";
+			}
+			</script>
+			<h2 class="HEAD2"><u>ELECTRICAL</u></h2>
+
+			<!--<p><marquee width="300" scrollamount="300" scrolldelay="500" loop="7">**NEW**</marquee></p>-->
+			<!--<center><p id="announcement" ><a class="p4elec" href="https://www.youtube.com/watch?v=Q2dUaDNhJeg">**NEW**</a></p></center>-->
+      <div style="text-align: center;"><a href="iot.html"><img class="img3elec" src="images/MAKE_IOT_SIMPLE.png"  width="460" height="345"></a></div><br>
+      <a style="border-bottom:none" href="iot.html"><h2 class="HEAD2">Make IOT SImple</h2></a>
+      <br><br>
+			<div style="text-align: center;"><a href="watering.html"><img class="img3elec" src="images/watrings.png"  width="460" height="345"></a></div><br>
+			<a style="border-bottom:none" href="watering.html"><h2 class="HEAD2">Automatic Watering System for Plants</h2></a>
+			<br><br>
+			<div style="text-align: center;"><a href="dynamo.html"><img class="img3elec" src="images/cycletitle.png"  width="460" height="345"></a></div><br>
+			<a style="border-bottom:none" href="dynamo.html"><h2 class="HEAD2">CYCLE DYNAMO | POWER GENERATION</h2></a>
+			<br><br>
+			<div style="text-align: center;"><a href="solar.html"><img class="img3elec" src="images/solar1.jpg"  width="460" height="345"></a></div><br>
+			<a style="border-bottom:none" href="solar.html"><h2 class="HEAD2">SMART WIRELESS SOLAR POWER MANAGEMENT - N. Aranganathan</h2> <br><br></a>
+		
+		<center><div style="bottom:0;position:fixed; width:100%;">
+		<a href="https://www.facebook.com/enggthoughts/"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/facebook.png" width='40px', height='40px' style="opacity:0.5"></a>
+		<a href="https://www.youtube.com/channel/UCNEehMfqVDmvPb9BJUPFU-w"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/youtube.png" width='40px', height='40px' style="opacity:0.5"></a>
+		<a href="mailto:engineerthoughts4life@gmail.com?Subject=I%20like%20Engineer%20Thoughts!!" target="_top"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/mail.png" width='40px', height='40px' style="opacity:0.5"></a>
+		</div></center>
+<script src="color.js"></script>
+<script>
+function bigImg(x) {
+  x.style.height = "60px";
+  x.style.width = "60px";
+  x.style.opacity = "1";
+}
+
+function normalImg(x) {
+  x.style.height = "40px";
+  x.style.width = "40px";
+  x.style.opacity = "0.5";
+}
+</script>
+	
+	</body>
+</html>

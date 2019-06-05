@@ -1,0 +1,31 @@
+color: dark grey - #2e2e2e
+bgd color: sandal - #d4a672
+
+
+color: #004d40
+light green: #8bc34a
+bgd color: #f9ffe3
+
+
+color:white
+heading: #ef9e62 (orange)
+bgd color: #f16a77 (pink)
+bgd color: #4f4f4f (grey)
+
+
+color: #d0363b (pink)
+color: #e3d1a2 (wheat)
+color: #121113 (black)
+
+
+color:#356178 (blue)
+color: #ddd5c5 (pink)
+
+
+color: #0d343f green
+color: #ddaf8f sandal
+
+
+coloir: #f6e5dd (pink light)
+color: #96532c (brown)
+color: #31241e (dark brown)
