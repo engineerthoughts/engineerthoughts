@@ -1,0 +1,803 @@
+<html class="loading">
+<head>
+	<title> memory game alien </title>
+		<link rel="shortcut icon" href="https://raw.githubusercontent.com/engineerthoughts/engineerthoughts/gh-pages/E.png">
+<style>
+
+html {
+				-webkit-transition: background-color 1s;
+				transition: background-color 1s;
+			}
+			html, body { min-height: 100%; }
+			html.loading {
+				background: #e8fffb url('loading.gif') no-repeat 50% 50%;
+				-webkit-transition: background-color 0;
+				transition: background-color 0;
+			}
+			body {
+				-webkit-transition: opacity 1s ease-in;
+				transition: opacity 1s ease-in;
+			}
+			html.loading body {
+				opacity: 0;
+				-webkit-transition: opacity 0;
+				transition: opacity 0;
+			}
+			
+.bartime
+{
+color:black;
+background-color:black;
+width:70%;
+height:30px;
+}
+#diva1, #diva3, #diva5, #diva7, #divb2, #divb4, #divb6, #divb8, #divc1, #divc3, #divc5, #divc7, 
+			#divd2, #divd4, #divd6, #divd8, #dive1, #dive3, #dive5, #dive7, #divf2, #divf4, #divf6, #divf8,
+			#divg1, #divg3, #divg5, #divg7, #divh2, #divh4, #divh6, #divh8
+			{
+				float: left;
+				width: 50px;
+				height: 50px;
+				border: 1px solid black;
+				background-color:white;
+			}
+
+			#diva2, #diva4, #diva6, #diva8, #divb1, #divb3, #divb5, #divb7, #divc2, #divc4, #divc6, #divc8,
+			#divd1, #divd3, #divd5, #divd7, #dive2, #dive4, #dive6, #dive8, #divf1, #divf3, #divf5, #divf7,
+			#divg2, #divg4, #divg6, #divg8, #divh1, #divh3, #divh5, #divh7{
+				float: left;
+				width: 50px;
+				height: 50px;
+				border: 1px solid black;
+				background-color:#7FB3D5;
+			}
+			#answer1Box,#answer2Box,#answer3Box,#answer4Box, #answer5Box, #answer6Box, #answer7Box,#answer8Box, #answer9Box, #answer10Box
+			{
+			float:left;
+			width: 50px;
+			height: 50px;
+			}
+			
+			
+			#imganalysis{
+			margin-top:-475px;
+			margin-left:90px;
+			width:300px;
+			height:375px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			}
+			
+			#analysis{
+			margin-left:-775px;
+			
+			}
+			
+			
+			#description
+			{
+			margin-top:-425px;
+			margin-left:900px;
+			width:300px;
+			height:375px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			
+			}
+			
+			
+			
+			#desctitle{
+			font-size:30px;
+			font-family:Calibri;
+			color:white;
+			background: #0c3327 ;
+			}
+			#getdescription,#resultin,#five1
+			{
+			font-size:22px;
+			font-family:Calibri;
+			color:#0c3327;
+			background: linear-gradient(to bottom left, #b7e9ff, #fffdd1);
+			
+			}
+			#getmoves,#resultout,#five
+			{
+			font-size:18px;
+			font-family:Calibri;
+			
+			color:#0c3327;
+			//border: 1px solid #4CAF50;
+			}
+			#desctitle1{
+			font-size:30px;
+			font-family:Calibri;
+			color:white;
+			width:300px;
+			background: #0c3327 ;
+			}
+			#desctitle2{
+			margin-top:-400px;
+			}
+			
+			
+			#answer11Box,#answer12Box,#answer13Box,#answer14Box, #answer15Box, #answer16Box, #answer17Box,#answer18Box,#answer19Box
+			{
+			float:left;
+			width: 50px;
+			height: 50px;
+			}
+			#answerBoxes
+			{
+			margin-top:-25px;
+			margin-left:450px;}
+			
+			#answers{
+			margin-left:430px;
+			}
+			body { min-width: 980px; text-align: left; background:#e8fffb;}
+			.buttonc{
+			margin-left:380px;
+			margin-top:10px;
+			}
+			.button {
+			background-color: #0c3327;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			
+			cursor: pointer;
+		}
+		h2{
+					margin-left:530px;
+					margin-top:-20px;
+					font-family:Calibri;
+					color:#0c3327;
+					}
+		.timer1{
+					margin-top:-17px;
+					margin-left:530px;
+					font-family:Calibri;
+					color:#0c3327;	}	
+
+
+					.topnav a.active{
+						  border-bottom: 2px solid #87CEFA;
+					}
+					.topnav {
+						  overflow: hidden;
+						  background-color: #0d1934;
+						  position: fixed;
+						  min-width: 1500px;
+						  box-shadow: 0 12px 16px 0 rgba(0,0,0,.5),0 17px 50px 0 rgba(0,0,0,0.19);
+						  margin-top:-10px;
+						  margin-left:-10px;
+					}
+
+					.topnav a {
+						  float: left;
+						  display: block;
+						  color: #b7e2e2;
+						  text-align: center;
+						  padding: 10px 16px;
+						  text-decoration: none;
+						  font-size: 16px;
+						  text-align: center;
+						  font-family:Calibri;
+					}
+
+					.topnav a:hover {
+						color:#b7e2e2;
+						border-bottom: 2px solid #87CEFA;
+					}
+
+					.topnav .icon {
+						display: none;
+					}					
+</style>
+<script src="jquery.js"></script>
+			<script>
+			var myFuncCalls = 0;
+			function allowDrop(ev){
+			   ev.preventDefault();
+			}
+
+			function drag(ev){
+			   ev.dataTransfer.setData("content", ev.target.id);
+			}
+			function drop(ev) {
+				ev.preventDefault();
+				var data = ev.dataTransfer.getData("content");
+				ev.target.appendChild(document.getElementById(data));
+				myFuncCalls++;
+			}
+			   
+			function drop1(ev){
+			   ev.preventDefault();
+			   var image5 = ev.dataTransfer.getData("content");
+			   ev.target.appendChild(document.getElementById(image5));
+			   myFuncCalls++;
+			
+			if(($('#diva1').find('#bR1').length == 1) || ($('#diva1').find('#bR2').length == 1))
+			  {
+				document.getElementById("diva1").style.backgroundColor = "#66cc33";
+			  } else {
+				alert("Wrong!");
+			  }
+			 
+			}
+			
+			
+			function drop2(ev)
+			{
+			   ev.preventDefault();
+			   var image1 = ev.dataTransfer.getData("content");
+			   ev.target.appendChild(document.getElementById(image1));
+			   myFuncCalls++;
+			   if(($('#diva8').find('#bR1').length == 1) || ($('#diva8').find('#bR2').length == 1))
+			  {
+				document.getElementById("diva8").style.backgroundColor = "#66cc33";
+			  } else {
+				alert("Wrong!");
+			  }
+			}
+			
+			function drop3(ev)
+			{
+			   ev.preventDefault();
+			   var image2 = ev.dataTransfer.getData("content");
+			   ev.target.appendChild(document.getElementById(image2));
+			   myFuncCalls++;
+			   if(($('#divb7').find('#bP1').length == 1) || ($('#divb7').find('#bP2').length == 1) || ($('#divb7').find('#bP3').length == 1) || ($('#divb7').find('#bP4').length == 1) || ($('#divb7').find('#bP5').length == 1) || ($('#divb7').find('#bP6').length == 1))
+			  {
+				document.getElementById("divb7").style.backgroundColor = "#66cc33";
+			  } else {
+				alert("Wrong!");
+			  }
+			}
+			
+			function drop4(ev)
+			{
+			   ev.preventDefault();
+			   var image3 = ev.dataTransfer.getData("content");
+			   ev.target.appendChild(document.getElementById(image3));
+			   myFuncCalls++;
+			   if(($('#divc1').find('#bP1').length == 1) || ($('#divc1').find('#bP2').length == 1) || ($('#divc1').find('#bP3').length == 1) || ($('#divc1').find('#bP4').length == 1) || ($('#divc1').find('#bP5').length == 1) || ($('#divc1').find('#bP6').length == 1))
+			  {
+				document.getElementById("divc1").style.backgroundColor = "#66cc33"; 
+			  } else {
+				alert("Wrong!");
+			  }
+			}
+			
+			function drop5(ev)
+			{
+			   ev.preventDefault();
+			   var image4 = ev.dataTransfer.getData("content");
+			   ev.target.appendChild(document.getElementById(image4));
+			   myFuncCalls++;
+			   if(($('#divc3').find('#wR1').length == 1) || ($('#divc3').find('#wR2').length == 1))
+			  {
+				document.getElementById("divc3").style.backgroundColor = "#66cc33"; 
+			  } else {
+				alert("Wrong!");
+				
+			  }
+			}
+			function drop6(ev)
+			{
+			   ev.preventDefault();
+			   var image6 = ev.dataTransfer.getData("content");
+			   ev.target.appendChild(document.getElementById(image6));
+			   myFuncCalls++;
+			   if(($('#divc5').find('#bP1').length == 1) || ($('#divc5').find('#bP2').length == 1) || ($('#divc5').find('#bP3').length == 1) || ($('#divc5').find('#bP4').length == 1) || ($('#divc5').find('#bP5').length == 1) || ($('#divc5').find('#bP6').length == 1))
+			  {
+				document.getElementById("divc5").style.backgroundColor = "#66cc33"; 
+			  } else {
+				alert("Wrong!");
+				
+			  }
+			}
+			function drop7(ev)
+			{
+			   ev.preventDefault();
+			   var image7 = ev.dataTransfer.getData("content");
+			   ev.target.appendChild(document.getElementById(image7));
+			   myFuncCalls++;
+			   if(($('#divd4').find('#bP1').length == 1) || ($('#divd4').find('#bP2').length == 1) || ($('#divd4').find('#bP3').length == 1) || ($('#divd4').find('#bP4').length == 1) || ($('#divd4').find('#bP5').length == 1) || ($('#divd4').find('#bP6').length == 1))
+			  {
+				document.getElementById("divd4").style.backgroundColor = "#66cc33"; 
+			  } else {
+				alert("Wrong!");
+				
+			  }
+			}
+			
+			function drop8(ev)
+			{
+			   ev.preventDefault();
+			   var image8 = ev.dataTransfer.getData("content");
+			   ev.target.appendChild(document.getElementById(image8));
+			   myFuncCalls++;
+			   if($('#divd6').find('#bB1').length == 1)
+			  {
+				document.getElementById("divd6").style.backgroundColor = "#66cc33"; 
+			  } else {
+				alert("Wrong!");
+				
+			  }
+			}
+			
+			function drop9(ev)
+			{
+			   ev.preventDefault();
+			   var image9 = ev.dataTransfer.getData("content");
+			   ev.target.appendChild(document.getElementById(image9));
+			   myFuncCalls++;
+			   if(($('#divd8').find('#bP1').length == 1) || ($('#divd8').find('#bP2').length == 1) || ($('#divd8').find('#bP3').length == 1) || ($('#divd8').find('#bP4').length == 1) || ($('#divd8').find('#bP5').length == 1) || ($('#divd8').find('#bP6').length == 1))
+			  {
+				document.getElementById("divd8").style.backgroundColor = "#66cc33"; 
+			  } else {
+				alert("Wrong!");
+				
+			  }
+			}
+			function drop10(ev)
+			{
+			   ev.preventDefault();
+			   var image10 = ev.dataTransfer.getData("content");
+			   ev.target.appendChild(document.getElementById(image10));
+			   myFuncCalls++;
+			   if(($('#dive2').find('#bP1').length == 1) || ($('#dive2').find('#bP2').length == 1) || ($('#dive2').find('#bP3').length == 1) || ($('#dive2').find('#bP4').length == 1) || ($('#dive2').find('#bP5').length == 1) || ($('#dive2').find('#bP6').length == 1))
+			  {
+				document.getElementById("dive2").style.backgroundColor = "#66cc33"; 
+			  } else {
+				alert("Wrong!");
+				
+			  }
+			}
+			function drop11(ev)
+			{
+			   ev.preventDefault();
+			   var image11 = ev.dataTransfer.getData("content");
+			   ev.target.appendChild(document.getElementById(image11));
+			   myFuncCalls++;
+			   if(($('#dive4').find('#wP1').length == 1) || ($('#dive4').find('#wP2').length == 1) || ($('#dive4').find('#wP3').length == 1) || ($('#dive4').find('#wP4').length == 1))
+			  {
+				document.getElementById("dive4").style.backgroundColor = "#66cc33"; 
+			  } else {
+				alert("Wrong!");
+				
+			  }
+			}
+			
+			function drop12(ev)
+			{
+			   ev.preventDefault();
+			   var image12 = ev.dataTransfer.getData("content");
+			   ev.target.appendChild(document.getElementById(image12));
+			   myFuncCalls++;
+			   if($('#divf4').find('#bK1').length == 1)
+			  {
+				document.getElementById("divf4").style.backgroundColor = "#66cc33"; 
+			  } else {
+				alert("Wrong!");
+				
+			  }
+			}
+			
+			function drop13(ev)
+			{
+			   ev.preventDefault();
+			   var image13 = ev.dataTransfer.getData("content");
+			   ev.target.appendChild(document.getElementById(image13));
+			   myFuncCalls++;
+			   if($('#divf6').find('#wN1').length == 1)
+			  {
+				document.getElementById("divf6").style.backgroundColor = "#66cc33"; 
+			  } else {
+				alert("Wrong!");
+				
+			  }
+			}
+			
+			function drop14(ev)
+			{
+			   ev.preventDefault();
+			   var image14 = ev.dataTransfer.getData("content");
+			   ev.target.appendChild(document.getElementById(image14));
+			   myFuncCalls++;
+			   if(($('#divf8').find('#wP1').length == 1) || ($('#divf8').find('#wP2').length == 1) || ($('#divf8').find('#wP3').length == 1) || ($('#divf8').find('#wP4').length == 1))
+			  {
+				document.getElementById("divf8").style.backgroundColor = "#66cc33"; 
+			  } else {
+				alert("Wrong!");
+				
+			  }
+			}
+			
+			function drop15(ev)
+			{
+			   ev.preventDefault();
+			   var image15 = ev.dataTransfer.getData("content");
+			   ev.target.appendChild(document.getElementById(image15));
+			   myFuncCalls++;
+			   if(($('#divg1').find('#wP1').length == 1) || ($('#divg1').find('#wP2').length == 1) || ($('#divg1').find('#wP3').length == 1) || ($('#divg1').find('#wP4').length == 1))
+			  {
+				document.getElementById("divg1").style.backgroundColor = "#66cc33"; 
+			  } else {
+				alert("Wrong!");
+				
+			  }
+			}
+			
+			function drop16(ev)
+			{
+			   ev.preventDefault();
+			   var image16 = ev.dataTransfer.getData("content");
+			   ev.target.appendChild(document.getElementById(image16));
+			   myFuncCalls++;
+			   if(($('#divg2').find('#wP1').length == 1) || ($('#divg2').find('#wP2').length == 1) || ($('#divg2').find('#wP3').length == 1) || ($('#divg2').find('#wP4').length == 1))
+			  {
+				document.getElementById("divg2").style.backgroundColor = "#66cc33"; 
+			  } else {
+				alert("Wrong!");
+				
+			  }
+			}
+			
+			function drop17(ev)
+			{
+			   ev.preventDefault();
+			   var image17 = ev.dataTransfer.getData("content");
+			   ev.target.appendChild(document.getElementById(image17));
+			   myFuncCalls++;
+			   if($('#divg6').find('#wK1').length == 1)
+			  {
+				document.getElementById("divg6").style.backgroundColor = "#66cc33"; 
+			  } else {
+				alert("Wrong!");
+				
+			  }
+			}
+			
+			function drop18(ev)
+			{
+			   ev.preventDefault();
+			   var image18 = ev.dataTransfer.getData("content");
+			   ev.target.appendChild(document.getElementById(image18));
+			   myFuncCalls++;
+			   if(($('#divh3').find('#wR1').length == 1) || ($('#divh3').find('#wR2').length == 1))
+			  {
+				document.getElementById("divh3").style.backgroundColor = "#66cc33"; 
+			  } else {
+				alert("Wrong!");
+				
+			  }
+			}
+			
+			function eff()
+			{
+			if(myFuncCalls <= 20)
+				{
+				document.getElementById("analysis").src = "green.gif";
+				}
+				else 
+				{
+				document.getElementById("analysis").src = "red.gif";
+				}
+				document.getElementById("getmoves").innerHTML = myFuncCalls;
+			}
+</script>
+</head>
+<body>
+	
+			
+	<body onload="blinktext();">
+		<div class="topnav" id="myTopnav">
+			<a> <img src="https://raw.githubusercontent.com/engineerthoughts/engineerthoughts/gh-pages/E.png" width='20px', height='18px'> </a>
+			<a href="http://engineerthoughts.com/index.html">HOME</a>
+			<a class="active" href="http://engineerthoughts.com/projects.html">PROJECTS</a>
+			<a href="http://engineerthoughts.com/scribbles.html">SCRIBBLES</a>
+			<a href="http://engineerthoughts.com/apj.html">THOUGHTS</a>
+			<a href="http://engineerthoughts.com/aboutus.html">ABOUT US</a>
+			<!--<a id="announcement" style="color: rgb(162, 238, 47);" href="http://engineerthoughts.com/elec.html">**NEW**</a> -->
+			<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">☰</a>
+		</div><br><br><br>
+		<h2>MEMORY GAME - LEVEL 11</h2>
+		<p class="timer1">Time remaining to complete : <span id="countdowntimer">93 </span> Seconds</p>
+	
+	<script type="text/javascript" charset="UTF-8"></script><script>
+			var html = document.getElementsByTagName('html')[0];
+			var removeLoading = function() {
+				// In a production application you would remove the loading class when your
+				// application is initialized and ready to go.  Here we just artificially wait
+				// 3 seconds before removing the class.
+				setTimeout(function() {
+					html.className = html.className.replace(/loading/, '');
+				}, 3000);
+			};
+			removeLoading();
+		</script>
+		
+		
+		<script>
+			function myFunction() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
+				}
+			}
+			</script>
+		<br>
+		
+			<div id="answerBoxes">
+						
+						<div id="diva1" ondrop="drop1(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="diva2" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="diva3" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="diva4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="diva5" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="diva6" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="diva7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="diva8" ondrop="drop2(event)" ondragover="allowDrop(event)">
+						</div>
+						<br> 
+						<br><br>
+						
+						<div id="divb1" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divb2" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divb3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divb4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divb5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divb6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divb7" ondrop="drop3(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divb8" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<br> 
+						<br><br>
+						
+						<div id="divc1" ondrop="drop4(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divc2" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divc3" ondrop="drop5(event)" ondragover="allowDrop(event)"></div>
+						<div id="divc4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divc5" ondrop="drop6(event)" ondragover="allowDrop(event)"></div>
+						<div id="divc6" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divc7" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divc8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<br> 
+						<br><br>
+						
+						<div id="divd1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divd2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divd3" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divd4" ondrop="drop7(event)" ondragover="allowDrop(event)"></div>
+						<div id="divd5" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divd6" ondrop="drop8(event)" ondragover="allowDrop(event)"></div>
+						<div id="divd7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divd8" ondrop="drop9(event)" ondragover="allowDrop(event)">
+						</div>
+						<br> 
+						<br><br>
+						
+						<div id="dive1" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="dive2" ondrop="drop10(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="dive3" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="dive4" ondrop="drop11(event)" ondragover="allowDrop(event)"></div>
+						<div id="dive5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="dive6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="dive7" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="dive8" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<br> 
+						<br><br>
+						
+						<div id="divf1" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divf2" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divf3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divf4" ondrop="drop12(event)" ondragover="allowDrop(event)"></div>
+						<div id="divf5" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divf6" ondrop="drop13(event)" ondragover="allowDrop(event)"></div>
+						<div id="divf7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divf8" ondrop="drop14(event)" ondragover="allowDrop(event)"></div>
+						<br> 
+						<br><br>
+						
+						<div id="divg1" ondrop="drop15(event)" ondragover="allowDrop(event)"></div>
+						<div id="divg2" ondrop="drop16(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divg3" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divg4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divg5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divg6" ondrop="drop17(event)" ondragover="allowDrop(event)"></div>
+						<div id="divg7" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divg8" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<br> 
+						<br><br>
+						
+						<div id="divh1" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divh2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divh3" ondrop="drop18(event)" ondragover="allowDrop(event)"></div>
+						<div id="divh4" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divh5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divh6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+						<div id="divh7" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+						<div id="divh8" ondrop="drop(event)" ondragover="allowDrop(event)">
+						</div>
+				</div>
+				<br> 
+				<br><br>
+				
+				<div id="whatsWhatContent">
+			<div id="answers">
+			   <div id="answer1Box" ondrop="drop1(event)" ondragover="allowDrop(event)">
+				   <img src="bR.png" draggable="true" ondragstart="drag(event)" id="bR1" width="50" height="50">
+			   </div>
+
+				 <div id="answer2Box" ondrop="drop2(event)" ondragover="allowDrop(event)">
+				   <img src="bR.png" draggable="true" ondragstart="drag(event)" id="bR2" width="50" height="50">
+				</div>
+				
+			   <div id="answer3Box" ondrop="drop3(event)" ondragover="allowDrop(event)">
+				   <img src="bP.png" draggable="true" ondragstart="drag(event)" id="bP1" width="50" height="50">
+				</div>		  
+
+			   <div id="answer4Box" ondrop="drop4(event)" ondragover="allowDrop(event)">
+				  <img src="bP.png" draggable="true" ondragstart="drag(event)" id="bP2" width="50" height="50">
+				</div>
+			
+			 <div id="answer5Box" ondrop="drop5(event)" ondragover="allowDrop(event)">
+				  <img src="wR.png" draggable="true" ondragstart="drag(event)" id="wR1" width="50" height="50">
+				</div>
+			
+			<div id="answer6Box" ondrop="drop6(event)" ondragover="allowDrop(event)">
+				  <img src="bP.png" draggable="true" ondragstart="drag(event)" id="bP3" width="50" height="50">
+				</div>
+			
+			<div id="answer7Box" ondrop="drop7(event)" ondragover="allowDrop(event)">
+				  <img src="bP.png" draggable="true" ondragstart="drag(event)" id="bP4" width="50" height="50">
+			</div>
+			<div id="answer8Box" ondrop="drop8(event)" ondragover="allowDrop(event)">
+				  <img src="bB.png" draggable="true" ondragstart="drag(event)" id="bB1" width="50" height="50">
+			</div>
+			
+			<div id="answer9Box" ondrop="drop9(event)" ondragover="allowDrop(event)">
+				  <img src="bP.png" draggable="true" ondragstart="drag(event)" id="bP5" width="50" height="50">
+			</div><br><br><br>
+			
+			<div id="answer10Box" ondrop="drop10(event)" ondragover="allowDrop(event)">
+				  <img src="bP.png" draggable="true" ondragstart="drag(event)" id="bP6" width="50" height="50">
+			</div>
+			
+			<div id="answer11Box" ondrop="drop11(event)" ondragover="allowDrop(event)">
+				  <img src="wP.png" draggable="true" ondragstart="drag(event)" id="wP1" width="50" height="50">
+			</div>
+			
+			<div id="answer12Box" ondrop="drop12(event)" ondragover="allowDrop(event)">
+				  <img src="bK.png" draggable="true" ondragstart="drag(event)" id="bK1" width="50" height="50">
+			</div>
+			
+			<div id="answer13Box" ondrop="drop13(event)" ondragover="allowDrop(event)">
+				  <img src="wN.png" draggable="true" ondragstart="drag(event)" id="wN1" width="50" height="50">
+			</div>
+			
+			<div id="answer14Box" ondrop="drop14(event)" ondragover="allowDrop(event)">
+				  <img src="wP.png" draggable="true" ondragstart="drag(event)" id="wP2" width="50" height="50">
+			</div>
+			
+			<div id="answer15Box" ondrop="drop15(event)" ondragover="allowDrop(event)">
+				  <img src="wP.png" draggable="true" ondragstart="drag(event)" id="wP3" width="50" height="50">
+			</div>
+			
+			<div id="answer16Box" ondrop="drop16(event)" ondragover="allowDrop(event)">
+				  <img src="wP.png" draggable="true" ondragstart="drag(event)" id="wP4" width="50" height="50">
+			</div>
+			
+					
+			<div id="answer17Box" ondrop="drop17(event)" ondragover="allowDrop(event)">
+				  <img src="wR.png" draggable="true" ondragstart="drag(event)" id="wR2" width="50" height="50">
+			</div>
+			
+			<div id="answer18Box" ondrop="drop18(event)" ondragover="allowDrop(event)">
+				  <img src="wK.png" draggable="true" ondragstart="drag(event)" id="wK1" width="50" height="50">
+			</div>
+			
+			</div>
+			</div><br><br><br>
+			
+			
+
+				<script>
+			
+					var timeleft = 93;
+					var downloadTimer = setInterval(function(){
+					timeleft--;
+					document.getElementById("countdowntimer").textContent = timeleft;
+					if(timeleft <= 0)
+						clearInterval(downloadTimer);
+					},1000);
+					
+			var myVar = setInterval(timeup, 93000);
+			var myVar = setInterval(check, 93000);
+			function timeup()
+			{alert("TIME UP");}
+			function check()
+			{
+			
+				if((($('#diva1').find('#bR1').length == 1) || ($('#diva1').find('#bR2').length == 1)) && (($('#diva8').find('#bR1').length == 1) || ($('#diva8').find('#bR2').length == 1)) && (($('#divb7').find('#bP1').length == 1) || ($('#divb7').find('#bP2').length == 1) || ($('#divb7').find('#bP3').length == 1) || ($('#divb7').find('#bP4').length == 1) || ($('#divb7').find('#bP5').length == 1) || ($('#divb7').find('#bP6').length == 1)) && (($('#divc1').find('#bP1').length == 1) || ($('#divc1').find('#bP2').length == 1) || ($('#divc1').find('#bP3').length == 1) || ($('#divc1').find('#bP4').length == 1) || ($('#divc1').find('#bP5').length == 1) || ($('#divc1').find('#bP6').length == 1)) && (($('#divc3').find('#wR1').length == 1) || ($('#divc3').find('#wR2').length == 1)) && (($('#divc5').find('#bP1').length == 1) || ($('#divc5').find('#bP2').length == 1) || ($('#divc5').find('#bP3').length == 1) || ($('#divc5').find('#bP4').length == 1) || ($('#divc5').find('#bP5').length == 1) || ($('#divc5').find('#bP6').length == 1)) && (($('#divd4').find('#bP1').length == 1) || ($('#divd4').find('#bP2').length == 1) || ($('#divd4').find('#bP3').length == 1) || ($('#divd4').find('#bP4').length == 1) || ($('#divd4').find('#bP5').length == 1) || ($('#divd4').find('#bP6').length == 1)) && ($('#divd6').find('#bB1').length == 1) && (($('#divd8').find('#bP1').length == 1) || ($('#divd8').find('#bP2').length == 1) || ($('#divd8').find('#bP3').length == 1) || ($('#divd8').find('#bP4').length == 1) || ($('#divd8').find('#bP5').length == 1) || ($('#divd8').find('#bP6').length == 1)) && (($('#dive2').find('#bP1').length == 1) || ($('#dive2').find('#bP2').length == 1) || ($('#dive2').find('#bP3').length == 1) || ($('#dive2').find('#bP4').length == 1) || ($('#dive2').find('#bP5').length == 1) || ($('#dive2').find('#bP6').length == 1)) && (($('#dive4').find('#wP1').length == 1) || ($('#dive4').find('#wP2').length == 1) || ($('#dive4').find('#wP3').length == 1) || ($('#dive4').find('#wP4').length == 1)) && ($('#divf4').find('#bK1').length == 1) && ($('#divf6').find('#wN1').length == 1) && (($('#divf8').find('#wP1').length == 1) || ($('#divf8').find('#wP2').length == 1) || ($('#divf8').find('#wP3').length == 1) || ($('#divf8').find('#wP4').length == 1)) && (($('#divg1').find('#wP1').length == 1) || ($('#divg1').find('#wP2').length == 1) || ($('#divg1').find('#wP3').length == 1) || ($('#divg1').find('#wP4').length == 1)) && (($('#divg2').find('#wP1').length == 1) || ($('#divg2').find('#wP2').length == 1) || ($('#divg2').find('#wP3').length == 1) || ($('#divg2').find('#wP4').length == 1)) && ($('#divg6').find('#wK1').length == 1) && (($('#divh3').find('#wR1').length == 1) || ($('#divh3').find('#wR2').length == 1)))
+				{
+				document.getElementById("resultout").innerHTML = "CONGRATULATIONS YOU WON";
+				document.body.style.backgroundImage = "url('congrats.gif')";
+				}
+				else {
+				document.getElementById("resultout").innerHTML = "SORRY PLEASE TRY AGAIN";
+				}
+			}
+			</script>
+			
+			
+			<div id="imganalysis">
+					
+						<img id="analysis" src="gifbgd.gif" width="300" height="375">
+					</div>
+<br>
+					<div id="description">
+						<center>
+							<p id="desctitle">ANALYSIS</p>
+							<p id="getdescription"><b>IDEAL MOVES TO COMPLETE : </b>
+							</p>
+							<p id="five">18</p>
+							
+							<p id="five1"><b>TOTAL MOVES TAKEN TO COMPLETE : </b></p>
+							
+							<p id="getmoves">&#160
+							</p>
+							<p id="resultin"><b>RESULT : </b>
+							</p>
+							<p id="resultout">&#160
+							</p>
+							</center>
+					</div>
+					
+					<br><br><br><br><br><br>
+					
+					
+			<div class="buttonc">
+					<a href="level10timer.html"><button class="button button1">&laquo; LEVEL 10 </button></a>
+					<button class="button button1" onclick="check();eff()">ANALYSIS</button>
+					<a href="level11timer.html"><button class="button button1">RETRY</button></a>
+					<a href="level12timer.html"><button class="button button1">LEVEL 12 &raquo;</button></a>
+			
+			</div>
+		</body>
+</html>
