@@ -1,7 +1,7 @@
 function scribblesET() {
-				  //var d = new Date();
-				  //var n = d.getDay()
-				  	var n=4;			  
+				  var d = new Date();
+				  var n = d.getDay()
+				  	//var n=4;			  
 				if(n==1)
 					{
 					
