@@ -1,7 +1,7 @@
 function DayET() {
-				  //var d = new Date();
-				  //var n = d.getDay()
-				  	var n=4;			  
+				  var d = new Date();
+				  var n = d.getDay()
+				  				  
 				if(n==1)
 					{
 					document.body.style.background = "#d4a672";
