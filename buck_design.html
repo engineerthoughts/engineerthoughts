@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buck_design</title>
+    <link rel="stylesheet" href="assets_buck_design/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets_buck_design/css/styles.css">
+</head>
+
+<body><form name="f1">
+   
+    <h2>Buck converter Design calculations</h2>
+    
+           <p>Power</p>
+<input type="text" name="p" value="100">
+        <p>Input Voltage</p>
+<input type="text" name="vs" value="48">
+        <p>Vout needed</p>
+<input type="text" name="vo" value="12">  
+    <p>Frequency</p>
+<input type="text" name="freq" value="20000">
+     <p>Delta Vl in percentage of vo</p>
+<input type="text" name="delta_v" value="5">  
+    <br>
+    
+        <input type="button" name="call" value="Calculate" onclick="cal()"> <br>
+    
+    
+    
+   <h3>C critical</h3>
+    <p class="outputs" id="ccrit">  </p>
+   <h3>L critical</h3>
+   <p class="outputs" id="lcrit">  </p>
+           <h3>R rated</h3>
+   <p class="outputs" id="rrated">  </p>
+    
+    
+       <h3>Io max</h3>
+   <p class="outputs" id="iomax">  </p>
+           <h3>D needed</h3>
+   <p class="outputs" id="d_needed">  </p>
+         <h3>Vo ripple max</h3>
+   <p class="outputs" id="vo_ripple_max">  </p>
+               <h3>Vo ripple min</h3>
+   <p class="outputs" id="vo_ripple_min">  </p>
+      
+</form>
+    <script src="assets_buck_design/js/jquery.min.js"></script>
+    <script src="assets_buck_design/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets_buck_design/js/buck_design.js"></script>
+</body>
+
+</html>
