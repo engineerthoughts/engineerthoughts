@@ -1,6 +1,6 @@
 
 
-function cal(){
+function buckcal(){
     var l=document.f1.L.value;
     var p=document.f1.p.value;
     var f=document.f1.freq.value;
@@ -39,7 +39,9 @@ if (k<=1 && rl>=rc){
     var rrat=(vout**2)/p;
     var delta_il=(vout*(1-d))/(l*f);
     var delta_vl=delta_il/8*f*c;
-    var ccrit=delta_il/8*f*0.48;
+    var ccrit=delta_il/8*f*0.5;
+   
+    
     var io=vout/rl;
     var irmsD=Math.sqrt(1-d)*io;
     var irmsM=Math.sqrt(d)*io;

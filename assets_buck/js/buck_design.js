@@ -1,4 +1,4 @@
-function cal(){
+function buckdescal(){
 var p=document.f1.p.value;
 var vs=document.f1.vs.value;
 var vo=document.f1.vo.value;

@@ -1,17 +1,7 @@
 form {
-  margin-left:auto;
-  margin-right:auto;
-  width:500px;
-  height:10000px;
-  background-color:rgba(39,69,173,0.25);
-}
-
-.font {
-  font-size:x-large;
-}
-
-.outputs {
-  font-size:x-large;
-  font-family:serif;
+  margin:300px;
+  margin-top:auto;
+  margin-left:400px;
+  background-color:rgba(131,130,179,0.27);
 }
 
