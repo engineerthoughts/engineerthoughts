@@ -1,0 +1,1505 @@
+<!Doctype HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="style.css">
+	<style>
+		#calendarhead
+			{
+			background-color: #333;
+			font-size:30px;
+			font-family:Calibri;
+			color: #c0f000;
+			text-align:center;
+			padding: 10px 10px;
+			width:100%;
+			}
+			* {
+				box-sizing: border-box;
+			}
+
+			/* Create three equal columns that floats next to each other */
+			.column {
+				float: left;
+				width: 33.33%;
+				padding: 10px;
+
+			}
+
+			/* Clear floats after the columns */
+			.row:after {
+				content: "";
+				display: table;
+				clear: both;
+				
+			}
+			button {
+				background-color: white;
+				color: black;
+				border: 2px solid #c0f000; /* Green */
+				font-size: 16px;
+				padding: 10px 25px;
+			}
+
+			#January, #February,#March,#April,#May,#June,#July,#August,#September,#October,#November,#December {
+				visibility: hidden;
+				width:85%;
+				background-color: #333;
+				color: #fff;
+				text-align: center;
+				border-radius: 2px;
+				padding: 16px;
+				position: fixed;
+				z-index: 1;
+				bottom: 30px;
+				left:25px;
+				font-size: 17px;
+			}
+
+			#January.show, #February.show,#March.show,#April.show,
+			#May.show,#June.show,#July.show,#August.show,#September.show,#October.show,#November.show,#December.show {
+				visibility: visible;
+				-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+				animation: fadein 0.5s, fadeout 0.5s 2.5s;
+			}
+
+			@-webkit-keyframes fadein {
+				from {bottom: 0; opacity: 0;} 
+				to {bottom: 30px; opacity: 1;}
+			}
+
+			@keyframes fadein {
+				from {bottom: 0; opacity: 0;}
+				to {bottom: 30px; opacity: 1;}
+			}
+
+			@-webkit-keyframes fadeout {
+				from {bottom: 30px; opacity: 1;} 
+				to {bottom: 0; opacity: 0;}
+			}
+
+			@keyframes fadeout {
+				from {bottom: 30px; opacity: 1;}
+				to {bottom: 0; opacity: 0;}
+			}
+	</style>
+	</head>
+	<body>
+		<div class="topnav" id="myTopnav">
+				<a><img src="thiruman/thiruman.jpg" width='70%', height='60px;' onclick="myFunction()"></a>
+				<a class="active" href="#">HOME</a>
+				<a href="alvar_e.html">AZHVARS</a>
+				<a href="acharya_e.html">ACHARYA</a>
+				<a href="questions/question.html">VEDIC SCIENCE</a>
+				<a href="#">ABOUT US</a>
+				
+		</div>
+		<script>
+				function myFunction() {
+					var x = document.getElementById("myTopnav");
+					if (x.className === "topnav") {
+						x.className += " responsive";
+					} else {
+						x.className = "topnav";
+					}
+				}
+		</script>
+		<!--ends here-->
+		<center><div class="bday" id="Thirunakchathram" style="display:none">Thirunakchathram</div></center>
+			<div class="Alvarlist" id="04-11-2019" style="display:none;">
+			<img src="alvar/poigaiazhwar/poigaiazhwar.jpg" alt="Flowers" width='100%'>
+				<table>
+					<col width="130">
+					<col width="280">
+						<tr>
+							<th Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></th>
+						</tr>
+						<tr>
+							<th Colspan='2' style="text-align:center;font-size:24px;">Poigaiazhvar</th>
+						</tr>
+						<tr>
+							<td><b>MONTH:</b></td>
+							<td>Iypasi Thiruvonam</td>
+						</tr>
+						<tr>
+							<td><b>BIRTHPLACE:</b></td>
+							<td>Kanchipuram (Yadhotakaari temple Temple - Near Poigai)</td>
+						</tr>
+						<tr>
+							<td><b>WORKS:</b></td>
+							<td>Mudhal Thiruvandhadhi (100 Verses)</td>
+						</tr>
+						<tr>
+							<td><b>AVATAR OF:</b></td>
+							<td>Panchajanya (Vishnu's conch)</td>
+						</tr>
+						<tr>
+							<td Colspan='2' style= "border:none"><a href="alvars/poigaialvar/poigaialvar.html"><button class="read">Read More</button></a></td>
+						</tr>
+						<tr>
+							<td Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></td>
+						</tr>
+				</table>				
+			</div>
+
+
+		<div class="Alvarlist" id="06-11-2019" style="display:none">
+			<img src="alvar/boothathazhwar/bhudhatazhwar.jpg" alt="Flowers" width='100%'>
+			<table>
+				<col width="130">
+				<col width="280">
+					<tr>
+						<th Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></th>
+					</tr>
+					<tr>
+						<th Colspan='2' style="text-align:center;font-size:24px;">BHOOTHATH AZHVAR</th>
+					</tr>
+					<tr>
+						<td><b>MONTH:</b></td>
+						<td>Iypasi Avittam</td>
+					</tr>
+					<tr>
+						<td><b>BIRTHPLACE:</b></td>
+						<td>Thirukadalmallai (Mahabalipuram)</td>
+					</tr>
+					<tr>
+						<td><b>WORKS:</b></td>
+						<td>Irandam Tiruvandadhi (100 Verses)</td>
+					</tr>
+					<tr>
+						<td><b>AVATAR OF:</b></td>
+						<td>Kaumodaki (Vishnu's Mace)</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><a href="alvars/bhoothathalvar/bhoothathalvar.html"><button class="read">Read More</button></a></td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></td>
+					</tr>
+			</table>
+			
+		</div>
+		
+	
+
+		<div class="Alvarlist" id="07-11-2019" style="display:none">
+		<img src="alvar/peyazhwar/peyazhwar.jpg" alt="Flowers" width='100%'>
+			<table>
+				<col width="130">
+				<col width="280">
+					<tr>
+						<th Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></th>
+					</tr>
+					<tr>
+						<th Colspan='2' style="text-align:center;font-size:24px;">PEY AZHVAR</th>
+					</tr>
+					<tr>
+						<td><b>MONTH:</b></td>
+						<td>Iypasi Sathayam</td>
+					</tr>
+					<tr>
+						<td><b>BIRTHPLACE:</b></td>
+						<td>Mylapore (historically called Manikaivaram) - Adi Kesava Perumal Temple)</td>
+					</tr>
+					<tr>
+						<td><b>WORKS:</b></td>
+						<td>Moondram Thiruvandhadhi (100 Verses)</td>
+					</tr>
+					<tr>
+						<td><b>AVATAR OF:</b></td>
+						<td>Nandaka (Vishnu's sword)</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><a href="alvars/peyalvar/peyalvar.html"><button class="read">Read More</button></a></td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></td>
+					</tr>
+			</table>
+			
+		</div>
+		
+	
+		<div class="Alvarlist" id ="23-01-2019" style="display:none">
+		<img src="alvar/thirumazhisaiazhwar/thirumazhisaiazhwar.jpg" alt="Flowers" width='100%'>
+			<table>
+				<col width="130">
+				<col width="280">
+					<tr>
+						<th Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></th>
+					</tr>
+					<tr>
+						<th Colspan='2' style="text-align:center;font-size:24px;">THIRUMAZHISAI AZHVAR</th>
+					</tr>
+					<tr>
+						<td><b>MONTH:</b></td>
+						<td>Thai Magam</td>
+					</tr>
+					<tr>
+						<td><b>BIRTHPLACE:</b></td>
+						<td>Jagannatha Perumal temple, Tirumazhisai </td>
+					</tr>
+					<tr>
+						<td><b>WORKS:</b></td>
+						<td>Nanmugan Thiruvandhadhi (96 verses); ThiruChanda Virutham (120 verses).</td>
+					</tr>
+					<tr>
+						<td><b>AVATAR OF:</b></td>
+						<td>Sudharshana Chakra (Vishnu's discus)</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><a href="alvars/thirumazhisai_alvar/thirumazhisaialvar.html"><button class="read">Read More</button></a></td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></td>
+					</tr>
+			</table>
+			
+		</div>
+		
+
+		<div class="Alvarlist" id ="18-05-2019" style="display:none">
+		<img src="alvar/nammalvar/nammalvar.jpg" alt="Flowers" width='100%'>
+			<table>
+				<col width="130">
+				<col width="280">
+					<tr>
+						<th Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></th>
+					</tr>
+					<tr>
+						<th Colspan='2' style="text-align:center;font-size:24px;">NAMMAZHVAR</th>
+					</tr>
+					<tr>
+						<td><b>MONTH:</b></td>
+						<td>Vaikasi Vishaakam</td>
+					</tr>
+					<tr>
+						<td><b>BIRTHPLACE:</b></td>
+						<td>Azhwar Thirunagari (Kurugur)</td>
+					</tr>
+					<tr>
+						<td><b>WORKS:</b></td>
+						<td>Tiruvaymozhi (1102 verses), Thiruvirutham (100 verses), Thiru Aasiriyam - 7 verses and Periya Thiruvanthadi (87 verses).</td>
+					</tr>
+					<tr>
+						<td><b>AVATAR OF:</b></td>
+						<td>Vishvaksena (Vishnu's commander)</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><a href="alvars/nammalvar/nammalvar.html"><button class="read">Read More</button></a></td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></td>
+					</tr>
+			</table>
+			
+		</div>
+
+		
+		<div class="Alvarlist" id="19-04-2019" style="display:none">
+		<img src="alvar/madhurakavi/madhurakavi.jpg" alt="Flowers" width='100%'>
+			<table>
+				<col width="130">
+				<col width="280">
+					<tr>
+						<th Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></th>
+					</tr>
+					<tr>
+						<th Colspan='2' style="text-align:center;font-size:24px;">MADHURAKAVI AZHVAR</th>
+					</tr>
+					<tr>
+						<td><b>MONTH:</b></td>
+						<td>Chittirai Chittirai</td>
+					</tr>
+					<tr>
+						<td><b>BIRTHPLACE:</b></td>
+						<td>Thirukkolur near Azhwar Thirunagari.</td>
+					</tr>
+					<tr>
+						<td><b>WORKS:</b></td>
+						<td>Kanninun Siruthambu, 11 verses.</td>
+					</tr>
+					<tr>
+						<td><b>AVATAR OF:</b></td>
+						<td>Garuda (Vishnu's mount)</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><a href="alvars/madhurakavi_alvar/madhurakavi_alvar.html"><button class="read">Read More</button></a></td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></td>
+					</tr>
+			</table>
+			
+		</div>
+		
+
+		<div class="Alvarlist" id="17-02-2019" style="display:none">
+		<img src="alvar/kulasekaraalvar/kulasekaraalwar.jpg" alt="Flowers" width='100%'>
+			<table>
+				<col width="130">
+				<col width="280">
+					<tr>
+						<th Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></th>
+					</tr>
+					<tr>
+						<th Colspan='2' style="text-align:center;font-size:24px;">KULASHEKHARA AZHVAR</th>
+					</tr>
+					<tr>
+						<td><b>MONTH:</b></td>
+						<td>Maasee Punar Poosam</td>
+					</tr>
+					<tr>
+						<td><b>BIRTHPLACE:</b></td>
+						<td>Thiruvanchikulam.</td>
+					</tr>
+					<tr>
+						<td><b>WORKS:</b></td>
+						<td>Perumal Thirumozhi, 105 verses.</td>
+					</tr>
+					<tr>
+						<td><b>AVATAR OF:</b></td>
+						<td>Kaustubha (Vishnu's jewel embedded in his necklace).</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><a href="alvars/kulasekara_alvar/kulasekaraalvar.html"><button class="read">Read More</button></a></td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></td>
+					</tr>
+			</table>
+			
+		</div>
+
+		
+		<div class="Alvarlist" id="11-07-2019" style="display:none">
+		<img src="alvar/periyalvar/periyalvar.jpg" alt="Flowers" width='100%'>
+			<table>
+				<col width="130">
+				<col width="280">
+					<tr>
+						<th Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></th>
+					</tr>
+					<tr>
+						<th Colspan='2' style="text-align:center;font-size:24px;">PERIYA AZHVAR</th>
+					</tr>
+					<tr>
+						<td><b>MONTH:</b></td>
+						<td>Aani Swathi</td>
+					</tr>
+					<tr>
+						<td><b>BIRTHPLACE:</b></td>
+						<td>Srivilliputhur</td>
+					</tr>
+					<tr>
+						<td><b>WORKS:</b></td>
+						<td>Thiruppallaandu, 12 verses; Periyazhwar Thirumozhi, 461 verses.</td>
+					</tr>
+					<tr>
+						<td><b>AVATAR OF:</b></td>
+						<td>Garuda (Vishnu's mount).</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><a href="alvars/periyalvar/periyalvar.html"><button class="read">Read More</button></a></td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></td>
+					</tr>
+			</table>
+			
+		</div>
+		
+
+		<div class="Alvarlist" id="04-08-2019" style="display:none">
+		<img src="alvar/andal/andal.jpg" alt="Flowers" width='100%'>
+			<table>
+				<col width="130">
+				<col width="280">
+					<tr>
+						<th Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></th>
+					</tr>
+					<tr>
+						<th Colspan='2' style="text-align:center;font-size:24px;">ANDAL</th>
+					</tr>
+					<tr>
+						<td><b>MONTH:</b></td>
+						<td>Aadi Pooram</td>
+					</tr>
+					<tr>
+						<td><b>BIRTHPLACE:</b></td>
+						<td>Srivilliputhur</td>
+					</tr>
+					<tr>
+						<td><b>WORKS:</b></td>
+						<td>Nachiyar Thirumozhi, 143 verses; Thiruppavai, 30 verses.</td>
+					</tr>
+					<tr>
+						<td><b>AVATAR OF:</b></td>
+						<td>Bhudevi (Vishnu's wife and the earth goddess).</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><button class="read">Read More</button></td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></td>
+					</tr>
+			</table>			
+		</div>
+		
+
+
+		<div class="Alvarlist" id="04-01-2019" style="display:none">
+		<img src="alvar/thondaradippodi/thondaradi.jpg" alt="Flowers" width='100%'>
+			<table>
+				<col width="130">
+				<col width="280">
+					<tr>
+						<th Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></th>
+					</tr>
+					<tr>
+						<th Colspan='2' style="text-align:center;font-size:24px;">THONDARADIPPODI AZHVAR</th>
+					</tr>
+					<tr>
+						<td><b>MONTH:</b></td>
+						<td>Margazhi Kettai</td>
+					</tr>
+					<tr>
+						<td><b>BIRTHPLACE:</b></td>
+						<td>Thirumandangudi</td>
+					</tr>
+					<tr>
+						<td><b>WORKS:</b></td>
+						<td>Thirumaalai, 45 verses; Thirupalliezhuchi, 10 verses.</td>
+					</tr>
+					<tr>
+						<td><b>AVATAR OF:</b></td>
+						<td>Vanamalai (Vishnu's garland).</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><button class="read">Read More</button></td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width="100%"></td>
+					</tr>
+			</table>			
+		</div>
+		
+
+
+		<div class="Alvarlist" id="12-12-2019" style="display:none">
+		<img src="alvar/thirupaanalvar/thirupaanalvar.jpg" alt="Flowers" width='100%'>
+			<table>
+				<col width="130">
+				<col width="280">
+					<tr>
+						<th Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></th>
+					</tr>
+					<tr>
+						<th Colspan='2' style="text-align:center;font-size:24px;">THIRUPPAAN AZHVAR</th>
+					</tr>
+					<tr>
+						<td><b>MONTH:</b></td>
+						<td>Karthigai Rogini</td>
+					</tr>
+					<tr>
+						<td><b>BIRTHPLACE:</b></td>
+						<td>Uraiyur</td>
+					</tr>
+					<tr>
+						<td><b>WORKS:</b></td>
+						<td>Amalanadhi Piraan, 10 verses.</td>
+					</tr>
+					<tr>
+						<td><b>AVATAR OF:</b></td>
+						<td>Srivatsa (An auspicious mark on Vishnu's chest).</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><button class="read">Read More</button></td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width="100%"></td>
+					</tr>
+			</table>			
+		</div>
+		
+
+
+		<div class="Alvarlist" id="10-12-2019" style="display:none">
+		<img src="alvar/thirumangai/thirumangai.jpg" alt="Flowers" width='100%'>
+			<table>
+				<col width="130">
+				<col width="280">
+					<tr>
+						<th Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></th>
+					</tr>
+					<tr>
+						<th Colspan='2' style="text-align:center;font-size:24px;">THIRUMANGAI AZHVAR</th>
+					</tr>
+					<tr>
+						<td><b>MONTH:</b></td>
+						<td>Karthigai Krithika</td>
+					</tr>
+					<tr>
+						<td><b>BIRTHPLACE:</b></td>
+						<td>Thirukurayalur</td>
+					</tr>
+					<tr>
+						<td><b>WORKS:</b></td>
+						<td>Periya Thirumozhi, 1084 verses; Thiru Vezhukootru irukkai, 1 verse; Thiru Kurun Thandagam, 20 verses; Thiru Nedun Thandagam, 30 verses; Siriya Thirumadal, 40 verses; Periya Thirumadal, 78 verses;</td>
+					</tr>
+					<tr>
+						<td><b>AVATAR OF:</b></td>
+						<td>Sharanga (Vishnu's bow).</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><button class="read">Read More</button></td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width="100%"></td>
+					</tr>
+			</table>			
+		</div>
+		
+		
+	
+		<div class="Alvarlist" id="10-12-2019" style="display:none">
+		<img src="acharya/ranga/ranga.jpg" alt="Flowers" width='100%'>
+			<img src="frame/horiflower.png" alt="Flowers" width="100%">
+			<p style="text-align:center;font-size:25px;"><b>SRI RANGANATHAR</b></p>
+					<p>
+					Ranganathar is a resting form of Lord Vishnu, recumbent on the great form of the serpent god Adisesha, one of the foremost of Hindu Gods.<br><br>
+					The Pancharanga Kshetrams are the five most sacred Ranganatha temples which are located on the banks of the Kaveri River. <br><br>
+					The five Pancharanga Kshetrams in the order of their successive locations, on the banks of the Kaveri River are: <br>
+					<li>The Srirangapatna (Karnataka) called the Adi Ranga,</li>
+					<li>The Srirangam, Trichy in Tamil Nadu known as Adya Ranga (the last temple), </li>
+					<li>Appalarangam or Koviladi at Tiurppernagar in Tamil Nadu, </li>
+					<li>Vatarangam near Sirkazhi, Vadarengam, Tamil Nadu,</li> 
+					<li>The Sarangapani temple at Kumbakonam is mentioned in place of Vatarangam.</li>
+					</p>
+					<button class="read">Read More</button>
+			<img src="frame/horiflower.png" alt="Flowers" width="100%">
+		</div>
+			
+
+		<div class="Alvarlist" id="10-12-2019" style="display:none">
+		<img src="acharya/ranganayaki/ranganayaki.jpg" alt="Flowers" width='100%'>
+			<img src="frame/horiflower.png" alt="Flowers" width="100%">
+			<p style="text-align:center;font-size:25px;"><b>RANGANAYAKI THAYAR</b></p>
+					<p>
+					Ranganayaki, is the presiding Goddess of Ranganatha Swamy. 
+					She is regarded as the manifestation of Lakshmi. <br><br>
+					As with Hindu tradition,
+					the shrine has both a Moolavar and an Uthsavar (presiding deity). 
+					Unlike other temples in SriRangam temple, the Uthsavar of Thayar never leaves her sannathi (shrine). 
+					It is a temple custom that the goddess of the temple takes her place beside the god of the temple 
+					during processions. In Srirangam, however, Thayar never leaves her sannathi. All others, including 
+					Ranganatha himself, come to see her.
+					</p>
+					<button class="read">Read More</button>
+			<img src="frame/horiflower.png" alt="Flowers" width="100%">
+		</div>
+		
+
+
+		<div class="Alvarlist" id="20-10-2019" style="display:none">
+		<img src="acharya/viswaksenar/Visvaksenar.jpg" alt="Flowers" width='100%'>
+			<img src="frame/horiflower.png" alt="Flowers" width="100%">
+			<p style="text-align:center;font-size:25px;"><b>VISHWAKSENAR</b></p>
+					<p>
+					Vishwaksenar, also known as Senai Mudalvar (Sena Mudaliar). <br> <br>
+					The Kurma Purana describes Vishvaksena as born out of a portion of Vishnu, 
+					carrying a conch (shankha), Sudarshana chakra (discus) and gada (mace) and wearing yellow clothes.  <br> <br>
+					The twelve Alvar saints of Sri Vaishnavism sect are considered as manifestations of Vishnu 
+					in some form, and the Alvar saint Nammalvar is considered as an avatar of Vishvaksena. <br> <br>
+					Vishvaksena occupies an important place in the Vaikhanasa sect of Vaishnavism, the sect dedicated to Vishnu. 
+					Any ritual or function begins with the worship of Vishvaksena.
+
+					</p>
+					<button class="read">Read More</button>
+			<img src="frame/horiflower.png" alt="Flowers" width="100%">
+		</div>
+		
+
+
+		<div class="Alvarlist" id="18-05-2019" style="display:none">
+		<img src="alvar/nammalvar/nammalvar.jpg" alt="Flowers" width='100%'>
+			<table>
+				<col width="130">
+				<col width="280">
+					<tr>
+						<th Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></th>
+					</tr>
+					<tr>
+						<th Colspan='2' style="text-align:center;font-size:24px;">NAMMAZHVAR</th>
+					</tr>
+					<tr>
+						<td><b>MONTH:</b></td>
+						<td>Vaikasi Vishaakam</td>
+					</tr>
+					<tr>
+						<td><b>BIRTHPLACE:</b></td>
+						<td>Azhwar Thirunagari (Kurugur)</td>
+					</tr>
+					<tr>
+						<td><b>WORKS:</b></td>
+						<td>Tiruvaymozhi (1102 verses), Thiruvirutham (100 verses), Thiru Aasiriyam - 7 verses and Periya Thiruvanthadi (87 verses).</td>
+					</tr>
+					<tr>
+						<td><b>AVATAR OF:</b></td>
+						<td>Vishvaksena (Vishnu's commander)</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><button class="read">Read More</button></td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></td>
+					</tr>
+			</table>
+			
+		</div>
+		
+
+		<div class="Alvarlist" id="13-07-2019" style="display:none">
+		<img src="acharya/nathamuni/nathamunigal.jpg" alt="Flowers" width='100%'>
+			<img src="frame/horiflower.png" alt="Flowers" width="100%">
+			<p style="text-align:center;font-size:25px;"><b>NATHAMUNI</b></p>
+				<p>
+				Nathamuni was born at Viranarayana Puram. His birth star was Anusham. <br><br>
+				His father's name was Isvara Bhaṭṭa and his son's name was Isvaramuni. His grandson was Yamunacharya.<br><br>
+				He came to know about Nalayira Divya Prabhandam, but he heard only 10 hymns. He wanted the rest. 
+				He recited 12000 times, Kanninun Siruthambu, a poem in praise of Nammazhwar. 
+				Nammazhwar appeared and gave the 4000 hymns (Nalayira Divya Prabhandam).
+				</p>
+				<button class="read">Read More</button>
+			<img src="frame/horiflower.png" alt="Flowers" width="100%">
+		</div>
+		
+
+		<div class="Alvarlist" id="06-05-2019" style="display:none">
+		<img src="acharya/uyyakondar/uyyakondar.jpg" alt="Flowers" width='100%'>
+			<table>
+				<col width="130">
+				<col width="280">
+					<tr>
+						<th Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></th>
+					</tr>
+					<tr>
+						<th Colspan='2' style="text-align:center;font-size:24px;">UYYAKONDAR</th>
+					</tr>
+					<tr>
+						<td><b>Name:</b></td>
+						<td>Pundareekaakshar later named Uyyakondar by Nathamunigal.</td>
+					</tr>
+					<tr>
+						<td><b>BIRTHPLACE:</b></td>
+						<td>Tiruvellarai</td>
+					</tr>
+					<tr>
+						<td><b>Month:</b></td>
+						<td>Chiththirai Karthikai.</td>
+					</tr>
+					<td Colspan='2'><p>
+					Nathamunigal had two prominent students, Pundareekaakshar and Kurukai kavalappan.<br><br>
+					Uyakkondar had five prominent students, of whom Manarkal nambi (also known as Rama mishra)
+					was the most popular and important to Srivaishnava Samprathayam.
+					</p>
+					</td>
+					
+			</table>
+			<button class="read">Read More</button>
+			<img src="frame/horiflower.png" alt="Flowers" width="100%">
+			
+		</div>
+		
+
+
+		<div class="Alvarlist" id="20-02-2019" style="display:none">
+		<img src="acharya/manakkal/manakkal.jpg" alt="Flowers" width='100%'>
+			<table>
+				<col width="130">
+				<col width="280">
+					<tr>
+						<th Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></th>
+					</tr>
+					<tr>
+						<th Colspan='2' style="text-align:center;font-size:24px;">MANAKKAL NAMBI</th>
+					</tr>
+					<tr>
+						<td><b>Name:</b></td>
+						<td>Manakkal Nambi (Rama Misrar)</td>
+					</tr>
+					<tr>
+						<td><b>BIRTHPLACE:</b></td>
+						<td>Anbil, near Trichy</td>
+					</tr>
+					<tr>
+						<td><b>Month:</b></td>
+						<td>Masi Magam.</td>
+					</tr>
+					<td Colspan='2'><p>
+					The credit for transforming Yamunai thuraivan into Yamuna Muni goes to him.<br><br>
+					Rama misrar told Alavandhar that his grandfather Sri Nathamuni had passed on the family wealth (kula
+					dhanam) that needs to be handed over to Sri Alavandhar. Alavandhar said, "in that case, give me that."
+					</p></td>
+			</table>
+			<button class="read">Read More</button>
+			<img src="frame/horiflower.png" alt="Flowers" width="100%">
+		</div>
+
+		
+		<div class="Alvarlist" id="13-08-2019" style="display:none">
+		<img src="acharya/alavandar/Yamunacharya.jpg" alt="Flowers" width='100%'>
+			<img src="frame/horiflower.png" alt="Flowers" width="100%">
+			<p style="text-align:center;font-size:25px;"><b>YAMUNACHARYA</b></p>
+				<p>
+				Yamunacharya also known as Alavandar and Periya Mudaliar. <br><br>
+				As a teenager he challenged the royal priest Akkiyalvan of the Pandya king (the name of the king is disputed). <br><br>
+				Akkiyalvan, when he saw the age of the youth, asked sarcastically "alavandara?" meaning "has he come to rule me?". 
+				He defeated Akkiyalvan proving through the accepted rules of logic.<br><br>
+				After years of rule, Mannakal Nambi tricked him into visiting the temple of Ranganatha. 
+				There, he had an epiphany and gave up the material duties of a king and became a sanyasin embracing saranagati.
+				</p>
+				<button class="read">Read More</button>
+			<img src="frame/horiflower.png" alt="Flowers" width="100%">
+		</div>
+		
+
+
+		<div class="Alvarlist" id="04-01-2019a" style="display:none">
+		<img src="acharya/periyanambi/periyanambi.jpg" alt="Flowers" width='100%'>
+			<table>
+				<col width="130">
+				<col width="280">
+					<tr>
+						<th Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></th>
+					</tr>
+					<tr>
+						<th Colspan='2' style="text-align:center;font-size:24px;">PERIYA NAMBI</th>
+					</tr>
+					<tr>
+						<td><b>MONTH:</b></td>
+						<td>Margazhi Kettai</td>
+					</tr>
+					<tr>
+						<td><b>BIRTHPLACE:</b></td>
+						<td>Srirangam</td>
+					</tr>
+					<tr>
+						<td><b>ACHARYAN:</b></td>
+						<td>Alavandhar</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none">
+						<p>
+						He was one of the prime sishyas of alavandhar and instrumental in bringing ramanujar to srirangam. 
+						After alavandhar’s time, all the srivaishnavas in srirangam request periya nambi to go and bring ramanujar to srirangam. <br><br>
+						So, he leaves srirangam with his family and travels towards kanchipuram. 
+						In the mean time, ramanujar also leaves kanchipuram to meet periya nambi. 
+						They both meet at madhuranthagam and periya nambi does pancha samskaram to him right there.
+						</p>
+						</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><button class="read">Read More</button></td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></td>
+					</tr>
+			</table>			
+		</div>
+		
+
+
+		<div class="Alvarlist" id="09-05-2019" style="display:none">
+		<img src="acharya/ramanujar/ramanujar.jpg" alt="Flowers" width='100%'>
+			<table>
+				<col width="130">
+				<col width="280">
+					<tr>
+						<th Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></th>
+					</tr>
+					<tr>
+						<th Colspan='2' style="text-align:center;font-size:24px;">RAMANUJAR</th>
+					</tr>
+					<tr>
+						<td><b>NAME:</b></td>
+						<td>Ilayazhvar</td>
+					</tr>
+					<tr>
+						<td><b>BIRTHPLACE:</b></td>
+						<td>Sriperumbudur</td>
+					</tr>
+					<tr>
+						<td><b>MONTH:</b></td>
+						<td>Chitra Tiruvatarai</td>
+					</tr>
+					<tr>
+						<td><b>AVATAR OF:</b></td>
+						<td>AADHI SESHAN</td>
+					</tr>
+					<tr>
+						<td><b>PARENTS:</b></td>
+						<td>Mother Kānthimathi and Father Kesava Somayaji.</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none">
+						<p>
+						The Sri Vaisnava tradition attributes nine Sanskrit texts to Ramanuja
+						<li>Vedarthasangraha (literally, "Summary of the Vedas meaning").</li>
+						<li>Sri Bhashya (a review and commentary on the Brahma Sutras). </li>
+						<li>Bhagavad Gita Bhashya (a review and commentary on the Bhagavad Gita).</li>
+						<li>Vedantapida. </li>
+						<li>Vedantasara.</li>
+						<li>Gadya Trayam (which is a compilation of three texts called the Saranagati Gadyam, Sriranga Gadyam and Srivaikunta Gadyam).</li>
+						<li>Nitya Grantham.</li>
+						</p>
+						</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><button class="read">Read More</button></td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width="100%"></td>
+					</tr>
+			</table>			
+		</div>
+		
+
+
+		<div class="Alvarlist" id="20-01-2018" style="display:none">
+		<img src="acharya/embar/embar.jpg" alt="Flowers" width='100%'>
+			<table>
+				<col width="130">
+				<col width="280">
+					<tr>
+						<th Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></th>
+					</tr>
+					<tr>
+						<th Colspan='2' style="text-align:center;font-size:24px;">EMBAR (GOVINDAR)</th>
+					</tr>
+					<tr>
+						<td><b>MONTH:</b></td>
+						<td>Thai Punarpusam</td>
+					</tr>
+					<tr>
+						<td><b>BIRTHPLACE:</b></td>
+						<td>Madhuramangalam</td>
+					</tr>
+					<tr>
+						<td><b>WORKS:</b></td>
+						<td>Vijnana sthuthi, Emperumanar vadivazhagu pasuram.</td>
+					</tr>
+					<tr>
+						<td><b>Acharya:</b></td>
+						<td>Periya Nambi</td>
+					</tr>
+					<tr>
+						<td><b>Sishyas:</b></td>
+						<td>Parasara bhattar, Vedha vyasa bhattar.</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none">
+						<p>
+						Govindha perumal was born in madhuramangalam born as the son of kamala nayana bhattar and sridhevi ammal. <br><br>
+						He is a cousin of emperumanar and was instrumental in saving emperumanar 
+						from being killed during varanasi yathrai with yadhava prakasar. <br><br>
+						Emperumanar visits periya thirumalai nambi at thirupathi and learns sri ramayanam from him.
+						</p>
+						</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><button class="read">Read More</button></td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width="100%"></td>
+					</tr>
+			</table>			
+		</div>
+		
+
+
+		<div class="Alvarlist" id="19-05-2019" style="display:none">
+		<img src="acharya/parasarabhattar/parasarabhattar.jpg" alt="Flowers" width='100%'>
+			<table>
+				<col width="130">
+				<col width="280">
+					<tr>
+						<th Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></th>
+					</tr>
+					<tr>
+						<th Colspan='2' style="text-align:center;font-size:24px;">PARASARA BHATTAR</th>
+					</tr>
+					<tr>
+						<td><b>MONTH:</b></td>
+						<td>Vaikasi Anusham</td>
+					</tr>
+					<tr>
+						<td><b>BIRTHPLACE:</b></td>
+						<td>Srirangam</td>
+					</tr>
+					<tr>
+						<td><b>FATHER:</b></td>
+						<td>Koorathazhwan</td>
+					</tr>
+					<tr>
+						<td><b>WORKS:</b></td>
+						<td>ashtasloki, srirangaraja sthavam, sri guna rathna kosam, bhagavadh guna dharpanam (vishnu sahasranama vyakyanam), srirangaraja sthothram</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none">
+						<p>
+						He was appointed as the head of Sri Vaishnavites (handed over Sri Vaishnava Sri) by Ramanuja himself to succeed him.
+						</p>
+						</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><button class="read">Read More</button></td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width="100%"></td>
+					</tr>
+			</table>			
+		</div>
+		
+
+
+		<div class="Alvarlist" id="21-03-2019" style="display:none">
+		<img src="acharya/nanjeeyar/nanjeeyar.jpg" alt="Flowers" width='100%'>
+			<table>
+				<col width="130">
+				<col width="280">
+					<tr>
+						<th Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></th>
+					</tr>
+					<tr>
+						<th Colspan='2' style="text-align:center;font-size:24px;">NANJEEYAR</th>
+					</tr>
+					<tr>
+						<td><b>Name:</b></td>
+						<td>Nigamantha yogi, Vedhanthi.</td>
+					</tr>
+					<tr>
+						<td><b>Month:</b></td>
+						<td>Panguni Uthram</td>
+					</tr>
+					<tr>
+						<td><b>Birth Place:</b></td>
+						<td>Thirunarayana Puram</td>
+					</tr>
+					<tr>
+						<td><b>Acharyan:</b></td>
+						<td>Parasara Bhattar</td>
+					</tr>
+					<tr>
+						<td><b>Sishyas:</b></td>
+						<td>Nampillai, Sri Senadhipathi jeeyar</td>
+					</tr>
+					<tr>
+						<td><b>Works:</b></td>
+						<td>Thiruvaimozhi 9000 padi vyakyanam, Kanninun chiruthambu vyakyanam, 
+						Thiruppavai vyakyanam, vyakyanams for thiruvandhadhis, sharanagathi gadhya vyakyanam, 
+						thiruppallandu vyakyanam, rahasya thraya vivarana grantham named nurrettu (108).</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><button class="read">Read More</button></td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width="100%"></td>
+					</tr>
+			</table>			
+		</div>
+		
+
+
+		<div class="Alvarlist" id="10-12-2019a" style="display:none">
+		<img src="acharya/nampillai/nampillai.jpg" alt="Flowers" width='100%'>
+			<table>
+				<col width="130">
+				<col width="280">
+					<tr>
+						<th Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></th>
+					</tr>
+					<tr>
+						<th Colspan='2' style="text-align:center;font-size:24px;">NAMPILLAI</th>
+					</tr>
+					<tr>
+						<td><b>Name:</b></td>
+						<td>Varadharajan.</td>
+					</tr>
+					<tr>
+						<td><b>Month:</b></td>
+						<td>Karthikai Karthikai.</td>
+					</tr>
+					<tr>
+						<td><b>Birth Place:</b></td>
+						<td>Nambur</td>
+					</tr>
+					<tr>
+						<td><b>Acharyan:</b></td>
+						<td>Nanjeeyar</td>
+					</tr>
+					<tr>
+						<td><b>Sishyas:</b></td>
+						<td>Vadakku thiruvidhi pillai, Periyavachan pillai, Pinbhazhagiya perumal jeeyar, Eeyunni madhava perumal, Naduvil thiruvidhi pillai bhattar.</td>
+					</tr>
+					<tr>
+						<td><b>Works:</b></td>
+						<td>Thiruvaimozhi 36000 padi eedu vyakyanam, Kanninun chiruthambu vyakyanam, Thiruvirutham vyakyanam.</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><button class="read">Read More</button></td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width="100%"></td>
+					</tr>
+			</table>			
+		</div>
+		
+
+
+		<div class="Alvarlist" id="11-07-2019a" style="display:none">
+		<img src="acharya/vadakku/vadakku.jpeg" alt="Flowers" width='100%'>
+			<table>
+				<col width="130">
+				<col width="280">
+					<tr>
+						<th Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></th>
+					</tr>
+					<tr>
+						<th Colspan='2' style="text-align:center;font-size:24px;">VADAKKU THIRUVEETHI PILLAI</th>
+					</tr>
+					<tr>
+						<td><b>Name:</b></td>
+						<td>SRI KRISHNA PADHAR</td>
+					</tr>
+					<tr>
+						<td><b>Month:</b></td>
+						<td>Aani Swathi.</td>
+					</tr>
+					<tr>
+						<td><b>Acharya:</b></td>
+						<td>Nampillai</td>
+					</tr>
+					<tr>
+						<td><b>Children:</b></td>
+						<td>Pillai Lokacharya, Azhagiya manavala perumal nayanar</td>
+					</tr>
+					<tr>
+						<td><b>Works:</b></td>
+						<td>Thiruvaimozhi 36000 padi eedu vyakyanam.</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none">
+						<p>
+						He was a direct Sishya of Nampillai. <br><br>
+						Swamy Emberumanar had many Sishyas as everybody knows. 
+						Each and every Sishya had a Sishya or Sishyas for them and that is how the "Emberumanar dharisanam" grew.
+						</p>
+						</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><button class="read">Read More</button></td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width="100%"></td>
+					</tr>
+			</table>			
+		</div>
+		
+
+
+		<div class="Alvarlist" id="04-11-2019a" style="display:none">
+		<img src="acharya/lokacharya/lokacharya.jpg" alt="Flowers" width='100%'>
+			<table>
+				<col width="130">
+				<col width="280">
+					<tr>
+						<th Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></th>
+					</tr>
+					<tr>
+						<th Colspan='2' style="text-align:center;font-size:24px;">PILLAI LOKACHARYA</th>
+					</tr>
+					<tr>
+						<td><b>Name:</b></td>
+						<td>Ulagasiriyar, Lokacharyar</td>
+					</tr>
+					<tr>
+						<td><b>Month:</b></td>
+						<td>Aippasi Thiruvonam</td>
+					</tr>
+					<tr>
+						<td><b>Birth Place:</b></td>
+						<td>Srirangam</td>
+					</tr>
+					<tr>
+						<td><b>Amsam:</b></td>
+						<td>Kanchi Devaraja (Varadaraja) Perumal</td>
+					</tr>
+					<tr>
+						<td><b>Works:</b></td>
+						<td>Sri Pillai Lokacharya authored 18 Ragasya Granthas collectively known as Astaadasa Ragasya. 
+						All these works are done in Manipravaalam (a mix of Tamil and Sanskrit languages).</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none">
+						<p>
+						The name Ulag-Ariya (or Lokacharya) first became associated with Sri Nampillai when 
+						Sri Kanthadai Thozhappar celebrated him as the acharya for the world 
+						("kanthadai thozhappar tham ugappal enna ulagariyano enru uraikka"). 
+						</p>
+						</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><button class="read">Read More</button></td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width="100%"></td>
+					</tr>
+			</table>			
+		</div>
+		
+
+
+		<div class="Alvarlist" id="18-05-2019a" style="display:none">
+		<img src="acharya/thiruvaimozhipillai/thiruvaimozhipillai.jpg" alt="Flowers" width='100%'>
+			<table>
+				<col width="130">
+				<col width="280">
+					<tr>
+						<th Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></th>
+					</tr>
+					<tr>
+						<th Colspan='2' style="text-align:center;font-size:24px;">THIRUVAI MOZHI PILLAI</th>
+					</tr>
+					<tr>
+						<td><b>Month:</b></td>
+						<td>Vaikasi Visakam</td>
+					</tr>
+					<tr>
+						<td><b>Birth Place:</b></td>
+						<td>Kunthinagaram (konthagai)</td>
+					</tr>
+					<tr>
+						<td><b>Acharyan:</b></td>
+						<td>Pillai lokacharyar</td>
+					</tr>
+					<tr>
+						<td><b>Sishyas:</b></td>
+						<td>Azhagiya manavala mamunigal, Satagopa jeeyar (bhavishyadhacharyan sannidhi), thathvesa jeeyar.</td>
+					</tr>
+					<tr>
+						<td><b>Works:</b></td>
+						<td>Periyazhwar thirumozhi svapadhesam.</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><button class="read">Read More</button></td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width="100%"></td>
+					</tr>
+			</table>			
+		</div>
+		
+
+
+		<div class="Alvarlist" id="01-11-2019" style="display:none">
+		<img src="acharya/manavalamuni/manavalamuni.jpg" alt="Flowers" width='100%'>
+			<table>
+				<col width="130">
+				<col width="280">
+					<tr>
+						<th Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width='100%'></th>
+					</tr>
+					<tr>
+						<th Colspan='2' style="text-align:center;font-size:24px;">MANAVALA MAMUNI</th>
+					</tr>
+					<tr>
+						<td><b>Name:</b></td>
+						<td>Periya jeeyar, Varavara Muni, Sowmyajamatru muni, Sowmyopayanthru muni, Sundarajamatru muni, Yathendra Pravanar, Ramyajamatrumuni </td>
+					</tr>
+					<tr>
+						<td><b>Month:</b></td>
+						<td>Aippasi Moolam</td>
+					</tr>
+					<tr>
+						<td><b>Birth Place:</b></td>
+						<td>Azhwarthirunagiri (Near Thirunelveli)</td>
+					</tr>
+					<tr>
+						<td><b>Amsam:</b></td>
+						<td>Adi Seshan</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none">
+						<p>
+						His eight famous disciples are known as Ashtadiggajas (elephants of the eight directions). <br><br>
+						They were: Vanamaamalai Jeeyar, Paravasthu Bhattar Piraan Jeeyar, Tiruvengada Jeeyar, 
+						Koil Kandhaadai Annan, Prathivadhi Bhayankaram Annangaracharya, Erumbi Appaa, Appillai and Appillan. <br><br>
+						Prathivadhi Bhayankaram Annangaracharya's "Sri Venkateswara Suprabhatham" is widely known.
+						</p>
+						</td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><button class="read">Read More</button></td>
+					</tr>
+					<tr>
+						<td Colspan='2' style= "border:none"><img src="frame/horiflower.png" alt="Flowers" width="100%"></td>
+					</tr>
+			</table>			
+		</div>
+
+
+
+	<script>
+
+			window.onload = function()
+				{
+					var today = new Date();
+					var dd = today.getDate();
+
+					var mm = today.getMonth()+1; 
+					var yyyy = today.getFullYear();
+					if(dd<10) 
+					{
+						dd='0'+dd;
+					} 
+
+					if(mm<10) 
+					{
+						mm='0'+mm;
+					} 
+					today = dd+'-'+mm+'-'+yyyy;
+					console.log(today);
+					//document.getElementById('DATE1').innerHTML=today;
+
+					
+					var cars = ["04-11-2019", "06-11-2019", "07-11-2019", "23-01-2019","18-05-2019",
+					"19-04-2019","17-02-2019","11-07-2019","04-08-2019","04-01-2019","12-12-2019",
+					"10-12-2019","20-10-2019","13-07-2019","06-05-2019","20-02-2019","13-08-2019",
+					"04-01-2019a","09-05-2019","20-01-2018","19-05-2019","21-03-2019","10-12-2019a",
+					"11-07-2019a","04-11-2019a","18-05-2019a","01-11-2019"];
+					
+					var y=0, index= '-1';
+					while (cars[y])
+						{
+							if(cars[y] == today)
+							{
+								console.log(cars[y]);
+								console.log(today);
+								document.getElementById("Thirunakchathram").style.display = "block";
+								document.getElementById(cars[y]).style.display = "block";
+								index = '11';
+							}
+							
+							else if(cars[y]  == today + "a")
+							{
+								console.log(y);
+								document.getElementById(cars[y]).style.display = "block";
+								index = '11';
+							}
+							
+						y = y + 1;	
+						
+						}		
+						console.log(index);
+						if(index == '-1')
+							{
+								var random2 = Math.floor(Math.random()*cars.length);
+								document.getElementById(cars[random2]).style.display = "block";
+							}
+															
+				}
+
+
+	</script>
+	
+	<div style="border:2px solid #333">
+		<center><div id="calendarhead">Calendar</div></center>
+		<img src="frame/horiflower.png" alt="Flowers" width="100%">
+		<div class="row">
+		  <div class="column">
+				<center><button onclick="January()">Jan</button>	</center>
+		  </div>
+		  <div class="column">
+				<center><button onclick="February()">Feb</button>	</center>
+		  </div>
+		  <div class="column">
+				<center><button onclick="March()">Mar</button>	</center>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="column">
+				<center><button onclick="April()">Apr</button>	</center>
+		  </div>
+		  <div class="column">
+				<center><button onclick="May()">May</button>	</center>
+		  </div>
+		  <div class="column">
+			<center><button onclick="June()">Jun</button>	</center>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="column">
+			<center><button onclick="July()">July</button>	</center>
+		  </div>
+		  <div class="column">
+			<center><button onclick="August()">Aug</button>	</center>
+		  </div>
+		  <div class="column">
+			<center><button onclick="September()">Sep</button>	</center>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="column">
+				<center><button onclick="October()">Oct</button>	</center>
+		  </div>
+		  <div class="column">
+				<center><button onclick="November()">Nov</button>	</center>
+		  </div>
+		  <div class="column">
+			<center><button onclick="December()">Dec</button>	</center>
+		  </div>
+		</div>
+		
+		<div class="Alvarlist">
+			<li>Azhwars and Acharyas Thirunakchathram.</li>
+			<li>Select Each Month to get the Thirunakchathram.</li>
+			<li>Corresponding Azhwar and Acharya will get displayed on the home page on their Thirunakchathram.</li>
+			<li>Other days a random Azhwar or Acharya will get displayed.</li>
+		</div>
+		<img src="frame/horiflower.png" alt="Flowers" width="100%">
+	</div>
+	
+
+
+	<div id="January">
+		<li>Thondaradippodi Alvar - Margazhi Kettai - 04-01-2019</li>
+		<li>Periya Nambi - Margazhi Kettai - 04-01-2019</li>
+		<li>EMBAR (GOVINDAR) - Thai Punarpusam - 20-01-2018</li>
+		<li>Thirumalisai Alvar - Thai Magam - 23-01-2019</li>
+	</div>
+	<div id="February">
+		<li>Kulashekhara Alwar - Masi Punar Poosam - 17-02-2019</li>
+		<li>MANAKKAL NAMBI - Masi Magam - 20-02-2019</li>
+	</div>
+	<div id="March">
+		<li>NANJEEYAR - Panguni Uthram - 21-03-2019</li>
+	</div>
+	<div id="April">
+		<li>Madhurakavi Alvar - Chittirai Chittirai - 19-04-2019</li>
+	</div>
+	<div id="May">
+		<li>RAMANUJAR - Chitra Tiruvatarai - 09-05-2019</li>
+		<li>Nammalvar - Vaikasi Vishaakam - 18-05-2019</li>
+		<li>THIRUVAI MOZHI PILLAI - Vaikasi Vishaakam - 18-05-2019</li>
+		<li>PARASARA BHATTAR - Vaikasi Anusham - 19-05-2019</li>
+	</div>
+	<div id="June">
+	-
+	</div>
+	<div id="July">
+		<li>Periyalvar - Aani  Swathi - 11-07-2019</li>
+		<li>VADAKKU THIRUVEETHI PILLAI - Aani Swathi - 11-07-2019</li>
+		<li>Nathamunigal - Aani Anusham - 13-07-2019</li>
+	</div>
+	<div id="August">
+		<li>Andal - Aadi Pooram - 04-08-2019</li>
+		<li>Yamunacharya - Aadi Uthiradam - 13-08-2019</li>
+	</div>
+	<div id="September">
+	-
+	</div>
+	<div id="October">
+		<li>Vishwaksenar - Iypasi Pooradam - 20-10-2019</li>
+	</div>
+	<div id="November">
+		<li>MANAVALA MAMUNI - Aippasi Moolam - 01-11-2019</li>
+		<li>POIGAI AZHWAR - Iypasi Thiruvonam - 04-11-2019</li>
+		<li>Pillai Lokacharya - Iypasi Thiruvonam - 04-11-2019</li>
+		<li>BHOOTHATH AZHWAR - Iypasi Avittam - 06-11-2019</li>
+		<li>PEYAZHWAR - Iypasi Sathayam - 07-11-2019</li>
+	</div>
+	<div id="December">
+		<li>Thirumangai Alvar - Karthikai Karthikai - 10-12-2019</li>
+		<li>NAMPILLAI - Karthikai Karthikai - 10-12-2019</li>
+		<li>Thiruppaan Alvar - Karthigai Rogini - 12-12-2019</li>
+	</div>
+	<script>
+		function January() 
+		{
+			var x = document.getElementById("January");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
+		}
+		function February() 
+		{
+			var x = document.getElementById("February");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
+		}
+		function March() 
+		{
+			var x = document.getElementById("March");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
+		}
+		function April() 
+		{
+			var x = document.getElementById("April");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
+		}
+		function May() 
+		{
+			var x = document.getElementById("May");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
+		}
+		function June() 
+		{
+			var x = document.getElementById("June");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
+		}
+		function July() 
+		{
+			var x = document.getElementById("July");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
+		}
+		function August() 
+		{
+			var x = document.getElementById("August");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
+		}
+		function September() 
+		{
+			var x = document.getElementById("September");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
+		}
+		function October() 
+		{
+			var x = document.getElementById("October");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
+		}
+		function November() 
+		{
+			var x = document.getElementById("November");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
+		}
+		function December() 
+		{
+			var x = document.getElementById("December");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
+		}
+
+	</script>
+	<a href="#" class="backtotop" style="display:inline;font-size:45px;text-align:center;">⇧</a>
+</body>
+</html>

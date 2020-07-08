@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <title>fadeOut demo</title>
+  <style>
+		.fade1
+		{
+		display: table-cell;
+		height: 550px;
+		text-align:center;
+		vertical-align:middle;
+		}	
+  </style>
+  <script src="jquery.js"></script>
+</head>
+<body>
+ 
+<div id="box1" class="fade1"><img src="thiruman/thiruman.jpg" width="80%"/></div>
+
+
+<script>
+	  function complete() {
+	  }  
+	  $( "#box1" ).fadeOut( 3500, "linear", complete );
+</script>
+ 
+</body>
+</html>

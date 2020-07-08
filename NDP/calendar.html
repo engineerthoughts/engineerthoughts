@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#calendarhead
+{
+background-color: #333;
+font-size:30px;
+font-family:Calibri;
+color: #c0f000;
+text-align:center;
+padding: 10px 10px;
+width:95%;
+}
+* {
+    box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+	
+}
+button {
+    background-color: white;
+    color: black;
+    border: 2px solid #c0f000; /* Green */
+	font-size: 16px;
+	padding: 10px 25px;
+}
+
+#January, #February,#March,#April,#May,#June,#July,#August,#September,#October,#November,#December {
+    visibility: hidden;
+    width:85%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    bottom: 30px;
+	left:25px;
+    font-size: 17px;
+}
+
+#January.show, #February.show,#March.show,#April.show,
+#May.show,#June.show,#July.show,#August.show,#September.show,#October.show,#November.show,#December.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+</style>
+</head>
+<body>
+
+<center><div id="calendarhead">Calendar</div></center>
+
+	<div class="row">
+	  <div class="column">
+			<center><button onclick="January()">Jan</button>	</center>
+	  </div>
+	  <div class="column">
+			<center><button onclick="February()">Feb</button>	</center>
+	  </div>
+	  <div class="column">
+			<center><button onclick="March()">Mar</button>	</center>
+	  </div>
+	</div>
+	<div class="row">
+	  <div class="column">
+			<center><button onclick="April()">Apr</button>	</center>
+	  </div>
+	  <div class="column">
+			<center><button onclick="May()">May</button>	</center>
+	  </div>
+	  <div class="column">
+		<center><button onclick="June()">Jun</button>	</center>
+	  </div>
+	</div>
+	<div class="row">
+	  <div class="column">
+		<center><button onclick="July()">July</button>	</center>
+	  </div>
+	  <div class="column">
+		<center><button onclick="August()">Aug</button>	</center>
+	  </div>
+	  <div class="column">
+		<center><button onclick="September()">Sep</button>	</center>
+	  </div>
+	</div>
+	<div class="row">
+	  <div class="column">
+			<center><button onclick="October()">Oct</button>	</center>
+	  </div>
+	  <div class="column">
+			<center><button onclick="November()">Nov</button>	</center>
+	  </div>
+	  <div class="column">
+		<center><button onclick="December()">Dec</button>	</center>
+	  </div>
+	</div>
+
+
+	<div id="January">
+		<li>Thondaradippodi Alvar - Margazhi Kettai - 04-01-2019</li>
+		<li>Periya Nambi - Margazhi Kettai - 04-01-2019</li>
+		<li>EMBAR (GOVINDAR) - Thai Punarpusam - 20-01-2018</li>
+		<li>Thirumalisai Alvar - Thai Magam - 23-01-2019</li>
+	</div>
+	<div id="February">
+		<li>Kulashekhara Alwar - Masi Punar Poosam - 17-02-2019</li>
+		<li>MANAKKAL NAMBI - Masi Magam - 20-02-2019</li>
+	</div>
+	<div id="March">
+		<li>NANJEEYAR - Panguni Uthram - 21-03-2019</li>
+	</div>
+	<div id="April">
+		<li>Madhurakavi Alvar - Chittirai Chittirai - 19-04-2019</li>
+	</div>
+	<div id="May">
+		<li>RAMANUJAR - Chitra Tiruvatarai - 09-05-2019</li>
+		<li>Nammalvar - Vaikasi Vishaakam - 18-05-2019</li>
+		<li>THIRUVAI MOZHI PILLAI - Vaikasi Vishaakam - 18-05-2019</li>
+		<li>PARASARA BHATTAR - Vaikasi Anusham - 19-05-2019</li>
+	</div>
+	<div id="June">
+	-
+	</div>
+	<div id="July">
+		<li>Periyalvar - Aani  Swathi - 11-07-2019</li>
+		<li>VADAKKU THIRUVEETHI PILLAI - Aani Swathi - 11-07-2019</li>
+		<li>Nathamunigal - Aani Anusham - 13-07-2019</li>
+	</div>
+	<div id="August">
+		<li>Andal - Aadi Pooram - 04-08-2019</li>
+		<li>Yamunacharya - Aadi Uthiradam - 13-08-2019</li>
+	</div>
+	<div id="September">
+	-
+	</div>
+	<div id="October">
+		<li>Vishwaksenar - Iypasi Pooradam - 20-10-2019</li>
+	</div>
+	<div id="November">
+		<li>MANAVALA MAMUNI - Aippasi Moolam - 01-11-2019</li>
+		<li>POIGAI AZHWAR - Iypasi Thiruvonam - 04-11-2019</li>
+		<li>Pillai Lokacharya - Iypasi Thiruvonam - 04-11-2019</li>
+		<li>BHOOTHATH AZHWAR - Iypasi Avittam - 06-11-2019</li>
+		<li>PEYAZHWAR - Iypasi Sathayam - 07-11-2019</li>
+	</div>
+	<div id="December">
+		<li>Thirumangai Alvar - Karthikai Karthikai - 10-12-2019</li>
+		<li>NAMPILLAI - Karthikai Karthikai - 10-12-2019</li>
+		<li>Thiruppaan Alvar - Karthigai Rogini - 12-12-2019</li>
+	</div>
+	<script>
+		function January() 
+		{
+			var x = document.getElementById("January");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
+		}
+		function February() 
+		{
+			var x = document.getElementById("February");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
+		}
+		function March() 
+		{
+			var x = document.getElementById("March");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
+		}
+		function April() 
+		{
+			var x = document.getElementById("April");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
+		}
+		function May() 
+		{
+			var x = document.getElementById("May");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
+		}
+		function June() 
+		{
+			var x = document.getElementById("June");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
+		}
+		function July() 
+		{
+			var x = document.getElementById("July");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
+		}
+		function August() 
+		{
+			var x = document.getElementById("August");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
+		}
+		function September() 
+		{
+			var x = document.getElementById("September");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
+		}
+		function October() 
+		{
+			var x = document.getElementById("October");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
+		}
+		function November() 
+		{
+			var x = document.getElementById("November");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
+		}
+		function December() 
+		{
+			var x = document.getElementById("December");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3500);
+		}
+
+	</script>
+
+</body>
+</html>

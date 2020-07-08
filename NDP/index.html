@@ -1,0 +1,61 @@
+<!Doctype HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="style.css">
+	<style>
+	
+	</style>
+	</head>
+	<body>
+		<div class="topnav" id="myTopnav">
+				<a><img src="thiruman/thiruman.jpg" width='70%', height='60px;' onclick="myFunction()"></a>
+		</div>
+		<script>
+				function myFunction() {
+					var x = document.getElementById("myTopnav");
+					if (x.className === "topnav") {
+						x.className += " responsive";
+					} else {
+						x.className = "topnav";
+					}
+				}
+		</script>
+			<div class="Alvarlist" id="0" style="display:none;">
+				<img src="thiruman/index_1.jpg" alt="Flowers" width='100%'>
+			</div>
+			
+			<div class="Alvarlist" id="1" style="display:none;">
+				<img src="thiruman/index_2.jpg" alt="Flowers" width='100%'>
+			</div>
+			
+			<div class="Alvarlist" id="2" style="display:none;">
+				<img src="thiruman/index_3.jpg" alt="Flowers" width='100%'>
+			</div>
+			
+			<div class="Alvarlist" id="3" style="display:none;">
+				<img src="thiruman/index_4.jpg" alt="Flowers" width='100%'>
+			</div>
+			
+			<div class="Alvarlist" id="4" style="display:none;">
+				<img src="thiruman/index_5.jpg" alt="Flowers" width='100%'>
+			</div>
+		
+		<script>
+			window.onload = function()
+				{
+					var indexNo = Math.floor(Math.random() * 5);
+					document.getElementById(indexNo).style.display = "block";
+				}
+		</script>
+		
+		<div class="Alvarlist">
+		<center>	<h3 style="font-size:12px">தங்களுக்கு விருப்பமான மொழியை தேர்ந்தெடுக்கவும்</h3>
+			<h3>Select Your Preferred Language</h3></center>
+			<a href="home_t.html"><button class="read">TAMIL</button></a>
+			<a href="home_e.html"><button class="read">ENGLISH</button></a>
+		</div>
+		
+	</body>
+</html>
