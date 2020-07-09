@@ -1,0 +1,272 @@
+body, html 
+			{
+			  height: 100%;
+			  margin: 0;
+			  font-family: Calibri;
+			  color: #333;
+			}
+			
+			.Alvarlist
+			{
+			text-align:Left;
+			padding:30px 30px;
+			opacity:0.85;
+
+			
+			}
+			.bday
+			{
+			text-align:center;
+			font-family:Calibri;
+			font-size:24px;
+			opacity:0.85;
+			}				
+
+			.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5, .bgimg-6, .bgimg-7, .bgimg-8, .bgimg-9, .bgimg-10, .bgimg-11, .bgimg-12, .bgimg-13,
+			.bgimg-21, .bgimg-22, .bgimg-23, .bgimg-24, .bgimg-25, .bgimg-26, .bgimg-27, .bgimg-28, .bgimg-29, .bgimg-30, .bgimg-31, .bgimg-32, .bgimg-33,
+			.bgimg-34, .bgimg-35, .bgimg-36, .bgimg-37, .bgimg-38, .bgimg-39
+			{
+			  position: relative;
+			  opacity: 0.75;
+			  background-attachment: fixed;
+			  background-position: center;
+			  background-repeat: no-repeat;
+			  background-size: cover;
+			  
+			}
+		.bgimg-1
+			{
+			  background-image: url("../../alvar/poigaiazhwar/12alwars.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-2 {
+			  background-image: url("../../alvar/poigaiazhwar/poigaiazhwar.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-3 {
+			  background-image: url("../../alvar/boothathazhwar/bhudhatazhwar.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-4 {
+			  background-image: url("../../alvar/peyazhwar/peyazhwar.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-5 {
+			  background-image: url("../../alvar/thirumazhisaiazhwar/thirumazhisaiazhwar.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-6 {
+			  background-image: url("../../alvar/nammalvar/nammalvar.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-7 {
+			  background-image: url("../../alvar/madhurakavi/madhurakavi.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-8 {
+			  background-image: url("../../alvar/kulasekaraalvar/kulasekaraalwar.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-9 {
+			  background-image: url("../../alvar/periyalvar/periyalvar.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-10 {
+			  background-image: url("../../alvar/andal/andal.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-11 {
+			  background-image: url("../../alvar/thondaradippodi/thondaradi.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-12 {
+			  background-image: url("../../alvar/thirupaanalvar/thirupaanalvar.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-13 {
+			  background-image: url("../../alvar/thirumangai/thirumangai.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-21
+			{
+			  background-image: url("../../acharya/Acharyas.gif");
+			  min-height: 100%;
+			}
+		.bgimg-22 {
+			  background-image: url("../../acharya/ranga/ranga.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-23 {
+			  background-image: url("../../acharya/ranganayaki/ranganayaki.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-24 {
+			  background-image: url("../../acharya/viswaksenar/Visvaksenar.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-25 {
+			  background-image: url("../../alvar/nammalvar/nammalvar.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-26 {
+			  background-image: url("../../acharya/nathamuni/nathamunigal.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-27 {
+			  background-image: url("../../acharya/uyyakondar/uyyakondar.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-28 {
+			  background-image: url("../../acharya/manakkal/manakkal.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-29 {
+			  background-image: url("../../acharya/alavandar/Yamunacharya.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-30 {
+			  background-image: url("../../acharya/periyanambi/periyanambi.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-31 {
+			  background-image: url("../../acharya/ramanujar/ramanujar.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-32 {
+			  background-image: url("../../acharya/embar/embar.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-33 {
+			  background-image: url("../../acharya/parasarabhattar/parasarabhattar.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-34 {
+			  background-image: url("../../acharya/nanjeeyar/nanjeeyar.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-35 {
+			  background-image: url("../../acharya/nampillai/nampillai.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-36 {
+			  background-image: url("../../acharya/vadakku/vadakku.jpeg");
+			  min-height: 100%;
+			}
+		.bgimg-37 {
+			  background-image: url("../../acharya/lokacharya/lokacharya.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-38 {
+			  background-image: url("../../acharya/thiruvaimozhipillai/thiruvaimozhipillai.jpg");
+			  min-height: 100%;
+			}
+		.bgimg-39 {
+			  background-image: url("../../acharya/manavalamuni/manavalamuni.jpg");
+			  min-height: 100%;
+			}
+		td , th
+			{
+				border:1px solid #000;
+				padding:10px;
+				text-align:left;
+				padding: 8px;
+			}
+			
+		.caption {
+			  position: absolute;
+			  left: 0;
+			  top: 50%;
+			  width: 100%;
+			  text-align: center;
+			  color: white;
+			  font-size:25px;
+			  letter-spacing: 10px;
+			}
+		.read
+			{
+			border-radius: 8px;
+			color: white;
+			padding: 10px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+			width:100%;
+			background-color:#0276FD;
+			}
+		.backtotop 
+			{ 			 
+			margin: 0;			 
+			position: fixed;			 
+			bottom: 0;			 
+			right: 0;			 
+			width: 50px;			 
+			height: 50px;			 
+			z-index: 100;			 		 
+			text-decoration: none;			 
+			color: #ffffff;			
+			opacity:0.55;
+			background-color: #ff9000;	
+			}
+	<!--top nav responsive-->
+		.topnav a.active{
+			border-bottom: 2px solid #87CEFA;
+		}
+		.topnav {
+		  overflow: hidden;
+		  background-color: #0d1934;
+		  width:100%;
+		  box-shadow: 0 12px 16px 0 rgba(0,0,0,.5),0 17px 50px 0 rgba(0,0,0,0.19);
+		  z-index: 100;
+		}
+
+		.topnav a {
+		  
+		  display: block;
+		  color: #b7e2e2;
+		  text-align: center;
+		  padding: 8px 5px;
+		  text-decoration: none;
+		  font-size: 16px;
+		  text-align: center;
+		  font-family:Century Gothic;
+		}
+
+		.topnav a:hover {
+		  color:#b7e2e2;
+			border-bottom: 2px solid #87CEFA;
+		}
+
+		.topnav .icon {
+		  display: none;
+		}
+
+		@media screen and (max-width: 800px) {
+		  .topnav a:not(:first-child) {display: none;}
+		  .topnav a.icon {
+			float: right;
+			display: block;
+		  }
+		}
+
+		@media screen and (max-width: 800px) {
+		  .topnav.responsive {position: relative;}
+		  .topnav.responsive .icon {
+			position: absolute;
+			right: 0;
+			top: 0;
+
+		  }
+		  .topnav.responsive a {
+			float: none;
+			display: block;
+			text-align: center;
+		  }
+
+		}
+		.topnav.responsive a.active{
+			border-bottom: 2px solid #87CEFA;
+		}
+	

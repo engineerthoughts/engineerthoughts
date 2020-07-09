@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="style.css">
+		
+		<style>
+			.embed-responsive 
+			{
+				position: relative;
+				display: block;
+				height: 0;
+				padding: 0;
+				overflow: hidden;
+			}
+			
+			#wrapper{ width:100%; float:left; height:500px; border:1px solid #5694cf;}
+		</style>
+		
+	</head>
+	
+	<body>
+		<!--top nav responsive-->
+		<div class="topnav" id="myTopnav">
+				<a><img src="../../thiruman/thiruman.jpg" width='70%', height='60px;' onclick="myFunction()"></a>
+				<a href="../../home_e.html">HOME</a>
+				<a class="active" href="../../alvar_e.html">AZHVARS</a>
+				<a href="../../acharya_e.html">ACHARYA</a>
+				<a href="#">VEDIC SCIENCE</a>
+				<a href="#">ABOUT US</a>
+				
+		</div>
+		<script>
+				function myFunction() {
+					var x = document.getElementById("myTopnav");
+					if (x.className === "topnav") {
+						x.className += " responsive";
+					} else {
+						x.className = "topnav";
+					}
+				}
+		</script>
+		<!--ends here-->
+		<div class="bgimg-10">
+		  <div class="caption">
+			<span class="border">ANDAL</span>
+		  </div>
+		</div>
+		
+		<div class="Alvarlist">
+		<a href="andal.html"><button class="read">ANDAL</button></a>
+		</div>
+		
+		<img src="../../frame/horiflower.png" alt="Flowers" width='100%'>
+		
+			<div class="Alvarlist" style="font-size:14px;">
+			<center><h3>SRI ANDAL ARULICHSEITHA</h3>
+			<h3>THIRUPPAVAI</h3></center>
+			</div>
+		
+		<div id="wrapper">
+			<object data="https://github.com/engineerthoughts/sudharsan/blob/master/thiruppavai_final.pdf" type="application/pdf" width="100%" height="100%">
+			<p>Your phone doesn't have a PDF Plugin. Instead you can <a href="https://github.com/engineerthoughts/sudharsan/blob/master/thiruppavai_final.pdf" type="application/pdf" download>Click
+			here to download the PDF.</a></p>
+			</object>
+		</div>
+		
+		<iframe src="https://github.com/engineerthoughts/sudharsan/blob/master/thiruppavai_final.pdf" width="auto" height="auto"> </iframe>
+		<img src="../../frame/horiflower.png" alt="Flowers" width='100%'>
+		<a href="#" class="backtotop" style="display:inline;font-size:45px;text-align:center;">⇧</a>
+	</body>
+</html>
