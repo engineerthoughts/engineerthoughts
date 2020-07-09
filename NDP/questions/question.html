@@ -1,0 +1,207 @@
+<!Doctype HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+		<div class="topnav" id="myTopnav">
+				<a><img src="../thiruman/thiruman.jpg" width='70%', height='60px;' onclick="myFunction()"></a>
+				<a href="../home_e.html">HOME</a>
+				<a href="../alvar_e.html">AZHVARS</a>
+				<a href="../acharya_e.html">ACHARYA</a>
+				<a class="active" href="#">VEDIC SCIENCE</a>
+				<a href="#">ABOUT US</a>
+				
+		</div>
+		<script>
+				function myFunction() {
+					var x = document.getElementById("myTopnav");
+					if (x.className === "topnav") {
+						x.className += " responsive";
+					} else {
+						x.className = "topnav";
+					}
+				}
+        </script>
+        <script src="refreshquestion.js"></script>
+
+        <script src="mudhalalvar.js"></script>
+        <script src="thirumazhisai.js"></script>
+        <script src="nammazhwar.js"></script>
+        <script src="kulasekaraazhwar.js"></script>
+        <script src="periazhwar.js"></script>
+        <script src="thondaradipodiazhwar.js"></script>
+        <script src="thiruppanazhwar.js"></script>
+        <script src="thirumangaiazhwar.js"></script>
+        <script src="andal.js"></script>
+
+        <script src="nathamunigal.js"></script>
+        <script src="yamunacharya.js"></script>
+        <script src="ramanujar.js"></script>
+        <script src="desikar.js"></script>
+        <script src="manavalamamuni.js"></script>
+        <script src="section6.js"></script>
+        <script src="section7.js"></script>
+        <script src="section8.js"></script>
+        
+        <script src="thiruppallandu.js"></script>
+        <script src="thiruppaliyezhuchi.js"></script>
+
+        <script src="generalavatharam.js"></script>
+        <script src="matsya.js"></script>
+        <script src="kurma.js"></script>
+        <script src="varaha.js"></script>
+        <script src="narasimha.js"></script>
+        <script src="vamana.js"></script>
+        <script src="parashurama.js"></script>
+
+        <script src="srirangam1.js"></script>
+        <script src="srirangam2.js"></script>
+
+
+<!--starts here-->
+    <div class="Alvarlist">
+       <center><span style="border: 2px solid #0d1934; padding: 5px 30px;border-radius: 12px;">Q & A</span></center>
+    </div>
+        <hr>
+        <button class="accordion">Azhwargal</button>
+            <div class="panel">
+                <a href="#question1">
+                    <button class="read" onclick="mudhalvarques()">Mudhal Azhwargal</button>
+                    <button class="read" onclick="thirumazhisaiques()">Thirumazhisai Azhwar</button>
+                    <button class="read" onclick="nammazhwarques()">Nammazhwar</button>
+                    <button class="read" onclick="kulasekaraazhwarques()">Kulasekara Azhwar</button>
+                    <button class="read" onclick="periazhwarques()">Periazhwar</button>
+                    <button class="read" onclick="thondaradipodiazhwarques()">Thondaradipodi Azhwar</button>
+                    <button class="read" onclick="thiruppanazhwarques()">Thiruppan Azhwar</button>
+                    <button class="read" onclick="thirumangaiazhwarques()">Thirumangai Azhwar</button>
+                    <button class="read" onclick="andalques()">Andal</button>
+                </a>
+            </div>
+
+        <button class="accordion">Acharyargal</button>
+            <div class="panel">
+                    <a href="#question1">
+                            <button class="read" onclick="nathamunigalques()">Nathamunigal</button>
+                            <button class="read" onclick="alavandarques()">Yamunacharya</button>
+                            <button class="read" onclick="ramanujarques()">Ramanujar</button>
+                            <button class="read" onclick="desikarques()">Desikar</button>
+                            <button class="read" onclick="manavalamamuniques()">Manavala Mamuni</button>
+                            <button class="read" onclick="section6ques()">Section 6</button>
+                            <button class="read" onclick="section7ques()">Section 7</button>
+                            <button class="read" onclick="section8ques()">Section 8</button>
+                        </a>
+            </div>
+
+        <button class="accordion">Divya prabhandam</button>
+            <div class="panel">
+                    <a href="#question1">
+                            <button class="read" onclick="thiruppallanduques()">Thiruppallandu</button>
+                            <button class="read" onclick="thiruppaliyezhuchiques()">Thiruppaliyezhuchi</button>                            
+                        </a>
+            </div>
+        
+        <button class="accordion">Avatharam</button>
+            <div class="panel">
+                    <a href="#question1">
+                            <button class="read" onclick="generalavatharamques()">General</button>
+                            <button class="read" onclick="matsyaques()">Matsya</button>
+                            <button class="read" onclick="kurmaques()">Kurma</button>
+                            <button class="read" onclick="varahaques()">Varaha</button>
+                            <button class="read" onclick="narasimhaques()">Narasimha</button>
+                            <button class="read" onclick="vamanaques()">Vamana</button>
+                            <button class="read" onclick="parasuramaques()">Parashurama</button>
+                        </a>
+            </div>
+
+        <button class="accordion">General</button>
+            <div class="panel">
+                    <button class="read" onclick="srirangam1ques()">Sri Rangam - Part 1</button>
+                    <button class="read" onclick="srirangam2ques()">Sri Rangam - Part 2</button>
+            </div>
+        <hr>
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+            var functionname;
+
+            for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                  panel.style.display = "none";
+                    } else {
+                  panel.style.display = "block";
+                    }
+                });
+            }
+        </script>
+<!--ends here-->
+
+        <div class="Alvarlist" id="question1" ></div>
+            <div class="Alvarlist" id="answer1" style="display:none; color:#0276FD;"></div>
+
+        <div class="Alvarlist" id="question2"></div>
+            <div class="Alvarlist" id="answer2" style="display:none; color:#0276FD;"></div>
+
+        <div class="Alvarlist" id="question3"></div>
+            <div class="Alvarlist" id="answer3" style="display:none; color:#0276FD;"></div>
+
+        <div class="Alvarlist" id="question4"></div>
+            <div class="Alvarlist" id="answer4" style="display:none; color:#0276FD;"></div>
+
+        <div class="Alvarlist" id="question5"></div>
+            <div class="Alvarlist" id="answer5" style="display:none; color:#0276FD;"></div>
+
+        <div class="Alvarlist" id="question6"></div>
+            <div class="Alvarlist" id="answer6" style="display:none; color:#0276FD;"></div>
+
+        <div class="Alvarlist" id="question7"></div>
+            <div class="Alvarlist" id="answer7" style="display:none; color:#0276FD;"></div>
+
+        <div class="Alvarlist" id="question8"></div>
+            <div class="Alvarlist" id="answer8" style="display:none; color:#0276FD;"></div>
+
+        <div class="Alvarlist" id="question9"></div>
+            <div class="Alvarlist" id="answer9" style="display:none; color:#0276FD;"></div>
+
+        <div class="Alvarlist" id="question10"></div>
+            <div class="Alvarlist" id="answer10" style="display:none; color:#0276FD;"></div>
+
+        <input type = "button" class="read" id="showhidebut" 
+        Value="Show Answers" onclick="showanswers()" style="display:none;"></input>
+        <button value="Refresh Page" class="read" id="refreshQuest" onClick="refreshquestion()" style="display:none;">
+                Refresh Questions</button>
+        <button value="Refresh Page" class="read" id="refreshpage" onClick="window.location.reload()" style="display:none;">
+            Refresh Page</button>
+
+        <script>
+        function showanswers() 
+            {
+                var ansids = ["answer1", "answer2", "answer3", "answer4", "answer5", "answer6", 
+                "answer7", "answer8" ,"answer9", "answer10"];
+                for(var no = 0; no < ansids.length; no++)
+                    {
+                        console.log(ansids[no]);
+                        var getid = document.getElementById(ansids[no])
+                        if (getid.style.display === "none") 
+                            {
+                            getid.style.display = "block";
+                            document.getElementById("showhidebut").value="Hide Answers";
+                            } 
+                        else 
+                          {
+                            getid.style.display = "none";
+                            document.getElementById("showhidebut").value="Show Answers";
+                          } 
+                    }
+            }
+
+        
+        </script>
+    </body>
+</html>
