@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -9,13 +10,40 @@
 		<title> Engineer thoughts </title>
 		<link rel="shortcut icon" href="images/logo.png">
 		<link rel="stylesheet" type="text/css" href="etstyle.css">		
-		
+		<style>
+		* {
+		  box-sizing: border-box;
+		}
+
+		/* Create two equal columns that floats next to each other */
+		.column {
+		  float: left;
+		  width: 50%;
+		  padding: 10px;
+		  height: 300px; /* Should be removed. Only for demonstration */
+		}
+
+		/* Clear floats after the columns */
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+
+		/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+		@media screen and (max-width: 600px) {
+		  .column {
+			width: 100%;
+		  }
+		}
+</style>
 	</head>
 	<body onload="DayET();">
 	
 		<div class="topnav" id="myTopnav">
 			<a> <img src="images/logo.png" width='20px', height='18px'> </a>
 			<a id="topnav1"	class="active" href="index.html">HOME</a>
+			<a id="topnav6"	href="events.html">EVENTS</a>
 			<a id="topnav2"	href="projects.html">PROJECTS</a>
 			<a id="topnav3"	href="scribbles.html">SCRIBBLES</a>
 			<a id="topnav4"	href="apj.html">THOUGHTS</a>
@@ -39,12 +67,19 @@
 		<h1 class="headtextindex"> Engineer Thoughts</h1>
 		</div>
 
-		
+			<div class="row">
 			<h3 class="head1index">Upcoming Event</h3>
-			<div class="sd1" style="text-align: center;"><img class="img3elec" src="images/3d anim.png"  width="50%" height="40%"></div><br>
-			<a href = "https://forms.gle/mTq5H4DGaC1Y8Xgi8"><button class = "buttonmodified">Click to Register</button></a>
-			<div class="sd1" style="text-align: center;"><img class="img3elec" src="images/python.png"  width="50%" height="40%"></div><br>
-			<a href = "https://forms.gle/mTq5H4DGaC1Y8Xgi8"><button class = "buttonmodified">Click to Register</button></a>
+				<div class="column">
+					
+					<div class="sd1" style="text-align: center;"><img class="img3elec" src="images/3d anim.png"  width="50%" height="40%"></div><br>
+					<a href = "https://forms.gle/mTq5H4DGaC1Y8Xgi8"><button class = "buttonmodified">Click to Register</button></a>
+				</div>
+				<div class="column">
+					<div class="sd1" style="text-align: center;"><img class="img3elec" src="images/python.png"  width="50%" height="40%"></div><br>
+					<a href = "https://forms.gle/mTq5H4DGaC1Y8Xgi8"><button class = "buttonmodified">Click to Register</button></a>
+				</div>
+			</div>
+			
 <div>			
 		<h3 class="head1index">INTRO</h3>
 			<p class="p1index"> 20 years before, If someone said
