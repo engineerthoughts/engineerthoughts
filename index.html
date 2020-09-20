@@ -20,7 +20,6 @@
 		  float: left;
 		  width: 50%;
 		  padding: 10px;
-		  height: 300px; /* Should be removed. Only for demonstration */
 		}
 
 		/* Clear floats after the columns */
@@ -30,7 +29,13 @@
 		  clear: both;
 		}
 
+
 		/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+		@media screen and (max-width: 600px) {
+		  .column {
+			width: 100%;
+		  }
+		}
 		@media screen and (max-width: 600px) {
 		  .column {
 			width: 100%;
@@ -71,16 +76,16 @@
 			<h3 class="head1index">Upcoming Event</h3>
 				<div class="column">
 					
-					<div class="sd1" style="text-align: center;"><img class="img3elec" src="images/3d anim.png"  width="50%" height="40%"></div><br>
+					<center><img class="img3elec" src="images/3DAnim10.png"  width="50%" height="40%"></center><br>
 					<a href = "https://forms.gle/mTq5H4DGaC1Y8Xgi8"><button class = "buttonmodified">Click to Register</button></a>
 				</div>
 				<div class="column">
-					<div class="sd1" style="text-align: center;"><img class="img3elec" src="images/python.png"  width="50%" height="40%"></div><br>
+					<center><img class="img3elec" src="images/pythonnew.png"  width="50%" height="40%"></center><br>
 					<a href = "https://forms.gle/mTq5H4DGaC1Y8Xgi8"><button class = "buttonmodified">Click to Register</button></a>
 				</div>
 			</div>
 			
-<div>			
+<div class = "introheadindex">			
 		<h3 class="head1index">INTRO</h3>
 			<p class="p1index"> 20 years before, If someone said
 			like, everyone in the world can be connected through a device,
