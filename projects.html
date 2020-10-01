@@ -9,6 +9,7 @@
 		* {
 		  box-sizing: border-box;
 		}
+
 		.fourcolumn {
 		  float: left;
 		  width: 25%;
@@ -19,10 +20,10 @@
 		.column {
 		  float: left;
 		  width: 50%;
-		  padding: 10px;
+		  padding:30px;
 		  border-style: inset;
 		  border-width: 1px;
-		}
+		 }
 
 		/* Clear floats after the columns */
 		.row:after {
@@ -35,6 +36,7 @@
 		@media screen and (max-width: 600px) {
 		  .column {
 			width: 100%;
+			padding:10px;
 		  }
 		  .fourcolumn {
 			width: 100%;
@@ -48,10 +50,10 @@
 			<div class="topnav" id="myTopnav">
 			<a> <img src="images/logo.png" width='20px', height='18px'> </a>
 			<a id="topnav1" href="index.html">HOME</a>
+			<a id="topnav4"	href="courses.html">COURSES</a>
 			<a id="topnav6"	href="events.html">EVENTS</a>
 			<a id="topnav2" class="active" href="projects.html">PROJECTS</a>
 			<a id="topnav3" href="scribbles.html">SCRIBBLES</a>
-			<a id="topnav4" href="apj.html">THOUGHTS</a>
 			<a id="topnav5" href="aboutus.html">ABOUT US</a>
 			<a id="topnav6" href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">☰</a>
 		</div>
@@ -104,22 +106,22 @@
 			</div>
 		</div>-->
 		<div class="fourrow">
-				<a class="a1" href="anim.html"><div class="fourcolumn">					
-					<div class="sd1" style="text-align: center;"><img class="img3elec" src="images/anima.png"  width="50%" height="40%"></div><br>
+				<a class="a1" href="anim.html"><div class="column" >					
+					<div class="sd1" style="text-align: center;background-color:#358D8F;" ><img src="images/anima.png"  width="50%" height="50%"></div><br>
 					<!--<p class="p1index"> Wonderful Session to start for a Basic Animation</p>-->
-					<button class = "buttonmodified">ANIMATION</button>
+					<button class = "buttonmodified"><span id="anim"></span></button>
 				</div></a>
-				<a class="a1" href="elec.html"><div class="fourcolumn">
-					<div class="sd1" style="text-align: center;"><img class="img3elec" src="images/electric.png"  width="50%" height="40%"></div><br>
-					<button class = "buttonmodified">ELECTRICAL</button>
+				<a class="a1" href="elec.html"><div class="column">
+					<div class="sd1" style="text-align: center;background-color:#EB5D4A;"><img src="images/electric.png" width="50%" height="50%"></div><br>
+					<button class = "buttonmodified"><span id="elec"></span></button>
 				</div></a>
-				<a class="a1" href="mech.html"><div class="fourcolumn">
-					<div class="sd1" style="text-align: center;"><img class="img3elec" src="images/mecha.png"  width="50%" height="40%"></div><br>
-					<button class = "buttonmodified">MECHANICAL</button>
+				<a class="a1" href="mech.html"><div class="column">
+					<div class="sd1" style="text-align: center;background-color:#EFAE1D;"><img src="images/mecha.png" width="50%" height="50%"></div><br>
+					<button class = "buttonmodified"><span id="mech"></span></button>
 				</div></a>
-				<a class="a1" href="computer.html"><div class="fourcolumn">
-					<div class="sd1" style="text-align: center;"><img class="img3elec" src="images/comp.png"  width="50%" height="40%"></div><br>
-					<button class = "buttonmodified">COMPUTER</button>
+				<a class="a1" href="computer.html"><div class="column">
+					<div class="sd1" style="text-align: center;background-color:#00C699;"><img src="images/comp.png" width="50%" height="50%"></div><br>
+					<button class = "buttonmodified"><span id="comp"></span></button>
 				</div></a>
 		</div>
 		<center><div style="bottom:0;position:fixed; width:100%;">
@@ -128,7 +130,46 @@
 		<a href="mailto:engineerthoughts4life@gmail.com?Subject=I%20like%20Engineer%20Thoughts!!" target="_top"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/mail.png" width='40px', height='40px' style="opacity:0.5"/></a>
 		</div></center>
 		
-<script src="color.js"></script>
+		
+		<script>
+		var a = 0;
+		var b = 0;
+		var c = 0;
+		var d = 0;
+		var txt1 = 'ANIMATION';
+		var txt2 = 'ELECTRICAL';
+		var txt3 = 'MECHANICAL';
+		var txt4 = 'COMPUTER';
+		var speed = 150;
+
+		function typeWriter() {
+		  if (a < txt1.length) {
+			document.getElementById("anim").innerHTML += txt1.charAt(a);
+			a++;
+			setTimeout(typeWriter, speed);
+		  }
+		  if (b < txt2.length) {
+			document.getElementById("elec").innerHTML += txt2.charAt(b);
+			b++;
+			setTimeout(typeWriter, speed);
+		  }
+		  if (c < txt3.length) {
+			document.getElementById("mech").innerHTML += txt3.charAt(c);
+			c++;
+			setTimeout(typeWriter, speed);
+		  }
+		  if (d < txt4.length) {
+			document.getElementById("comp").innerHTML += txt4.charAt(d);
+			d++;
+			setTimeout(typeWriter, speed);
+		  }
+
+		}
+		window.onload = typeWriter;
+
+		</script>
+
+<!--<script src="color.js"></script>-->
 <script src="projectsET.js"></script>
 <script>
 function bigImg(x) {
