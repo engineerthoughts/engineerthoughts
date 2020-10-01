@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -11,38 +12,62 @@
 		<link rel="shortcut icon" href="images/logo.png">
 		<link rel="stylesheet" type="text/css" href="etstyle.css">		
 	<style>
-		.aboutuscontainer 
-			{
-				float: left;
-				width: 50%;
-				height:auto;
-				margin-top:15px;
-			}
+		
+		/* Create two equal columns that floats next to each other */
+		.column {
+		  float: left;
+		  width: 33.33%;
+		  padding:50px;
+		  border-style: none;
+		  text-align:center;
+		  border-width: 1px;
+		 }
+		
 
+		/* Clear floats after the columns */
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+		.rowinner:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
 
-		.aboutusimage 
-			{
-			  display: block;
-			  width: 50%;
-			  height: auto;
-			}
-
-		@media screen and (max-width: 600px) 
-			{
-				.head1index
-				{
-					font-size:14px;
-					margin:10px 0 0 0;
-				}
-				.p1index
-				{
-					font-size: 12px;
-				}
-				.img3
-				{
-					width:90%;
-					height:auto;
-				}
+		/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+		@media screen and (max-width: 1100px) {
+		  .column {
+		   float: left;
+			width: 50%;
+			 padding:50px;
+		  border-style: none;
+		  text-align:center;
+		  border-width: 1px;
+		  }
+		  .columninner {
+			width: 100%;
+			padding:10px;
+		  }
+		  .fourcolumn {
+			width: 100%;
+		  }
+		}
+		/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+		@media screen and (max-width: 550px) {
+		  .column {
+		   padding:25px;
+		width:100%;
+		  }
+		  .columninner {
+			width: 100%;
+			padding:10px;
+		  }
+		  .fourcolumn {
+			width: 100%;
+		  }
+		}
 </style>	
 	</head>
 	<body onload="DayET();">
@@ -73,24 +98,28 @@
 	<p class = "p1index" style="text-align:center">"Even if you are zero, a good team can make you a hero"<br>"Team work makes the Dream work"</p>
 	<img class="img3" src="images/join.png" style="width:60%;height:auto;"></img>
 	<p class = "p1index" style="text-align:center">Nice Meeting you :)</p></center>
-	<div class="aboutuscontainer">
-		<center>
-			<img src="images/aranga.png" alt = "N Aranganathan" class="aboutusimage">
-			<h3 class="head1index">ARANGANATHAN N</h3>
-			<p class="p1index" style="text-align:center">Electrical Engineer<br>R & D<br> (ranga) </p><br>
-			<button class="buttonmodified" style="width:60%">PROFILE</button>
-		 </center>
-	</div>
+
+		<div class="row">
+			<div class="column" >
+			<a class="a1" href="3dcourse.html"><img class="sd1" src="images/aranga.png" width="100%" height="350px"></img>
+				<p style="color:grey">ARANGANATHAN</p>
+				<p style="color:black">PYTHON, ROBOTICS - TUTOR</p>
+				<p style="color:black">Masters in Electrical, Working as Electric Circuit Designer in Leading Company.</p>
+				</div>
+			<div class="column" >
+			<a class="a1" href="3dcourse.html"><img class="sd1" src="images/alien.png" width="100%" height="350px"></img>
+				<p style="color:grey">SUDHARSAN</p>
+				<p style="color:black">3D ANIMATION, WEB DEVELOPMENT - TUTOR</p>
+				<p style="color:black">Software Engineer in Tier 1 Tech Company, Passionate in Teaching.</p>
+			</div>
+			<div class="column" >
+			<a class="a1" href="3dcourse.html"><img class="sd1" src="images/aravind.png" width="100%" height="350px"></img>
+				<p style="color:grey">ARAVIND</p>
+				<p style="color:black">ROBOTICS, PYTHON - TUTOR</p>
+				<p style="color:black">Associate Analyst in Leading Health Company, Robotics Conference in Singapore</p>
+			</div>
+		</div>
 	
-	<div class="aboutuscontainer">
-		<center>
-			<img src="images/alien.jpg" alt = "N Aranganathan" class="aboutusimage">
-			<h3 class="head1index">SUDHARSAN K</h3>
-			<p class="p1index" style="text-align:center">Mechanical Engineer<br>But works in IT.<br> (alien) </p><br>
-			<button class="buttonmodified"  style="width:60%">PROFILE</button>
-		 </center>
-		 	<br><br>
-	</div>
 <center><div style="bottom:0;position:fixed; width:100%;">
 		<a href="https://www.facebook.com/enggthoughts/"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/facebook.png" width='40px', height='40px' style="opacity:0.5"></a>
 		<a href="https://www.youtube.com/channel/UCNEehMfqVDmvPb9BJUPFU-w"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/youtube.png" width='40px', height='40px' style="opacity:0.5"></a>
@@ -110,6 +139,6 @@ function normalImg(x) {
 }
 </script>
 
-<script src="color.js"></script>
+<!--<script src="color.js"></script>-->
 </body>
 </html>
