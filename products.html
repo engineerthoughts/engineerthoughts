@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Engineer thoughts </title>
+		<link rel="shortcut icon" href="images/logo.png">
+		<link rel="stylesheet" type="text/css" href="etstyle.css">
+		<style>
+		* {
+		  box-sizing: border-box;
+		}
+
+		.fourcolumn {
+		  float: left;
+		  width: 25%;
+		  padding: 10px;
+		  
+		}
+		/* Create two equal columns that floats next to each other */
+		.column {
+		  float: left;
+		  width: 50%;
+		  padding:30px;
+		  border-style: inset;
+		  border-width: 1px;
+		 }
+
+		/* Clear floats after the columns */
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+
+		/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+		@media screen and (max-width: 600px) {
+		  .column {
+			width: 100%;
+			padding:10px;
+		  }
+		  .fourcolumn {
+			width: 100%;
+		  }
+		}
+		</style>
+		</head>
+<!--<body onload="DayET();projectsET();">-->
+<body onload="projectsET1();DayET();">
+			
+			<div class="topnav" id="myTopnav">
+			<a> <img src="images/logo.png" width='20px', height='18px'> </a>
+			<a id="topnav1" href="index.html">HOME</a>
+			<a id="topnav4"	href="courses.html">COURSES</a>
+			<a id="topnav6"	href="events.html">EVENTS</a>
+			<a id="topnav2" class="active" href="projects.html">PROJECTS</a>
+			<a id="topnav3" href="scribbles.html">SCRIBBLES</a>
+			<a id="topnav5" href="aboutus.html">ABOUT US</a>
+			<a id="topnav6" href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">☰</a>
+		</div>
+		<br><br><br><br>
+			
+			<!--<div class="topnav" id="myTopnav">
+			  <a href="#home">Home</a>
+			  <a href="#news">News</a>
+			  <a href="#contact">Contact</a>
+			  <a href="#about">About</a>
+			  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+			</div>-->
+
+			
+			<script>
+			function myFunction() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
+				}
+			}
+			</script>
+			
+			
+
+		<!--<div class="projectsrow">
+			<div class="col-3 col-s-3 menu">
+				 <ul>
+					<li  class="value123"><a class="a1" href="anim.html">ANIMATION</a> <a href="anim.html"><img class="img1" src="images/anima.png" width="1"></a></li>
+					<li  class="value123"><a class="a1" href="elec.html">ELECTRICAL</a> <a href="elec.html"><img class="img1" src="images/electric.png" width="1"></a></li>
+					<li  class="value123"><a class="a1" href="mech.html">MECHANICAL</a> <a href="mech.html"><img class="img1" src="images/mecha.png" width="1"></a></li>
+					<li  class="value123"><a class="a1" href="computer.html">COMPUTER</a> <a href="computer.html"><img class="img1" src="images/comp.png" width="1"></a></li>
+				 </ul>
+			</div>
+			
+			<!--<div class="col-6 col-s-9">
+			  <center><h2 class="head4">ANIMATION<a class="a1" href="anim.html"> <button class="buttonmodified">VIEW MORE </button></a></h2></center>
+			  <p class="project2">Animation is one of the latest and most advance technologies of the computer applications. It is not only used in the entertainment but animations have also slowly taken over the scientific and other daily aspect of life.
+			  </p>
+			  <h2 class="head4">HOW WE STARTED</h2>
+			  <p class="project2">We started learning animation from our final year of our college. Our family friend showed us what all the things that can be done through computer. He told us to learn some extra things other than the curriculum. Then he told us to try doing animation. We started bprojectsrowsing. We got some idea. We had a decent knowledge in drawing and sketching. So, it was easy for us to grasp the concepts of animation.<br><br>
+			We started doing 2d animation. We should draw images in each frame, which is technically called frame-by-frame animation. We started drawing images. Only one challenge which We faced is difficulty in drawing using mouse. After some days, We got used to it. Even though We didn’t get perfection but We managed to make some good-looking videos.<br><br>
+			But there are some limitations in 2d animation. So, We decided to try some 3d animations and modeling. We started bprojectsrowsing on it. <br><br>
+			<b>Note:</b> You can learn basics from internet with some little effort. There are plenty of resources available in the internet which you can make use of it. We have listed out some useful sites by which you may get benefited.
+			<br><br>  </p>
+			</div>
+		</div>-->
+		<div class="fourrow">
+				<a class="a1" href="anim.html"><div class="column" >					
+					<div class="sd1" style="text-align: center;background-color:#358D8F;" ><img src="images/anima.png"  width="50%" height="50%"></div><br>
+					<!--<p class="p1index"> Wonderful Session to start for a Basic Animation</p>-->
+					<button class = "buttonmodified"><span id="anim"></span></button>
+				</div></a>
+				<a class="a1" href="elec.html"><div class="column">
+					<div class="sd1" style="text-align: center;background-color:#EB5D4A;"><img src="images/electric.png" width="50%" height="50%"></div><br>
+					<button class = "buttonmodified"><span id="elec"></span></button>
+				</div></a>
+				<a class="a1" href="mech.html"><div class="column">
+					<div class="sd1" style="text-align: center;background-color:#EFAE1D;"><img src="images/mecha.png" width="50%" height="50%"></div><br>
+					<button class = "buttonmodified"><span id="mech"></span></button>
+				</div></a>
+				<a class="a1" href="computer.html"><div class="column">
+					<div class="sd1" style="text-align: center;background-color:#00C699;"><img src="images/comp.png" width="50%" height="50%"></div><br>
+					<button class = "buttonmodified"><span id="comp"></span></button>
+				</div></a>
+		</div>
+		<center><div style="bottom:0;position:fixed; width:100%;">
+		<a href="https://www.facebook.com/enggthoughts/"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/facebook.png" width='40px', height='40px' style="opacity:0.5"/></a>
+		<a href="https://www.youtube.com/channel/UCNEehMfqVDmvPb9BJUPFU-w"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/youtube.png" width='40px', height='40px' style="opacity:0.5"/></a>
+		<a href="mailto:engineerthoughts4life@gmail.com?Subject=I%20like%20Engineer%20Thoughts!!" target="_top"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/mail.png" width='40px', height='40px' style="opacity:0.5"/></a>
+		</div></center>
+		
+		
+		<script>
+		var a = 0;
+		var b = 0;
+		var c = 0;
+		var d = 0;
+		var txt1 = 'ANIMATION';
+		var txt2 = 'ELECTRICAL';
+		var txt3 = 'MECHANICAL';
+		var txt4 = 'COMPUTER';
+		var speed = 150;
+
+		function typeWriter() {
+		  if (a < txt1.length) {
+			document.getElementById("anim").innerHTML += txt1.charAt(a);
+			a++;
+			setTimeout(typeWriter, speed);
+		  }
+		  if (b < txt2.length) {
+			document.getElementById("elec").innerHTML += txt2.charAt(b);
+			b++;
+			setTimeout(typeWriter, speed);
+		  }
+		  if (c < txt3.length) {
+			document.getElementById("mech").innerHTML += txt3.charAt(c);
+			c++;
+			setTimeout(typeWriter, speed);
+		  }
+		  if (d < txt4.length) {
+			document.getElementById("comp").innerHTML += txt4.charAt(d);
+			d++;
+			setTimeout(typeWriter, speed);
+		  }
+
+		}
+		window.onload = typeWriter;
+
+		</script>
+
+<!--<script src="color.js"></script>-->
+<script src="projectsET.js"></script>
+<script>
+function bigImg(x) {
+  x.style.height = "60px";
+  x.style.width = "60px";
+  x.style.opacity = "1";
+}
+
+function normalImg(x) {
+  x.style.height = "40px";
+  x.style.width = "40px";
+  x.style.opacity = "0.5";
+}
+</script>
+
+	</body>
+	
+</html>
