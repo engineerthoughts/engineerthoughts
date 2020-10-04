@@ -1,0 +1,339 @@
+
+
+body
+			{
+				background-image:url("../wood_bgd.png");
+				background-size:100%;
+				font-family:Calibri;
+				height:100%;
+			}
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.analysiscolumn {
+  float: left;
+  width: 50%;
+  padding: 20px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.analysisrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+			#myLevel 
+			{
+				padding:5px;
+				font-size:22px;
+			}
+			option{
+			font-size:16px;
+			}
+			.button {
+				background-color:Transparent;
+				border: none;
+				color: white;
+				border-radius: 50px;
+				
+				padding: 10px 25px;
+				text-align: center;
+				text-decoration: none;
+				display: inline-block;
+				font-size: 16px;
+				margin: 4px 2px;
+				cursor: pointer;
+			}
+			.button1 {
+				width:200px;
+				font-size:24px;
+				color: white; 
+				border: 5px solid #ffffff;
+			}
+			.button2 {
+				width:150px;
+				font-size:24px;
+				color: white; 
+				border: 5px solid #ffffff;
+			}
+			
+
+			.chesslogofront
+			{
+				margin-top:50px;
+				align:center;
+				height: auto;
+			}
+			table.chessboard , table.chessboardout_table
+				{
+					margin: 5px auto;						
+					border-collapse: collapse; border:solid;border-color:#C19A6B
+				}
+				
+				td.chessboard1,td.chessboard2,td.chessboard3,td.chessboard4,
+				td.chessboard5,td.chessboard6,td.chessboard7,td.chessboard8
+				
+				{
+					width: 60px; height: 60px;
+					border: 2px solid #333; 				
+				}
+				td.chessboardout
+				{
+					width: 60px; height: 60px; ;
+				}
+				
+				td.chessboard1:nth-child(even),
+				td.chessboard2:nth-child(odd),
+				td.chessboard3:nth-child(even),
+				td.chessboard4:nth-child(odd),
+				td.chessboard5:nth-child(even),
+				td.chessboard6:nth-child(odd),
+				td.chessboard7:nth-child(even),
+				td.chessboard8:nth-child(odd)
+				{
+					/*background-color: #a0522d; 
+					background: linear-gradient(to bottom left, #a0522d 25%, #8b4513 75%);	*/	
+					/*background-color: #00C2CB; 
+					//background: linear-gradient(to bottom left, #00C2CB 25%, #F1FEFF 75%)*/
+				}
+				
+				td.chessboard1:nth-child(odd),
+				td.chessboard2:nth-child(even),
+				td.chessboard3:nth-child(odd),
+				td.chessboard4:nth-child(even),
+				td.chessboard5:nth-child(odd),
+				td.chessboard6:nth-child(even),
+				td.chessboard7:nth-child(odd),
+				td.chessboard8:nth-child(even)				
+				{
+					/*background-color: #ffa54f; 
+					background: linear-gradient(to bottom right, #deb887 25%, #ffa54f 75%);*/
+					/*background-color: #F1FEFF; 
+					//background: linear-gradient(to bottom left, #F1FEFF 25%, #00C2CB 75%);*/	
+				}
+				/*td.chessboard1:nth-child(1)
+				{
+					background-image: url("chess.png");
+					background-size: 100% 100%;
+				}*/
+				input[type="radio"]{
+    /* hide the inputs */
+    opacity: 0;
+}
+
+#overlaytext1, #overlaytext2, #overlaytext3, #overlaytext4
+{
+	font-size: 20px;
+	font-family:Calibri;
+	color:White;
+
+}
+/* style your lables/button */
+input[type="radio"] + .radioclasscolor{
+    /* keep pointer so that you get the little hand showing when you are on a button */
+    cursor: pointer;
+    /* the following are the styles */
+    background: transparent;
+}
+
+input[type="radio"]:checked + .radioclasscolor
+{
+    /* style for the checked/selected state */
+    background: transparent;
+	border-bottom: 5px solid white;
+    color: white;
+}
+
+			/* toggle switch */
+				input[type=checkbox]{
+					height: 0;
+					width: 0;
+					visibility: hidden;
+				}
+				
+				.timerclass {
+					cursor: pointer;
+					text-indent: -9999px;
+					width: 90px;
+					height: 40px;
+					background: grey;
+					display: inline-block;
+					border-radius: 100px;
+					position: relative;
+				}
+				
+				.timerclass:after {
+					content: '';
+					position: absolute;
+					top: 5px;
+					left: 5px;
+					width: 30px;
+					height: 30px;
+					background: #fff;
+					border-radius: 90px;
+					transition: 0.3s;
+				}
+				
+				input:checked + label {
+					background: #bada55;
+				}
+				
+				input:checked + label:after {
+					left: calc(100% - 5px);
+					transform: translateX(-100%);
+				}
+				
+				label:active:after {
+					width: 80px;
+				}
+				
+			
+				/*toggle switch ends here*/
+			/*css for heading common for all pages*/
+			* 
+			{
+				box-sizing: border-box;
+			}
+			.row.bgd
+			{
+				background-image:url("../button_bgd.png");
+				background-size:100%;
+
+			}
+				/* Create three equal columns that floats next to each other */
+			.column
+			{
+				float: left;
+				
+				 /* Should be removed. Only for demonstration */
+			}
+			.column.one
+			{
+				text-align:center;
+				width: 20%;
+			}
+			.column.two
+			{
+				text-align:center;
+				width: 50%;
+			}
+				/* Create three equal columns that floats next to each other */
+			.column.center
+			{
+				width: 60%;
+				font-family: Calibri;
+				font-size: 30px;
+				font-weight: bolder;
+				color: white;
+			}
+			
+				/* Clear floats after the columns */
+			.row:after 
+			{
+				content: "";
+				display: table;
+				clear: both;
+			}
+			<!--ends here-->
+			
+			
+			#overlay {
+				position: fixed;
+				display: none;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: rgba(0,0,0,0.5);
+				z-index: 2;
+				cursor: pointer;
+			}
+			#incdec
+			{
+				background-color: Transparent;
+				background-repeat:no-repeat;
+				border: none;
+				cursor:pointer;
+				overflow: hidden;
+				outline:none;
+				color:white;
+				font-size:28px;
+			}
+			
+			
+
+				
+			@media only screen and (max-width: 411px) 
+			{
+				td.chessboard1,td.chessboard2,td.chessboard3,td.chessboard4,
+				td.chessboard5,td.chessboard6,td.chessboard7,td.chessboard8,
+				td.chessboardout
+				{
+					width: 60px; height: 55px;				
+				}
+			#overlay {
+				position: fixed;
+				display: none;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: rgba(0,0,0,0.5);
+				z-index: 2;
+				cursor: pointer;
+			}				
+			}
+			
+			@media only screen and (max-width: 360px) 
+			{				
+				td.chessboard1,td.chessboard2,td.chessboard3,td.chessboard4,
+				td.chessboard5,td.chessboard6,td.chessboard7,td.chessboard8,
+				td.chessboardout
+				{
+					width: 60px; height: 45px;				
+				}	
+				#overlay {
+				position: fixed;
+				display: none;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: rgba(0,0,0,0.5);
+				z-index: 2;
+				cursor: pointer;
+			}
+			}
+			
+			@media only screen and (max-width: 320px) 
+			{
+				td.chessboard1,td.chessboard2,td.chessboard3,td.chessboard4,
+				td.chessboard5,td.chessboard6,td.chessboard7,td.chessboard8,
+				td.chessboardout
+				{
+					width: 60px; height: 40px; 				
+				}	
+			#overlay {
+				position: fixed;
+				display: none;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: rgba(0,0,0,0.5);
+				z-index: 2;
+				cursor: pointer;
+			}
+				
+			}
+			

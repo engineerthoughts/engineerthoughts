@@ -1,0 +1,65 @@
+<!Doctype html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Engineer thoughts </title>
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" href="chess.png">
+		<link rel="stylesheet" href="css/style.css">
+		
+	</head>
+	
+	<body>
+	
+		<div id="overlay" style="display:none">
+		<div id="text">Overlay Text</div>
+		<button onclick="off()">close</button>
+		</div>
+
+		<!--top title bar common for all tabs-->
+		<div class="row">
+			<div class="column one">
+				<img src="chess_icon/wK.png" alt="wK" width='80%' height=auto; >
+			</div>
+			<div class="column center">
+				<center><span>MEMORY <br>CHESS GAME</span></center>
+			</div>
+			<div class="column one">
+				<img src="chess_icon/bK.png" alt="bK" width='80%' height=auto; >
+			</div>
+			
+		</div><hr>
+		<!--ends here-->
+
+		<!--frist page welcome page-->		
+		<div id="questionstart" class = "tabcontent">		
+			<center>
+				<div>			
+					<img class="chesslogofront" src="fronttitle.png"  width="100%" height="345">
+				</div>	
+				<br><br>
+				<a href="homepage.html"><button class="button button1">PLAY</button></center></a>
+		</div>
+		<!--ends here-->
+		<center><a href="http://engineerthoughts.com"><img src="fbshare.jpg" width="150px" height="55px" style="margin-top:20px"></img></a></center>
+		<center><div style="bottom:10px;position: fixed;width: 100%;color:white;font-size:20px;">© Copyright EngineerThoughts</div></center>
+
+<script>
+			document.getElementById("questionstart").style.display = "block";
+			function openCity(evt, cityName) {
+				var i, tabcontent, tablinks;
+			
+				tabcontent = document.getElementsByClassName("tabcontent");
+				for (i = 0; i < tabcontent.length; i++) {
+					tabcontent[i].style.display = "none";
+				}
+				tablinks = document.getElementsByClassName("tablinks");
+				for (i = 0; i < tablinks.length; i++) {
+					tablinks[i].className = tablinks[i].className.replace(" active", "");
+				}
+				document.getElementById(cityName).style.display = "block";
+				evt.currentTarget.className += " active";
+			}
+		</script>		
+		            
+	</body>         
+</html>  

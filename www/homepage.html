@@ -1,0 +1,150 @@
+<!Doctype html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Engineer thoughts </title>
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" href="chess.png">
+		<link rel="stylesheet" href="css/style.css">
+		
+	</head>
+	
+	<body>
+		<div id="overlay" style="display:none">
+		<div id="text">Overlay Text</div>
+		<button onclick="off()">close</button>
+		</div>
+
+		<!--top title bar common for all tabs-->
+		<div class="row">
+			<div class="column one">
+				<img src="chess_icon/wK.png" alt="wK" width='80%' height=auto; >
+			</div>
+			<div class="column center">
+				<center><span>MEMORY <br>CHESS GAME</span></center>
+			</div>
+			<div class="column one">
+				<img src="chess_icon/bK.png" alt="bK" width='80%' height=auto; >
+			</div>
+			
+		</div><hr>
+		<!--ends here-->
+<div id="questionhome" class="tabcontent">
+        <!--Play button-->
+        <div class="row bgd" style="margin-top:50px;border:5px solid #ffffff;">
+            <div class="column one">
+                <img src="icon/people.png" alt="☺" width='70%' height=auto; style="margin-top:5px;">
+            </div>
+            <a href="playoption.html"><div class="column center">
+                <center><span style="line-height: 52px;vertical-align: middle;" >PLAY</span></center>
+            </div></a>
+            <div class="column one">
+                <img src="icon/people.png" alt="☺" width='70%' height=auto; style="margin-top:5px;" >
+            </div>
+        </div>
+        <!--rules-->
+        <div class="row bgd" style="margin-top:20px;border:5px solid #ffffff;">
+            <div class="column one">
+                <img src="icon/rules.png" alt="☺" width='70%' height=auto; style="margin-top:5px;">
+            </div>
+            <div class="column center" onclick="openCity(event, 'questionrule')" >
+                <center><span style="line-height: 52px;vertical-align: middle;" >RULES</span></center>
+            </div>
+            <div class="column one">
+                <img src="icon/rules.png" alt="☺" width='70%' height=auto; style="margin-top:5px;" >
+            </div>
+        </div>
+        
+        <!--Options-->
+        <div class="row bgd" style="margin-top:20px;border:5px solid #ffffff;">
+            <div class="column one">
+                <img src="icon/option.png" alt="☺" width='60%' height=auto; style="margin-top:5px;">
+            </div>
+            <div class="column center" onclick="openCity(event, 'questionoption')" >
+                <center><span style="line-height: 52px;vertical-align: middle;" >OPTIONS</span></center>
+            </div>
+            <div class="column one">
+                <img src="icon/option.png" alt="☺" width='60%' height=auto; style="margin-top:5px;" >
+            </div>
+        </div>
+		
+		<div class="row bgd" style="margin-top:20px;border:5px solid #ffffff;">
+            <div class="column one">
+                <img src="icon/aboutus.png" alt="☺" width='60%' height=auto; style="margin-top:5px;">
+            </div>
+            <div class="column center" onclick="openCity(event, 'questionabtus')" >
+                <center><span style="line-height: 52px;vertical-align: middle;" >ABOUT US</span></center>
+            </div>
+            <div class="column one">
+                <img src="icon/aboutus.png" alt="☺" width='60%' height=auto; style="margin-top:5px;" >
+            </div>
+        </div>
+        
+</div>
+<!--ends here-->
+
+<!--rules page-->
+<div id="questionrule" class="tabcontent" style="display:none">
+    <p style="font-size:20px;color:white;">
+        # The chess board consist of various pieces at various positions. <br>
+        # You need to remember the positions of each pieces and you need to assemble them correctly.<br>
+        # There are various Levels (1 to 8). Each Levels the Number of coins get increased so as the difficulty.<br>
+        # You can enable the Timer Option and configure the time in seconds in the input box.<br>
+        # Before the Time exhaust memorize all the pieces and its positions.<br>
+        # You can click "READY" button if you have memorized the pieces before time and you will be directed to the empty chess board where you can place the pieces. <br>
+        # You need to place the pieces into the correct boxes accordingly.<br>
+        # Increase the levels and start playing. <br>
+		# Play with Dedication so you can improve your memory power<br>
+        <b>ALL THE BEST 👍</b>
+    </p>
+        <div class="row">
+            <div class="column two">
+                <button class="button button2" onclick="openCity(event, 'questionhome')">BACK</button>
+            </div>
+            <div class="column two">
+                <a href="playoption.html"><button class="button button2">PLAY</button></a>
+            </div>
+        </div>
+    
+</div>
+<!--rules page ends here-->
+
+<!--option page-->
+<div id="questionoption" class="tabcontent" style="display:none">
+<br><br>
+        <center><button class="button button2" onclick="openCity(event, 'questionhome')">BACK</button><br>
+        <p style="color:white">UNDER CONSTRUCTION</p></center>
+</div>
+<div id="questionabtus" class="tabcontent" style="display:none">
+<br><br>
+        
+        <center>
+		<a href="http://engineerthoughts.com" style="border:none;text-decoration: none;">
+		<img src="icon/cover.jpg" width="100%"></img>
+		
+			<p style="color:white;background-color:#0d1934;color:#b7e2e2">visit: www.engineerthoughts.com</p>
+		</a>
+		<button class="button button2" onclick="openCity(event, 'questionhome')">BACK</button><br></center>
+</div>
+<!--ends here-->
+<center><div style="bottom:10px;margin-top:20px;width: 100%;color:white;font-size:20px;">© Copyright EngineerThoughts</div></center>		            
+
+
+<script>
+	//document.getElementById("questionstart").style.display = "block";
+	function openCity(evt, cityName) {
+		var i, tabcontent, tablinks;
+	
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+		tablinks = document.getElementsByClassName("tablinks");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+		document.getElementById(cityName).style.display = "block";
+		evt.currentTarget.className += " active";
+	}
+</script>	 
+</body>         
+</html>  
