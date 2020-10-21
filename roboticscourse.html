@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<meta name="description" content="home engineer thoughts">
+		<meta name="keywords" content="engineerthoughts,home,Home engineerthoughts,sudharsan,aranganathan,alien,arangan,engineer,engineersthoughts">
+		<meta name="author" content="engineerthoughts">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Engineer thoughts </title>
+		<link rel="shortcut icon" href="images/logo.png">
+		<link rel="stylesheet" type="text/css" href="etstyle.css">		
+		<style>
+		body{
+		background-color: white;
+		}
+		* {
+		  box-sizing: border-box;
+		}
+
+		/* Create two equal columns that floats next to each other */
+		.column {
+		  float: left;
+		  width: 50%;
+		  padding: 10px;
+		}
+
+		/* Clear floats after the columns */
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+
+
+		/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+		@media screen and (max-width: 600px) {
+		  .column {
+			width: 100%;
+		  }
+		}
+		@media screen and (max-width: 600px) {
+		  .column {
+			width: 100%;
+		  }
+		}
+</style>
+	</head>
+	<body onload="DayET();">
+	
+		<div class="topnav" id="myTopnav">
+			<a> <img src="images/logo.png" width='20px', height='18px'> </a>
+			<a id="topnav1"	href="index.html">HOME</a>
+			<a id="topnav4"	class="active" href="courses.html">COURSES</a>
+			<a id="topnav6"	href="events.html">EVENTS</a>
+			<a id="topnav2"	href="projects.html">PROJECTS</a>
+			<a id="topnav3"	href="scribbles.html">SCRIBBLES</a>			
+			<a id="topnav5"	href="aboutus.html">ABOUT US</a>
+			<!--<a id="announcement" style="color: rgb(162, 238, 47);" href="http://engineerthoughts.com/elec.html">**NEW**</a> -->
+			<a id="topnav6" href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">☰</a>
+		</div>
+		<script>
+			function myFunction() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
+				}
+			}
+			</script>
+		<br><br><br>
+
+			
+		<img src = "robotics/Slide1.png" width = '100%'></img>
+		<img src = "robotics/Slide2.png" width = '100%'></img>
+		<img src = "robotics/Slide3.png" width = '100%'></img>
+		<img src = "robotics/Slide4.png" width = '100%'></img>
+		<img src = "robotics/Slide5.png" width = '100%'></img>
+		<img src = "robotics/Slide6.png" width = '100%'></img>
+		<img src = "robotics/Slide7.png" width = '100%'></img>
+		
+		<center>ENROLL TODAY</center>
+		<a class="a1" href="https://forms.gle/bp389na55ByX5a799"><button class = "buttonmodified">REGISTRATION LINK</button></a>
+		<br><br><br><br>
+		<center><div style="bottom:0;position:fixed; width:100%;">
+		<a href="https://www.facebook.com/enggthoughts/"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/facebook.png" width='40px', height='40px' style="opacity:0.5"></a>
+		<a href="https://www.youtube.com/channel/UCNEehMfqVDmvPb9BJUPFU-w"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/youtube.png" width='40px', height='40px' style="opacity:0.5"></a>
+		<a href="mailto:engineerthoughts4life@gmail.com?Subject=I%20like%20Engineer%20Thoughts!!" target="_top"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/mail.png" width='40px', height='40px' style="opacity:0.5"></a>
+		</div></center>
+<script>
+function bigImg(x) {
+  x.style.height = "60px";
+  x.style.width = "60px";
+  x.style.opacity = "1";
+}
+
+function normalImg(x) {
+  x.style.height = "40px";
+  x.style.width = "40px";
+  x.style.opacity = "0.5";
+}
+</script>
+
+<!--<script src="color.js"></script>-->
+</div>
+
+</body>
+</html>
