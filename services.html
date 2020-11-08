@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<meta name="description" content="home engineer thoughts">
+		<meta name="keywords" content="engineerthoughts,home,Home engineerthoughts,sudharsan,aranganathan,alien,arangan,engineer,engineersthoughts">
+		<meta name="author" content="engineerthoughts">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Engineer thoughts </title>
+		<link rel="shortcut icon" href="images/logo.png">
+		<link rel="stylesheet" type="text/css" href="etstyle.css">		
+		<style>
+		body, html {
+		  height: 100%;
+		}
+
+		.serviceshome {
+		  background-image: url('images/services1.gif');
+		  height: 100%; 
+		  background-attachment: fixed;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		}
+		.msexcel {
+		  background-image: url('images/services2.png');
+		  height: 100%; 
+		  background-attachment: fixed;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		}
+		.website {
+		  background-image: url('images/services3.png');
+		  height: 100%; 
+		  background-attachment: fixed;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		}
+		.automationai {
+		  background-image: url('images/services4.png');
+		  height: 100%; 
+		  background-attachment: fixed;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		}
+
+		
+		* {
+		  box-sizing: border-box;
+		}
+		.blacktxt
+		{
+		color:black;
+		}
+		.fourcolumn {
+		  float: left;
+		  width: 25%;
+		  padding: 10px;
+		  
+		}
+		/* Create two equal columns that floats next to each other */
+		.column {
+		  float: left;
+		  width: 50%;
+		  padding-top:200px;
+		  border-style: none;
+		  padding-left:200px;
+		  border-width: 1px;
+		 }
+		 .columninner {
+		  float: left;
+		  width: 50%;
+		  padding:10px;
+		  border-style: none;
+		  text-align:center;
+		  border-width: 1px;
+		 }
+		.midparallalex{
+		  margin: auto;
+		  width: 60%;
+		  border: 3px solid grey;
+		  padding: 10px;
+		  font-size:24px;
+		  text-align:center;
+		}
+
+		/* Clear floats after the columns */
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+		.rowinner:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+
+		/* Responsive layout - makes the two columns stack on top of each other instead of next to each other 
+		@media screen and (max-width: 600px) {
+		  .column {
+			width: 100%;
+			padding:10px;
+		  }
+		  .columninner {
+			width: 100%;
+			padding:10px;
+		  }
+		  .fourcolumn {
+			width: 100%;
+		  }
+		}*/
+		/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+		@media only screen and (max-device-width: 700px) {
+		  .serviceshome {
+		  background-image: url('images/mobileserv1.png');
+		  height: 100%; 
+		  background-attachment: fixed;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		  }
+		  .msexcel{
+		  
+		  background-image: url('images/mobileserv2.png');
+		  height: 100%; 
+		  background-attachment: fixed;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		  }
+		  .website {
+		  background-image: url('images/mobileserv3.png');
+		  height: 100%; 
+		  background-attachment: fixed;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		  }
+		  .automationai {
+		  background-image: url('images/mobileserv4.png');
+		  height: 100%; 
+		  background-attachment: fixed;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		  }
+		  
+		}
+</style>
+	</head>
+	<body onload="DayET();">
+	
+		<div class="topnav" id="myTopnav">
+			<a> <img src="images/logo.png" width='20px', height='18px'> </a>
+			<a id="topnav1" href="index.html">HOME</a>
+			<a id="topnav4"	class="active" href="services.html">SERVICES</a>
+			<a id="topnav4" href="courses.html">COURSES</a>
+			<a id="topnav2"	href="projects.html">PROJECTS</a>
+			<a id="topnav3"	href="scribbles.html">SCRIBBLES</a>
+			<a id="topnav5"	href="aboutus.html">ABOUT US</a>
+			<!--<a id="announcement" style="color: rgb(162, 238, 47);" href="http://engineerthoughts.com/elec.html">**NEW**</a> -->
+			<a id="topnav6" href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">☰</a>
+		</div>
+		<script>
+			function myFunction() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
+				}
+			}
+			</script>
+		<br><br>
+		
+		<div class="serviceshome"></div>
+		
+		<div class="midparallalex" style="width:100%;background-color:white;margin-top:-20px">
+			<p><span style="color:#0d1934">#1 </span><br><br>MS Excel - Automate your daily manual excel work using VBA's and Macros. Creating Interactive Dashboards for Daily Status Reports.</p>
+		</div>
+		
+		<div class="msexcel"></div>
+		
+		<div class="midparallalex" style="width:100%;background-color:white;margin-top:-20px">
+			<p><span style="color:#0d1934">#2 </span><br><br>Website Development - Creating website that inspire and turn the target audience into your customers. Interactive Websites for Various Devices.</p>
+		</div>
+		
+		<div class="website"></div>
+		
+		<div class="midparallalex" style="width:100%;background-color:white;margin-top:-20px">
+			<p><span style="color:#0d1934">#3 </span><br><br>Automation & AI - Automate manual Web and PC strenrous works. With latest Technologies using Python, JAVA, RPA we can Automate anything.</p>
+		</div>
+		
+		<div class="automationai"></div>
+		
+		<div class="midparallalex" style="width:100%;background-color:white;margin-top:-20px">
+			<p></p>
+		</div>
+		
+		<center><div style="bottom:0;position:fixed; width:100%;">
+		<a href="https://www.facebook.com/enggthoughts/"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/facebook.png" width='40px', height='40px' style="opacity:0.5"></a>
+		<a href="https://www.youtube.com/channel/UCNEehMfqVDmvPb9BJUPFU-w"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/youtube.png" width='40px', height='40px' style="opacity:0.5"></a>
+		<a href="mailto:engineerthoughts4life@gmail.com?Subject=I%20like%20Engineer%20Thoughts!!" target="_top"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="images/mail.png" width='40px', height='40px' style="opacity:0.5"></a>
+		</div></center>
+<script>
+function bigImg(x) {
+  x.style.height = "60px";
+  x.style.width = "60px";
+  x.style.opacity = "1";
+}
+
+function normalImg(x) {
+  x.style.height = "40px";
+  x.style.width = "40px";
+  x.style.opacity = "0.5";
+}
+</script>
+
+<!--<script src="color.js"></script>-->
+</div>
+
+</body>
+</html>
