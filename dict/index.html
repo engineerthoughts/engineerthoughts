@@ -1,0 +1,67 @@
+<!Doctype html>
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<meta name="description" content="home engineer thoughts">
+		<meta name="keywords" content="English German Dictionary, SAP Dict, SAPDict">
+		<meta name="author" content="engineerthoughts">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>SAP Dict</title>
+		<link rel="shortcut icon" href="images/sapdictlogo.png">
+		<link rel="stylesheet" type="text/css" href="css/sapdictcss_index.css">	
+		<!--<link rel="stylesheet" type="text/css" href="css/textboxsearch.css">-->
+		<link rel="stylesheet" type="text/css" href="css/autocomplete.css">
+		<script src="js/sapdictjs_navbar.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		
+	</head>
+	<body>
+		<div class="indextop">
+			<img class="innerindextop" src="images/sapdictlogo.png" width='60px', height='60px'></img>
+			<span class="innerindextop">SAP DICT</span>
+		</div>
+	
+		<div class="topnav" id="myTopnav">
+			<a href="#home" class="active">HOME</a>
+			<a href="#about">ABOUT US</a>
+			<a href="#contact">DISCLAIMER</a>
+			<a href="javascript:void(0);" class="icon" onclick="topnavbar()">☰</a>
+		</div>
+		
+
+		<center>	
+		<div class="autocomplete" style="margin-top:30px;">
+		<form method="post" id="contact-form">
+			<input id="myInput" class="inputtext" type="text" name="myCountry" placeholder="Type English Word to Search"></input>
+			<span>
+			<button type = "submit" class="GoButton" onclick="engtogerfun()">SEARCH 🔍</button>
+		</form>
+		</div>
+		</center>
+		
+		<script src="js/wordsearchengtoger.js"></script>
+		<script src="js/autocompletejs.js"></script>
+		<script src="js/wordslistjs.js"></script>
+		
+		<center>
+		<div id="Dicresultsmain" style="display:none">
+			<table id="Dicresults">
+			  <tr>
+				<th>S.NO.</th>
+				<th>ENGLISH<span style="margin-left:15px"><img src="images/eng.PNG" width='50px', height='30px'></img></span></th> 
+				<th>GERMAN<span style="margin-left:15px"><img src="images/ger.png" width='50px', height='30px'></img></span></th> 
+			  </tr>
+			  <tr>
+				<td>1</td>
+				<td id="EnglishwordTab1">-</td>
+				<td id="GermanwordTab1">-</td>
+			  </tr>
+			</table>
+		</div>
+		<p id="disclaimer" style="display:none">Don't Worry We will update the Entered Word's Translation into Dictionary Soon</p>
+		</center>
+		<!--<iframe id = "frameforms" src="https://docs.google.com/forms/d/e/1FAIpQLScT5eahd-me4vPflbwFGIJuRUh0kS_dXFC1Hpu38Lo7i8BKJQ/viewform?embedded=true" width="640" height="506" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>-->
+
+	</body>
+</html>
