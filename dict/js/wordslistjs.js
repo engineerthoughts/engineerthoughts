@@ -35,7 +35,8 @@ var Englishworddic =
 "surcharges",
 "article",
 "item",
-"assortment"
+"assortment",
+"transalate"
 ];
 
 var Germanworddic = 
@@ -75,6 +76,7 @@ var Germanworddic =
 "Mehrkosten (f)",
 "Artikel (m)",
 "Artikel (m)",
-"Sortiment (n)"
+"Sortiment (n)",
+"Übersetzen"
 ];
 autocomplete(document.getElementById("myInput"), Englishworddic);
