@@ -80,8 +80,7 @@ function engtogerfun()
 					
 			const database = firebase.database();
 
-
-			database.ref('input'+inputVal).set
+			database.ref(inputVal.toLowerCase()).set
 			({
 			englishvalue: inputVal,
 			germanvalue: 'NA'
@@ -119,8 +118,8 @@ function engtogerfun()
 			
 			const database = firebase.database();
 
-
-			database.ref('input'+inputVal).set
+			var inputlow = Englishworddic[outpval]+Germanworddic[outpval];
+			database.ref(inputlow.toLowerCase()).set
 			({
 			englishvalue: Englishworddic[outpval],
 			germanvalue: Germanworddic[outpval]

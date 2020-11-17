@@ -1,3 +1,15 @@
+function displaytable()
+{
+	for (var abc = 0; abc < 10; abc++)
+	{
+		var idgenrowcol1 = "row".concat(abc+1);
+		document.getElementById(idgenrowcol1).style.display="none";
+		var idgenrowcol2 = "row".concat(abc+1);
+		document.getElementById(idgenrowcol2).style.display="none";		
+		var idgenrowcol3 = "row".concat(abc+1);
+		document.getElementById(idgenrowcol3).style.display="none";
+	}
+}
 function myFunctionfirst()
 		{
 			document.getElementById("myLevel").value = "1";
@@ -62,9 +74,12 @@ function myFunctionfirst()
 		var n = 0;
 		var table = document.getElementById("TableList");
 			var getinputval = document.getElementById("myLevel").value
-
+			
 			var lengthminus1 = Englishworddic.length - 1;
 			var tableindexval = lengthminus1 - ((getinputval - 1) * 10);
+			//var startval = ((Math.ceil(lengthminus1 / 10))*10) - 11;
+			var startval = ((getinputval - 1) * 10);
+			var endval = ((getinputval - 1) * 10)+10;
 			document.getElementById("totalpagesdisp").innerHTML = " of " + Math.ceil(lengthminus1 / 10);
 			
 				for (var i = startval; i < endval; i++)
@@ -75,9 +90,11 @@ function myFunctionfirst()
 					
 						var idgenrowcol1 = "row".concat(n+1,"col1");
 						document.getElementById(idgenrowcol1).innerHTML = i + 1;
+						var idgenrow1 = "row".concat(n+1);
+						document.getElementById(idgenrow1).style.display="";
 						
 						var idgenrowcol2 = "row".concat(n+1,"col2");
-						document.getElementById(idgenrowcol2).innerHTML = Englishworddic[tableindexval];					
+						document.getElementById(idgenrowcol2).innerHTML = Englishworddic[tableindexval];										
 						
 						var idgenrowcol3 = "row".concat(n+1,"col3");
 						document.getElementById(idgenrowcol3).innerHTML = Germanworddic[tableindexval];
@@ -118,9 +135,11 @@ function myFunctionfirst()
 						
 							var idgenrowcol1 = "row".concat(n+1,"col1");
 							document.getElementById(idgenrowcol1).innerHTML = i + 1;
+							var idgenrow1 = "row".concat(n+1);
+							document.getElementById(idgenrow1).style.display="";
 							
 							var idgenrowcol2 = "row".concat(n+1,"col2");
-							document.getElementById(idgenrowcol2).innerHTML = Englishworddic[tableindexval];					
+							document.getElementById(idgenrowcol2).innerHTML = Englishworddic[tableindexval];										
 							
 							var idgenrowcol3 = "row".concat(n+1,"col3");
 							document.getElementById(idgenrowcol3).innerHTML = Germanworddic[tableindexval];
@@ -165,9 +184,11 @@ function myFunctionfirst()
 					
 						var idgenrowcol1 = "row".concat(n+1,"col1");
 						document.getElementById(idgenrowcol1).innerHTML = i + 2;
+						var idgenrow1 = "row".concat(n+1);
+						document.getElementById(idgenrow1).style.display="";
 						
 						var idgenrowcol2 = "row".concat(n+1,"col2");
-						document.getElementById(idgenrowcol2).innerHTML = Englishworddic[tableindexval];					
+						document.getElementById(idgenrowcol2).innerHTML = Englishworddic[tableindexval];										
 						
 						var idgenrowcol3 = "row".concat(n+1,"col3");
 						document.getElementById(idgenrowcol3).innerHTML = Germanworddic[tableindexval];
@@ -179,7 +200,6 @@ function myFunctionfirst()
 					{
 						var idgenrowcol1 = "row".concat(n+1,"col1");
 						document.getElementById(idgenrowcol1).innerHTML = "";
-						
 						var idgenrowcol2 = "row".concat(n+1,"col2");
 						document.getElementById(idgenrowcol2).innerHTML = "";					
 						
@@ -208,12 +228,15 @@ function myFunctionfirst()
 					
 						var idgenrowcol1 = "row".concat(n+1,"col1");
 						document.getElementById(idgenrowcol1).innerHTML = i + 1;
+						var idgenrow1 = "row".concat(n+1);
+						document.getElementById(idgenrow1).style.display="";
 						
 						var idgenrowcol2 = "row".concat(n+1,"col2");
 						document.getElementById(idgenrowcol2).innerHTML = Englishworddic[tableindexval];					
 						
 						var idgenrowcol3 = "row".concat(n+1,"col3");
 						document.getElementById(idgenrowcol3).innerHTML = Germanworddic[tableindexval];
+						
 						tableindexval = tableindexval - 1;
 						n = n+1;
 					}
@@ -221,9 +244,10 @@ function myFunctionfirst()
 					{
 						var idgenrowcol1 = "row".concat(n+1,"col1");
 						document.getElementById(idgenrowcol1).innerHTML = "";
+
 						
 						var idgenrowcol2 = "row".concat(n+1,"col2");
-						document.getElementById(idgenrowcol2).innerHTML = "";					
+						document.getElementById(idgenrowcol2).innerHTML = "";						
 						
 						var idgenrowcol3 = "row".concat(n+1,"col3");
 						document.getElementById(idgenrowcol3).innerHTML = "";
