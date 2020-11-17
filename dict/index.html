@@ -149,7 +149,20 @@
 	</div>	
 
 		</center>
-		
+<script>
+	function displaytable()
+	{
+	for (var abc = 0; abc < 10; abc++)
+	{
+		var idgenrowcol1 = "row".concat(abc+1);
+		document.getElementById(idgenrowcol1).style.display="none";
+		var idgenrowcol2 = "row".concat(abc+1);
+		document.getElementById(idgenrowcol2).style.display="none";		
+		var idgenrowcol3 = "row".concat(abc+1);
+		document.getElementById(idgenrowcol3).style.display="none";
+	}
+	}
+</script>
 <script src="js/tablelistJS.js"></script>
 	</body>
 </html>
