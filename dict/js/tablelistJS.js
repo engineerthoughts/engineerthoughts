@@ -1,4 +1,4 @@
-function displaytable()
+/*function displaytable()
 {
 	for (var abc = 0; abc < 10; abc++)
 	{
@@ -9,7 +9,7 @@ function displaytable()
 		var idgenrowcol3 = "row".concat(abc+1);
 		document.getElementById(idgenrowcol3).style.display="none";
 	}
-}
+}*/
 function myFunctionfirst()
 		{
 			document.getElementById("myLevel").value = "1";
