@@ -1,83 +1,6 @@
-<html>
-<head><link rel="stylesheet" type="text/css" href="css/sapdictcss_index.css">	</head>
-	<body>
-		<script src="js/wordsearchengtoger.js"></script>
-		<script src="js/autocompletejs.js"></script>
-		<script src="js/wordslistjs.js"></script>
-	<center>
-	<table id="TableList">
-		<tr>
-			<th>S.NO.</th>
-			<th>ENGLISH<span style="margin-left:15px"><img src="images/eng.PNG" width='50px', height='30px'></img></span></th> 
-			<th>GERMAN<span style="margin-left:15px"><img src="images/ger.png" width='50px', height='30px'></img></span></th> 
-		</tr>
-		<tr>
-			<td id="row1col1"></td>
-			<td id="row1col2"></td>
-			<td id="row1col3"></td>
-		</tr>
-		<tr>
-			<td id="row2col1"></td>
-			<td id="row2col2"></td>
-			<td id="row2col3"></td>
-		</tr>
-		<tr>
-			<td id="row3col1"></td>
-			<td id="row3col2"></td>
-			<td id="row3col3"></td>
-		</tr>
-		<tr>
-			<td id="row4col1"></td>
-			<td id="row4col2"></td>
-			<td id="row4col3"></td>
-		</tr>
-		<tr>
-			<td id="row5col1"></td>
-			<td id="row5col2"></td>
-			<td id="row5col3"></td>
-		</tr>
-		<tr>
-			<td id="row6col1"></td>
-			<td id="row6col2"></td>
-			<td id="row6col3"></td>
-		</tr>
-		<tr>
-			<td id="row7col1"></td>
-			<td id="row7col2"></td>
-			<td id="row7col3"></td>
-		</tr>
-		<tr>
-			<td id="row8col1"></td>
-			<td id="row8col2"></td>
-			<td id="row8col3"></td>
-		</tr>
-		<tr>
-			<td id="row9col1"></td>
-			<td id="row9col2"></td>
-			<td id="row9col3"></td>
-		</tr>
-		<tr>
-			<td id="row10col1"></td>
-			<td id="row10col2"></td>
-			<td id="row10col3"></td>
-		</tr>
-	</table>
-	
-	<button onclick="myFunctionfirst();firstFunction();" id="incdec" style="margin-left:45px;">First &nbsp;</button>
-	
-	<button onclick="myFunctiondec();updatetable();" id="dec">⫷ &nbsp; </button>
-	<input type="number" id="myLevel" min="1" value="1" style = "border: 1px solid #ccc;border-radius:4px;width:40px;text-align:center;box-sizing: border-box;" readonly></input>
-	<span id="totalpagesdisp">	</span>
-	<button onclick="myFunctioninc();updatetable();" id="inc">&nbsp; ⫸</button>
-	<button onclick="myFunctionlast();lastfunction();" id="incdec">Last &nbsp;</button>
-	
-	</center>
-	
-	<script>
-		function myFunctionfirst()
+function myFunctionfirst()
 		{
 			document.getElementById("myLevel").value = "1";
-			console.log("first");
 		}
 		function myFunctionlast()
 		{
@@ -176,10 +99,7 @@
 					}
 				}
 		}
-	</script>
-	
-		<script>
-		function firstFunction()
+	function firstFunction()
 		{
 			var startval = 0;
 			var endval = 10;
@@ -206,6 +126,7 @@
 							document.getElementById(idgenrowcol3).innerHTML = Germanworddic[tableindexval];
 							tableindexval = tableindexval - 1;
 							n = n+1;
+							document.getElementById("inc").style.display="";
 						}
 						else
 						{
@@ -219,6 +140,7 @@
 							document.getElementById(idgenrowcol3).innerHTML = "";
 							tableindexval = tableindexval - 1;
 							n = n+1;
+							document.getElementById("inc").style.display="";
 						}
 					}
 		}
@@ -231,8 +153,8 @@
 
 			var lengthminus1 = Englishworddic.length - 1;
 			var tableindexval = lengthminus1 - ((getinputval - 1) * 10);
-			var startval = 0;
-			var endval = 10;
+			var startval = ((Math.ceil(lengthminus1 / 10))*10) - 11;
+			var endval = (Math.ceil(lengthminus1 / 10))*10;
 			document.getElementById("totalpagesdisp").innerHTML = " of " + Math.ceil(lengthminus1 / 10);
 			
 				for (var i = startval; i < endval; i++)
@@ -242,7 +164,7 @@
 					{
 					
 						var idgenrowcol1 = "row".concat(n+1,"col1");
-						document.getElementById(idgenrowcol1).innerHTML = i + 1;
+						document.getElementById(idgenrowcol1).innerHTML = i + 2;
 						
 						var idgenrowcol2 = "row".concat(n+1,"col2");
 						document.getElementById(idgenrowcol2).innerHTML = Englishworddic[tableindexval];					
@@ -251,6 +173,7 @@
 						document.getElementById(idgenrowcol3).innerHTML = Germanworddic[tableindexval];
 						tableindexval = tableindexval - 1;
 						n = n+1;
+						document.getElementById("inc").style.display="none";
 					}
 					else
 					{
@@ -264,6 +187,7 @@
 						document.getElementById(idgenrowcol3).innerHTML = "";
 						tableindexval = tableindexval - 1;
 						n = n+1;
+						document.getElementById("inc").style.display="none";
 					}
 				}
 		}
@@ -307,7 +231,3 @@
 						n = n+1;
 					}
 				}
-		</script>
-		
-	</body>
-</html>

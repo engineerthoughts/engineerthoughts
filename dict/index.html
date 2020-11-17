@@ -1,0 +1,139 @@
+<!Doctype html>
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<meta name="description" content="home engineer thoughts">
+		<meta name="keywords" content="English German Dictionary, SAP Dict, SAPDict">
+		<meta name="author" content="engineerthoughts">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>SAP Dict</title>
+		<link rel="shortcut icon" href="images/sapdictlogo.png">
+		<link rel="stylesheet" type="text/css" href="css/sapdictcss_index.css">	
+		<!--<link rel="stylesheet" type="text/css" href="css/textboxsearch.css">-->
+		<link rel="stylesheet" type="text/css" href="css/autocomplete.css">
+		<script src="js/sapdictjs_navbar.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+		
+	</head>
+	<body>
+		<div class="indextop">
+			<img class="innerindextop" src="images/sapdictlogo.png" width='60px', height='60px'></img>
+			<span class="innerindextop">SAP DICT</span>
+		</div>
+	
+		<div class="topnav" id="myTopnav">
+			<a href="#home" class="active">HOME</a>
+			<a href="#about">ABOUT US</a>
+			<a href="#contact">DISCLAIMER</a>
+			<a href="javascript:void(0);" class="icon" onclick="topnavbar()">☰</a>
+		</div>
+		
+
+		<center>	
+		<div class="autocomplete" style="margin-top:30px;">
+		<form method="post" id="contact-form">
+			<input id="myInput" class="inputtext" type="text" name="myCountry" placeholder="Type English Word to Search"></input>
+			<span>
+			<button type = "submit" class="GoButton" onclick="engtogerfun()">SEARCH 🔍</button>
+		</form>
+		</div>
+		</center>
+		
+		<script src="js/wordsearchengtoger.js"></script>
+		<script src="js/autocompletejs.js"></script>
+		<script src="js/wordslistjs.js"></script>
+		
+		
+		<center>
+		<div id="Dicresultsmain" style="display:none"><u style="font-size:18px">Search Results</u>
+			<table id="Dicresults" style="margin-top:-2px">
+			  <tr>
+				<th>S.NO.</th>
+				<th>ENGLISH<span style="margin-left:15px"><img src="images/eng.PNG" width='50px', height='30px'></img></span></th> 
+				<th>GERMAN<span style="margin-left:15px"><img src="images/ger.png" width='50px', height='30px'></img></span></th> 
+			  </tr>
+			  <tr>
+				<td>1</td>
+				<td id="EnglishwordTab1">-</td>
+				<td id="GermanwordTab1">-</td>
+			  </tr>
+			</table>
+		</div>
+		<p id="disclaimer" style="display:none">Don't Worry We will update the Entered Word's Translation into Dictionary Soon</p>
+		</center>
+		<br>
+		
+	<center>
+<div><u style="font-size:18px">List of Words</u>	
+	<table id="TableList" style="margin-top:-2px"> 
+		<tr>
+			<th>S.NO.</th>
+			<th>ENGLISH<span style="margin-left:15px"><img src="images/eng.PNG" width='50px', height='30px'></img></span></th> 
+			<th>GERMAN<span style="margin-left:15px"><img src="images/ger.png" width='50px', height='30px'></img></span></th> 
+		</tr>
+		<tr>
+			<td id="row1col1"></td>
+			<td id="row1col2"></td>
+			<td id="row1col3"></td>
+		</tr>
+		<tr>
+			<td id="row2col1"></td>
+			<td id="row2col2"></td>
+			<td id="row2col3"></td>
+		</tr>
+		<tr>
+			<td id="row3col1"></td>
+			<td id="row3col2"></td>
+			<td id="row3col3"></td>
+		</tr>
+		<tr>
+			<td id="row4col1"></td>
+			<td id="row4col2"></td>
+			<td id="row4col3"></td>
+		</tr>
+		<tr>
+			<td id="row5col1"></td>
+			<td id="row5col2"></td>
+			<td id="row5col3"></td>
+		</tr>
+		<tr>
+			<td id="row6col1"></td>
+			<td id="row6col2"></td>
+			<td id="row6col3"></td>
+		</tr>
+		<tr>
+			<td id="row7col1"></td>
+			<td id="row7col2"></td>
+			<td id="row7col3"></td>
+		</tr>
+		<tr>
+			<td id="row8col1"></td>
+			<td id="row8col2"></td>
+			<td id="row8col3"></td>
+		</tr>
+		<tr>
+			<td id="row9col1"></td>
+			<td id="row9col2"></td>
+			<td id="row9col3"></td>
+		</tr>
+		<tr>
+			<td id="row10col1"></td>
+			<td id="row10col2"></td>
+			<td id="row10col3"></td>
+		</tr>
+	</table>
+</div>	
+	<div style="margin-top:10px;">
+		<button onclick="myFunctionfirst();firstFunction();" id="incdec">First &nbsp;</button>
+		
+		<button onclick="myFunctiondec();updatetable();" id="dec">⫷ &nbsp; </button>
+		<input type="number" id="myLevel" min="1" value="1" style = "border: 1px solid #ccc;border-radius:4px;font-size:12px;width:50px;height:16px;text-align:center;box-sizing: border-box;" readonly></input>
+		<span id="totalpagesdisp">	</span>
+		<button onclick="myFunctioninc();updatetable();" id="inc">&nbsp; ⫸</button>
+		<button onclick="myFunctionlast();lastfunction();" id="incdec">Last &nbsp;</button>
+	</div>	
+		</center>
+	<script src="js/tablelistJS.js"></script>	
+	</body>
+</html>

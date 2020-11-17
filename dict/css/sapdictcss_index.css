@@ -49,6 +49,31 @@ body {
 }
 /*Table CSS ENDS Here*/
 
+/*Table CSS*/
+#TableList {
+  margin-top:20px;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+#TableList td, #TableList th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#TableList tr:nth-child(even){background-color: #f2f2f2;}
+
+#TableList tr:hover {background-color: #ddd;}
+
+#TableList th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #272536;
+  color: white;
+}
+/*Table CSS ENDS Here*/
+
 .topnav {
   overflow: hidden;
   background-color: #538790;
@@ -78,8 +103,13 @@ body {
   display: none;
 }
 @media screen and (max-width: 600px) {
-#Dicresults {width:100%;font-size:12px;}
+#Dicresults {width:100%;font-size:14px;}
 #Dicresults th,#Dicresults td {
+  padding-top: 8px;
+  padding-bottom: 6px;
+}
+#TableList {width:100%;font-size:14px;}
+#TableList th,#TableList td {
   padding-top: 8px;
   padding-bottom: 6px;
 }}
