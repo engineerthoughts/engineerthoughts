@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<body>
+<button onclick="abc()">update url</button>
+	<script>
+	var tab = window.location.href.split('?')[1];
+	console.log(tab);
+	function abc()
+	{
+		//window.history.pushState('www.engineerthoughts.com/url.html/', '?abc');
+	    window.history.pushState({"html":"","pageTitle":""},"", "?var");
+		console.log("url");
+	}
+	</script>
+</body>
+</html>
