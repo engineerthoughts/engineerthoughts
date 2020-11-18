@@ -35,7 +35,8 @@ var Englishworddic =
 "surcharges",
 "article",
 "item",
-"assortment"
+"assortment",
+"Empties are a type of returnable transport packaging or sales packaging."
 ];
 
 var Germanworddic = 
@@ -75,6 +76,7 @@ var Germanworddic =
 "Mehrkosten (f)",
 "Artikel (m)",
 "Artikel (m)",
-"Sortiment (n)"
+"Sortiment (n)",
+"Leergut ist eine Ausprägung der Mehrwegtransportverpackungen oder -verkaufsverpackungen."
 ];
 autocomplete(document.getElementById("myInput"), Englishworddic);
