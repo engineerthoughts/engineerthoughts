@@ -1,0 +1,125 @@
+body
+{
+	font-family:Calibri;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.fourcolumn{
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+.column50
+{
+  float: left;
+  width: 50%;
+  padding: 0px;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.iotouter
+{
+	display: table;
+}
+.iotintxt
+{
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+}
+.iotusericon
+{
+  box-sizing: border-box;
+  display: table-cell;
+  vertical-align: middle;
+}
+.iotspantext
+{
+  box-sizing: border-box;
+  display: table-cell;
+  vertical-align: middle;
+  padding-left:20px;
+  font-size:18px;
+}
+.iotbutton
+{
+  background-color: #53504F;/*#008CBA;*/
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-top:20px;
+  border-radius: 8px;
+  width:40%;
+}
+.onoffbutton
+{
+  background-color: #53504F;/*#008CBA;*/
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-top:20px;
+  border-radius: 8px;
+  width:70%;
+}
+.iotsignupbutton
+{
+  background-color: #53504F;/*#008CBA;*/
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-top:20px;
+  border-radius: 8px;
+  width:100%;
+}
+
+svg {
+  height: 175px;
+  width: 175px;
+}
+circle {
+  stroke-width: 4px;
+  fill: transparent;
+}
+#gray{
+  stroke: #AAA;
+}
+
+
+@media screen and (max-width: 600px) {
+.fourcolumn {
+	 width: 25%;
+	}
+.column {
+	 width: 100%;
+	}
+.column50 {
+	 width: 50%;
+	}
+}

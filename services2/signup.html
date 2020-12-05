@@ -1,0 +1,88 @@
+<!Doctype html>
+<html>
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="description" content="IOT Apps">
+	<meta name="keywords" content="IOT Apps, EngineerThoughts, IOT">
+	<meta name="author" content="engineerthoughts">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>IOT App</title>
+	<link rel="shortcut icon" href="images/logoiot.jpg">
+	<link rel="stylesheet" type="text/css" href="css/iotcss.css">	
+	
+</head>
+<body>
+
+		<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-analytics.js"></script>
+		
+		
+		<script src="js/firebaselog.js"></script>
+		
+	<center>	
+		<div style = "margin-top:30px;">
+			<h2>IOT APP | SIGNUP</h2>
+		</div>
+	</center>
+	
+<div id="entiresignup">
+	
+	<center>
+
+		
+		<div class="iotouter">		
+			
+			<img src="images/user.png" width="50px" height="40px" class="iotusericon"></img>
+			<span class="iotspantext">USERNAME</span>
+			
+		</div>
+		
+		<p><span style="color:red">CAUTION:</span> Once UserName Created, Cannot be modified.</p>
+		<input type = "text" class="iotintxt" placeholder="Enter the Username / Mobile no" id="usernamesignup" autocomplete='off'></input>
+		
+		<button class="iotsignupbutton" id="signupusernamebutton" onclick="iotsignupfun();">CHECK USERNAME</button>
+		<p id="txtmsgusernamecrct" style="display:none">Username is Available. ✅</p>
+		<p id="txtmsgusernamewrong" style="display:none">Username is already Taken, Please try with different username.</p>
+		
+		<div id="iotpasswordsignup" style="display:none">
+		
+			<div class="iotouter">		
+				<img src="images/lock.png" width="50px" height="50px" class="iotusericon"></img>
+				<span class="iotspantext">PASSWORD</span>
+			</div>
+				<input type = "password" class="iotintxt" placeholder="Enter the password" id="passwordsignup" autocomplete='off'></input>
+				
+			<div class="iotouter">
+				<span class="iotspantext">RE-ENTER THE PASSWORD</span>
+			</div>
+				<input type = "password" class="iotintxt" placeholder="Re-Enter the password" id="rpasswordsignup" autocomplete='off'></input>
+		
+			<button class="iotsignupbutton" onclick="iotsignupfirebase();">SIGN UP</button>
+			
+			<p id="pwdmismatch" style="display:none">Password doesn't match. Please re-type.</p>
+			
+			
+		</div>
+		
+
+		<!--<p id="txtmsgwrong" style="display:none">USERNAME / PASSWORD IS INCORRECT. PLEASE TRY AGAIN.</p>-->
+		
+		<script src="js/iotsignup.js"></script>
+	</center>
+</div>
+
+<center>
+	<div id="pwdmatch" style="display:none">
+		<p>User Signed Up Successfully.</p>
+		<a href="index.html"><button class="iotsignupbutton">GoTo Login Page 😊</button></a>
+	</div>
+	<div id="loginpage" style="display:block">
+		<a href="index.html"><button class="iotsignupbutton">BACK TO LOGIN </button></a>
+	</div>
+</center>
+
+	
+</body>
+</html>

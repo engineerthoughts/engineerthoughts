@@ -1,0 +1,143 @@
+<!Doctype html>
+<html>
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="description" content="IOT Apps">
+	<meta name="keywords" content="IOT Apps, EngineerThoughts, IOT">
+	<meta name="author" content="engineerthoughts">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>IOT App</title>
+	<link rel="shortcut icon" href="images/logoiot.jpg">
+	<link rel="stylesheet" type="text/css" href="css/iotcss.css">	
+	
+</head>
+<body>
+
+		<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-analytics.js"></script>
+		
+		<script src="js/firebaselog.js"></script>
+		
+<div id="iotloginwindow">		
+	<center>
+	
+		<div style = "margin-top:30px;">
+			<h2>IOT APP | LOGIN</h2>
+		</div>
+		
+		<br><br>	
+			
+		<div class="iotouter">		
+			<img src="images/user.png" width="50px" height="40px" class="iotusericon"></img>
+			<span class="iotspantext">USERNAME</span>
+		</div>
+			<input type = "text" class="iotintxt" placeholder="Enter the Username / Mobile no" id="username" autocomplete='off'></input>
+		
+		<br><br>
+		
+		<div class="iotouter">		
+			<img src="images/lock.png" width="50px" height="50px" class="iotusericon"></img>
+			<span class="iotspantext">PASSWORD</span>
+		</div>
+			<input type = "password" class="iotintxt" placeholder="Enter the password" id="password" autocomplete='off'></input>
+	
+		<button class="iotbutton" onclick="getvalfirebase();">LOGIN</button>
+		
+		<p id="txtmsgblank" style="display:none">USERNAME / PASSWORD IS BLANK.</p>
+		<p id="txtmsgcrct" style="display:none">user and pwd is correct</p>
+		<p id="txtmsgwrong" style="display:none">USERNAME / PASSWORD IS INCORRECT. PLEASE TRY AGAIN.</p>
+		
+		
+		<script src="js/iotlogincheck.js"></script>
+		<h3>New User? Click Here to <a href="signup.html">SIGN UP</a></h3>
+	</center>	
+</div>
+
+
+
+<center>
+
+	<div id="iotdashboard" style="display:none">
+	
+	<h2 id="hiuser">Hi User</h2>
+	<span>Welcome to EngineerThoughts IOT hub</span>
+	<hr>
+
+		<div class="row">
+			<div class="fourcolumn" onclick="tempjsexe()">
+				<img src="images/temp.png" width="50px" height="50px" class="iotusericon" id="tempid" style="opacity:100%"></img>
+				<span> Temp </span>
+			</div>
+			<div class="fourcolumn" onclick="lightjsexe()">
+				<img src="images/light.png" width="50px" height="50px" class="iotusericon" id="lightid" style="opacity:50%"></img>
+				<span> Light </span>
+			</div>
+			<div class="fourcolumn" onclick="fanjsexe()">
+				<img src="images/fan.png" width="50px" height="50px" class="iotusericon" id="fanid" style="opacity:50%"></img>
+				<span> Fan </span>
+			</div>
+			<div class="fourcolumn" onclick="relayjsexe()">
+				<img src="images/relay.png" width="50px" height="50px" class="iotusericon" id="relayid" style="opacity:50%"></img>
+				<span> Relay </span>
+			</div>
+		</div>
+		
+		<div id="tempdivid">
+			<div class="row">
+				<div class="column">
+				
+					<svg viewBox='0 0 100 100' > 
+						<circle cx='50' cy='50' r='45' id='gray'/>
+						<!--<img src="images/weather.png" width="50px" height="50px" class="iotusericon" id="fanid" style="margin-top:-50px"></img>-->
+						<text x="50%" y="50%" text-anchor="middle" stroke-width="2px" dy=".3em" id="temptxtval">25" C</text>
+					</svg>
+				</div>
+			</div>
+		</div>
+		<div id="lightdivid" style="display:none">
+			<div class="row" style="margin-top:10px;">
+				<div class="column50">
+					<img src="images/bulboff.jpg" width="100%" height="auto" class="iotusericon" id="onofflightid"></img>
+				</div>
+				<div class="column50">
+				<br>
+					<button class="onoffbutton" id="onlbut" onclick="onlighton();onlightonval();">ON</button><br>
+					<button class="onoffbutton" id="offlbut" onclick="offlightoff();offlightoffval();">OFF</button>
+				</div>
+			</div>
+		</div>
+		<div id="fandivid" style="display:none">
+			<div class="row" style="margin-top:10px;">
+				<div class="column50">
+					<img src="images/fanoff.png" width="100%" height="auto" class="iotusericon" id="onofffanid"></img>
+				</div>
+				<div class="column50">
+				<br>
+					<button class="onoffbutton" id="onfbut" onclick="onfanon();onfanonval();">ON</button><br>
+					<button class="onoffbutton" id="offfbut" onclick="offfanoff();offfanoffval();">OFF</button>
+				</div>
+			</div>
+		</div>
+		<div id="relaydivid" style="display:none">
+			<div class="row" style="margin-top:10px;">
+				<div class="column50">
+					<img src="images/relayoff.png" width="90%" height="auto" class="iotusericon" id="onoffrelayid"></img>
+				</div>
+				<div class="column50">
+				<br>
+					<button class="onoffbutton" id="onrbut" onclick="onrelayon();onrelayonval();">ON</button><br>
+					<button class="onoffbutton" id="offrbut" onclick="offrelayoff();offrelayoffval();">OFF</button>
+				</div>
+			</div>
+		</div>
+		
+	<script src="js/dashboardiot.js"></script>	
+	
+	</div>
+	
+</center>
+	
+</body>
+</html>
