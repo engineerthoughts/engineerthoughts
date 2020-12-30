@@ -3,22 +3,17 @@
 <body style='margin : 0px; overflow: hidden;'>
 <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
 	<div style='position: fixed; top: 10px; left:50px; width:100%; text-align: center; z-index: 1;'>
-		<a href="www.engineerthoughts.com"><button>Click Me !!</button></a>
+		<a href="http://engineerthoughts.com" target="_blank"><button>Click Me !!</button></a>
 	</div>
 	
 	<a-scene embedded="" vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 
-		<a-assets>
-			<a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"></a-asset-item>
-		</a-assets>
-
-		<a-marker type="barcode" value="0">
+		<a-marker type="barcode" value="1">
 		   <a-image  src="YT.png" rotation="-90 0 0"></a-image>
 		</a-marker>
 
-		<a-marker id="animated-marker" type="barcode" value="6">
-			<a-entity animation-mixer="" gltf-model="#animated-asset" scale="2 2 2">
-			</a-entity>
+		<a-marker type="barcode" value="0">
+		   <a-image  src="2.png" rotation="-90 0 0" position="-10 0 0" width="3" height="1.5"></a-image>
 		</a-marker>
 
 		<a-entity camera=""></a-entity>
