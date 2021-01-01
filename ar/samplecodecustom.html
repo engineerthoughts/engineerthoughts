@@ -2,29 +2,45 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    </head>
+    <script>
+        // https://aframe.io/docs/1.0.0/introduction/writing-a-component.html
+        AFRAME.registerComponent("move", {
+            tick: function() {
+                let obj3d = this.el.sceneEl.querySelector("a-marker");
+                // console.log(obj3d);
+                this.el.object3D.setRotationFromQuaternion(obj3d.object3D.quaternion);
+                this.el.object3D.position.set(obj3d.object3D.position.x, obj3d.object3D.position.y, obj3d.object3D.position.z);
+            }
+        });
+    </script>
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 
+    </head>
+
     <body style='margin : 0px; overflow: hidden;'>
-        
-        <a-scene embedded  arjs; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+        <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
+        <a-scene embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 
         <a-assets>
             <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/engineerthoughts/engineerthoughts/master/ar/image.gltf"></a-asset-item>
         </a-assets>
 
+        <a-marker type='barcode' value='7'>
+            <a-box position='0 0.5 0' color="yellow"></a-box>
+        </a-marker>
 
-        <a-marker-camera id="anmated-marker" type='barcode' value='0'>
+        <a-marker id="animated-marker" type='barcode' value='0'>
             <a-entity
                 animation-mixer
                 gltf-model="#animated-asset"
                 scale="1 1 1" position="-8 0 0">
             </a-entity>
-        </a-marker-camera>
+        </a-marker>
 
-  
+        <a-entity camera></a-entity>
         </a-scene>
     </body>
 </html>
+
