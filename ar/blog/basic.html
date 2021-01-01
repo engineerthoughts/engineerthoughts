@@ -50,7 +50,7 @@
         renderer.setSize(window.innerWidth,window.innerHeight);
         document.body.appendChild(renderer.domElement);
 		
-		controls = new THREE.OrbitControls(camera);
+		controls = new THREE.OrbitControls(camera, renderer.domElement);
         controls.addEventListener('change', renderer);
 		
         let loader = new THREE.GLTFLoader();
