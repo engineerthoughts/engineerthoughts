@@ -39,7 +39,7 @@
         controls.addEventListener('change', renderer);
 		
         let loader = new THREE.GLTFLoader();
-        loader.load('scene1.gltf', function(gltf){
+        loader.load('scene2.gltf', function(gltf){
 		  car = gltf.scene.children[0];
           car.scale.set(2,40,35);
           scene.add(gltf.scene);
