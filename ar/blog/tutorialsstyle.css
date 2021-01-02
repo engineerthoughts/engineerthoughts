@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+body
+{
+	margin:0;
+	font-family:Calibri;
+}
+/* Create two equal columns that floats next to each other */
+.vertical {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.horizon:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.headiot
+{
+	Font-Family:Calibri;
+	Font-size:24px;
+}
+.intoimage
+{
+	width:100%;
+	height:450px;
+}
+iframe
+{
+	width:100%;
+	height:450px;
+}
+
+.buttonANIM {
+  padding: 15px 25px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color:#00AEEF;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #999;
+}
+
+.buttonANIM:hover {background-color: #0D1935;}
+
+.buttonANIM:active {
+  background-color: #0D1935;
+  box-shadow: 0 5px #666;
+  transform: translateY(2px);
+}
+.outerp
+{
+  height: 150px;
+  position: relative;
+
+}
+
+.innerp
+{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size:20px;
+
+}
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .vertical {
+    width: 100%;
+  }
+	.intoimage
+	{
+		width:100%;
+		height:200px;
+	}
+	iframe
+	{
+		width:100%;
+		height:200px;
+	}
+	.headiot
+	{
+		Font-Family:Calibri;
+		Font-size:20px;
+	}
+	.buttonANIM 
+	{
+		padding: 10px 18px;
+		font-size: 14px;
+	}
+}
