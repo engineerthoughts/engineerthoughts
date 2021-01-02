@@ -41,7 +41,7 @@
         let loader = new THREE.GLTFLoader();
         loader.load('scene2.gltf', function(gltf){
 		  car = gltf.scene.children[0];
-          car.scale.set(20,400,350);
+          car.scale.set(2000,40000,35000);
           scene.add(gltf.scene);
           animate();
         });
