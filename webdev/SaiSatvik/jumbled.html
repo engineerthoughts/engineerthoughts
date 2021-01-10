@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	<center>
+		<h1>JUMBLED QUIZ</h1>
+		<p>In the jumbled words quiz, the question is formed with mixed up letters of a word related to a vacation or holiday. 
+		The quiz answers are correct spellings and words formed with those spellings. 
+		This can be made interesting by setting a time limit. 
+		You can give several chances to whoever you are assigning the task to.</p>
+		
+		<h3>NOTE: ENTER YOUR ANSWER ONLY IN <span style="color:red">CAPITAL.</span> THANKS AND ALL THE BEST</h3>
+	</center>
+	<div style="margin-left:30px">
+
+		<p>1. GTLIHF</p>
+		<input type="text" id="ans1"></input>
+		<p id="answer1correct" style="display:none">Your Answer is Correct</p>
+		<p id="answer1wrong" style="display:none">Your Answer is Wrong. Correct Answer is "FLIGHT"</p>
+		
+		<p>2. DNITANOTESI</p>
+		<input type="text" id="ans2"></input>
+		<p id="answer2correct" style="display:none">Your Answer is Correct</p>
+		<p id="answer2wrong" style="display:none">Your Answer is Wrong. Correct Answer is "DESTINATION"</p>
+	
+	<br><br>
+	<button onclick="checkanswer()">Submit</button>
+	</div>
+	
+	<script>
+	function checkanswer()
+	
+	{
+		var ans1 = document.getElementById("ans1").value;
+		if (ans1 == 'FLIGHT')
+		{
+			document.getElementById("answer1correct").style.display ='block';
+			document.getElementById("answer1wrong").style.display ='none';
+		}
+		else
+		{
+			document.getElementById("answer1wrong").style.display ='block';
+			document.getElementById("answer1correct").style.display ='none';
+		}
+		
+		var ans2 = document.getElementById("ans2").value;
+		if (ans2 == 'DESTINATION')
+		{
+			document.getElementById("answer2correct").style.display ='block';
+			document.getElementById("answer2wrong").style.display ='none';
+		}
+		else
+		{
+			document.getElementById("answer2wrong").style.display ='block';
+			document.getElementById("answer2correct").style.display ='none';
+		}
+		
+	}
+	</script>
+
+</body>
+</html>

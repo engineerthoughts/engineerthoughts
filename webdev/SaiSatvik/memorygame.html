@@ -1,0 +1,103 @@
+<html>
+<head>
+<style>
+#hh
+{
+display:none;
+font-size:20px;
+}
+
+table
+{
+border:2px solid;
+}
+
+#pp
+{
+display:none;
+font-size:20px;
+}
+</style>
+</head>
+<body>
+<center>
+<p style="font-size:20px;">Memory Game</p>
+<p style="font-size:20px;">In this Game you need to remember number between 1 to 8 and you need to follow few instructions given below.Finally the computer will read your mind and tell the number that you thought</p>
+<button class="jj" onclick="document.getElementById('pp').style.display = 'block'">Instructions</button>
+<p id="pp">Step 1 Lets take number 2
+<br>
+Step 2 2*2=4
+<br>
+Step 3 4+2=6
+<br>
+Step 4 6*5=30
+<br>
+Step 5 30+5=35
+<br>
+Step 6 35*10=350
+<br>
+Step 5 350+10=360
+</p>
+<button class="jj" onclick="document.getElementById('hh').style.display = 'block'">Are You Ready?</button>
+
+<br>
+<br>
+<div id="hh">
+<table>
+<tr>
+	<td>Step 1</td>
+	<td>Think any Number between 1 to 8</td>
+</tr>
+
+<tr>
+	<td>Step 2</td>
+	<td>Multiply by 2</td>
+</tr>
+
+<tr>
+	<td>Step 3</td>
+	<td>Add by 2</td>
+</tr>
+
+<tr>
+	<td>Step 4</td>
+	<td>Multiply by 5</td>
+</tr>
+
+<tr>
+	<td>Step 5</td>
+	<td>Add by 5</td>
+</tr>
+
+<tr>
+	<td>Step 6</td>
+	<td>Multiply by 10</td>
+</tr>
+
+<tr>
+	<td>Step 7</td>
+	<td>Add by 10</td>
+</tr>
+
+<tr>
+	<td>Step 8</td>
+	<td>Enter the output below box</td>
+</tr>
+</table>
+<br>
+<input type="number" id="numvalue" ></input>
+<button onclick="Findnumber()">Submit</button>
+<br>
+<p id="display"></p>
+</div>
+</center>
+<script>
+function Findnumber(){
+		var numvalueget = document.getElementById("numvalue").value;
+
+		var finalvaluenum = parseInt(numvalueget.substring(0,1)) - 1;
+		document.getElementById("display").innerHTML="the number that you thought of is: "+finalvaluenum;
+}
+</script>
+</body>
+</html>
