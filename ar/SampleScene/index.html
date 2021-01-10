@@ -37,7 +37,7 @@ fullbutton.addEventListener("click", function (evt) {
                         /* IE/Edge */
                         elem.msRequestFullscreen();
                     }
-                    fullbutton.setAttribute("src", "../exit_fullscreen.png");
+                    fullbutton.setAttribute("src", "exit_fullscreen.png");
                     fullscreen = 1;
                 } else {
                     if (document.exitFullscreen) {
@@ -49,7 +49,7 @@ fullbutton.addEventListener("click", function (evt) {
                     } else if (document.msExitFullscreen) {
                         document.msExitFullscreen();
                     }
-                    fullbutton.setAttribute("src", "../fullscreen.png");
+                    fullbutton.setAttribute("src", "fullscreen.png");
                     fullscreen = 0;
                 }
 
@@ -91,7 +91,7 @@ function bezierEvaluate(p0, p1, p2, p3, t) {
         </input>
     </div>
 <!-- <a-scene embedded arjs='debugUIEnabled: false; sourceType: video; sourceUrl:../../data/videos/headtracking.mp4;'> -->
-    <a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam' vr-mode-ui='enabled: false'; detectionMode: mono_and_matrix; matrixCodeType: 3x3;>
+    <a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam' vr-mode-ui='enabled: false'>
     <a-entity id="mouseCursor" cursor="rayOrigin: mouse" raycaster="objects: .intersectable; useWorldCoordinates: true;"></a-entity>
 <!-- END: Middle HTML -->
 
@@ -102,7 +102,7 @@ function bezierEvaluate(p0, p1, p2, p3, t) {
 </a-assets>
 <!-- END: Unity Compiled Assets -->
 <!-- BEGIN: Add Image Target (marker) -->
-<a-marker id="marker" type='barcode' value='6'>
+<a-marker id="marker" type="pattern" preset="custom" src="etupdated.patt" url="etupdated.patt" emitevents="true" button>
 <!-- END: Add Image Target (marker) -->
 
 <!-- BEGIN: Unity Compiled Objects -->
