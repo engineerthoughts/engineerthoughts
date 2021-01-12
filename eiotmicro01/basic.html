@@ -17,15 +17,15 @@
         scene.background = new THREE.Color(0x183757);
 		
         camera = new THREE.PerspectiveCamera(40,window.innerWidth/window.innerHeight,1,5000);
-		camera.position.set(0,300,250);
-		camera.lookAt( 350, 350, 0 );
-		camera.up.set( 0, 0, -1 );
-		camera.updateProjectionMatrix();
+	camera.position.set(0,300,250);
+	camera.lookAt( 350, 350, 0 );
+	camera.up.set( 0, 0, -1 );
+	camera.updateProjectionMatrix();
 
-		hlight = new THREE.AmbientLight (0x404040,3);
+	hlight = new THREE.AmbientLight (0x404040,3);
         scene.add(hlight);
 		
-		directionalLight = new THREE.DirectionalLight(0xffffff,1);
+	directionalLight = new THREE.DirectionalLight(0xffffff,1);
         directionalLight.position.set(0,1,0);
         directionalLight.castShadow = true;
         scene.add(directionalLight);
@@ -39,7 +39,7 @@
         controls.addEventListener('change', renderer);
 		
         let loader = new THREE.GLTFLoader();
-        loader.load('scene2.gltf', function(gltf){
+        loader.load('scene1.gltf', function(gltf){
 		  car = gltf.scene.children[0];
           car.scale.set(2,40,35);
           scene.add(gltf.scene);
