@@ -36,14 +36,14 @@ var pwd = document.getElementById ("password").value;
 			document.getElementById ("txtmsgcrct").style.display = "none";
 					
 			const database = firebase.database();
-			firebase.database().ref('userpwd'+un.toUpperCase()).on('value',function(snapshot)
+			firebase.database().ref('userkey'+un.toUpperCase()).on('value',function(snapshot)
 			{
 				var snapval = snapshot.val();
 				//console.log(snapval);
 				
 				if(snapval != null)
 				{
-					firebase.database().ref('userpwd'+un.toUpperCase()).on('value',function(snapshot)
+					firebase.database().ref('userkey'+un.toUpperCase()).on('value',function(snapshot)
 					{
 						//console.log(snapshot.val().iotpassword);
 						pwdvalidateini = snapshot.val().iotpassword;

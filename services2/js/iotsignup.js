@@ -8,7 +8,7 @@ function iotsignupfun()
 	if(siupun != '')
 	{
 		const database = firebase.database();
-		firebase.database().ref('userpwd'+siupun.toUpperCase()).on('value',function(snapshot)
+		firebase.database().ref('userkey'+siupun.toUpperCase()).on('value',function(snapshot)
 		{
 			var snapval = snapshot.val();
 			//console.log(snapval);
@@ -50,11 +50,16 @@ function iotsignupfirebase()
 				
 				const database = firebase.database();
 
-				var inputlow = 'userpwd'+siupun.toUpperCase();
+				var inputlow = 'userkey'+siupun.toUpperCase();
 				database.ref(inputlow).set
 				({
 				iotusername: siupun.toUpperCase(),
-				iotpassword: siuppwd,
+				iotpassword: siuppwd
+				});
+				
+				var inputlow1 = 'userpwd'+siupun.toUpperCase();
+				database.ref(inputlow1).set
+				({
 				iottemp: '25 C',
 				iotlight: '0',
 				iotfan: '0',
